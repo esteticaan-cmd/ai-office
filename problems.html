@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 проблем селлеров маркетплейсов — которые решает AI-Офис</title>
+    <meta name="description" content="Одиночество решений, ловушка «я быстрее сам», невидимые потери маржи, страх конкуренции и ещё 3 глубоких боли. Как AI-Офис решает каждую.">
+    <meta property="og:title" content="7 проблем селлеров маркетплейсов — которые решает AI-Офис">
+    <meta property="og:description" content="Одиночество решений, ловушка «я быстрее сам», невидимые потери маржи, страх конкуренции и ещё 3 глубоких боли. Как AI-Офис решает каждую.">
+    <meta property="og:url" content="https://ai-office.ru/problems">
+    <meta property="og:image" content="https://ai-office.ru/images/og-problems.jpg">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="canonical" href="https://ai-office.ru/problems">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* === Existing custom CSS === */
+        body { font-family: 'Inter', sans-serif; background: #0F1229; color: #fff; }
+        .glow { box-shadow: 0 0 30px rgba(13, 148, 136, 0.4); }
+        .glow:hover { box-shadow: 0 0 50px rgba(13, 148, 136, 0.6); }
+        .card { background: rgba(26, 31, 61, 0.7); border: 1px solid rgba(148, 163, 184, 0.1); }
+        .card:hover { border-color: rgba(13, 148, 136, 0.3); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .scale-in { opacity: 0; transform: scale(0.9); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .scale-in.visible { opacity: 1; transform: scale(1); }
+        .sticky-header { backdrop-filter: blur(20px); background: rgba(15, 18, 41, 0.8); }
+        .hamburger-line { transition: all 0.3s ease; }
+        .menu-open .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .menu-open .hamburger-line:nth-child(2) { opacity: 0; }
+        .menu-open .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+
+        /* === Tailwind utility classes (local CSS) === */
+
+        /* Reset */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* Font & rendering */
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        /* Display */
+        .block { display: block; }
+        .inline-block { display: inline-block; }
+        .hidden { display: none; }
+        .flex { display: flex; }
+        .grid { display: grid; }
+
+        /* Position */
+        .fixed { position: fixed; }
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .top-0 { top: 0; }
+        .left-0 { left: 0; }
+        .right-0 { right: 0; }
+        .-top-3 { top: -0.75rem; }
+        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+        .z-10 { z-index: 10; }
+        .z-50 { z-index: 50; }
+        .overflow-hidden { overflow: hidden; }
+        .left-1\/2 { left: 50%; }
+        .-translate-x-1\/2 { transform: translateX(-50%); }
+
+        /* Flexbox */
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .items-start { align-items: flex-start; }
+        .justify-between { justify-content: space-between; }
+        .justify-center { justify-content: center; }
+        .gap-1\.5 { gap: 0.375rem; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-8 { gap: 2rem; }
+
+        /* Grid */
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+        /* Sizing */
+        .w-full { width: 100%; }
+        .w-6 { width: 1.5rem; }
+        .w-5 { width: 1.25rem; }
+        .h-0\.5 { height: 0.125rem; }
+        .h-16 { height: 4rem; }
+        .max-w-7xl { max-width: 80rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .max-w-2xl { max-width: 42rem; }
+
+        /* Margin */
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+        .mt-0\.5 { margin-top: 0.125rem; }
+        .mt-1 { margin-top: 0.25rem; }
+
+        /* Padding */
+        .p-2 { padding: 0.5rem; }
+        .p-4 { padding: 1rem; }
+        .p-5 { padding: 1.25rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .p-10 { padding: 2.5rem; }
+        .p-16 { padding: 4rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+        .pt-8 { padding-top: 2rem; }
+        .pt-24 { padding-top: 6rem; }
+        .pb-4 { padding-bottom: 1rem; }
+        .pb-16 { padding-bottom: 4rem; }
+        .pb-24 { padding-bottom: 6rem; }
+        .pl-5 { padding-left: 1.25rem; }
+
+        /* Typography */
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1; }
+        .text-6xl { font-size: 3.75rem; line-height: 1; }
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .font-normal { font-weight: 400; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+        .leading-tight { line-height: 1.25; }
+        .leading-relaxed { line-height: 1.625; }
+        .tracking-widest { letter-spacing: 0.1em; }
+        .uppercase { text-transform: uppercase; }
+        .italic { font-style: italic; }
+
+        /* Colors - text */
+        .text-white { color: #ffffff; }
+        .text-teal { color: #0D9488; }
+        .text-slate { color: #94A3B8; }
+        .text-mint { color: #99F6E4; }
+        .text-red-400 { color: #f87171; }
+        .text-yellow-400 { color: #facc15; }
+        .text-white\/80 { color: rgba(255, 255, 255, 0.8); }
+        .text-white\/70 { color: rgba(255, 255, 255, 0.7); }
+        .text-white\/90 { color: rgba(255, 255, 255, 0.9); }
+
+        /* Colors - background */
+        .bg-dark { background-color: #0F1229; }
+        .bg-dark\/95 { background-color: rgba(15, 18, 41, 0.95); }
+        .bg-navy { background-color: #1A1F3D; }
+        .bg-navy\/30 { background-color: rgba(26, 31, 61, 0.3); }
+        .bg-teal { background-color: #0D9488; }
+        .bg-teal\/10 { background-color: rgba(13, 148, 136, 0.1); }
+        .bg-teal\/80 { background-color: rgba(13, 148, 136, 0.8); }
+        .bg-white { background-color: #ffffff; }
+
+        /* Gradient */
+        .bg-gradient-to-b { background: linear-gradient(to bottom, var(--tw-gradient-from), var(--tw-gradient-to)); }
+        .from-teal\/5 { --tw-gradient-from: rgba(13, 148, 136, 0.05); }
+        .to-transparent { --tw-gradient-to: transparent; }
+
+        /* Borders */
+        .border { border-width: 1px; border-style: solid; }
+        .border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+        .border-t { border-top-width: 1px; border-top-style: solid; }
+        .border-l-2 { border-left-width: 2px; border-left-style: solid; }
+        .border-white\/5 { border-color: rgba(255, 255, 255, 0.05); }
+        .border-white\/10 { border-color: rgba(255, 255, 255, 0.1); }
+        .border-teal\/20 { border-color: rgba(13, 148, 136, 0.2); }
+        .border-teal\/40 { border-color: rgba(13, 148, 136, 0.4); }
+
+        /* Rounded */
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .rounded-3xl { border-radius: 1.5rem; }
+        .rounded-full { border-radius: 9999px; }
+
+        /* Transitions */
+        .transition { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+        .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+        .duration-300 { transition-duration: 300ms; }
+
+        /* Backdrop */
+        .backdrop-blur-xl { backdrop-filter: blur(24px); }
+
+        /* Hover states */
+        .hover\:text-teal:hover { color: #0D9488; }
+        .hover\:bg-teal\/80:hover { background-color: rgba(13, 148, 136, 0.8); }
+        .hover\:underline:hover { text-decoration: underline; }
+
+        /* Space-y utilities */
+        .space-y-2 > * + * { margin-top: 0.5rem; }
+        .space-y-4 > * + * { margin-top: 1rem; }
+        .space-y-8 > * + * { margin-top: 2rem; }
+        .space-y-12 > * + * { margin-top: 3rem; }
+
+        /* === Responsive: sm (640px) === */
+        @media (min-width: 640px) {
+            .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+            .sm\:p-10 { padding: 2.5rem; }
+            .sm\:p-16 { padding: 4rem; }
+            .sm\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .sm\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:text-5xl { font-size: 3rem; line-height: 1; }
+            .sm\:flex-row { flex-direction: row; }
+            .sm\:col-span-2 { grid-column: span 2 / span 2; }
+        }
+
+        /* === Responsive: md (768px) === */
+        @media (min-width: 768px) {
+            .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+
+        /* === Responsive: lg (1024px) === */
+        @media (min-width: 1024px) {
+            .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+            .lg\:flex { display: flex; }
+            .lg\:hidden { display: none; }
+            .lg\:text-6xl { font-size: 3.75rem; line-height: 1; }
+            .lg\:col-span-1 { grid-column: span 1 / span 1; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "7 проблем селлеров маркетплейсов — которые решает AI-Офис",
+        "description": "Одиночество решений, ловушка «я быстрее сам», невидимые потери маржи, страх конкуренции и ещё 3 глубоких боли. Как AI-Офис решает каждую.",
+        "url": "https://ai-office.ru/problems",
+        "publisher": {
+            "@type": "Organization",
+            "name": "AI-Офис",
+            "url": "https://ai-office.ru"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ai-office.ru/problems"
+        }
+    }
+    </script>
+</head>
+<body class="font-inter antialiased">
+
+    <!-- Header -->
+    <header class="sticky-header fixed top-0 left-0 right-0 z-50 border-b border-white/5">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold text-white">AI-<span class="text-teal">Офис</span></a>
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-slate hover:text-teal transition">Главная</a>
+                <a href="problems.html" class="text-white font-medium hover:text-teal transition">Проблемы</a>
+                <a href="team.html" class="text-slate hover:text-teal transition">Команда</a>
+                <a href="how-it-works.html" class="text-slate hover:text-teal transition">Как работает</a>
+                <a href="pricing.html" class="text-slate hover:text-teal transition">Тарифы</a>
+                <a href="cases.html" class="text-slate hover:text-teal transition">Кейсы</a>
+                <a href="contact.html" class="bg-teal hover:bg-teal/80 text-white px-5 py-2 rounded-lg font-medium transition">Начать</a>
+            </div>
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Открыть меню">
+                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="lg:hidden hidden bg-dark/95 backdrop-blur-xl border-t border-white/5">
+            <div class="px-4 py-6 flex flex-col gap-4">
+                <a href="index.html" class="text-slate hover:text-teal py-2 transition">Главная</a>
+                <a href="problems.html" class="text-white font-medium py-2">Проблемы</a>
+                <a href="team.html" class="text-slate hover:text-teal py-2 transition">Команда</a>
+                <a href="how-it-works.html" class="text-slate hover:text-teal py-2 transition">Как работает</a>
+                <a href="pricing.html" class="text-slate hover:text-teal py-2 transition">Тарифы</a>
+                <a href="cases.html" class="text-slate hover:text-teal py-2 transition">Кейсы</a>
+                <a href="contact.html" class="bg-teal text-white px-5 py-3 rounded-lg font-medium text-center">Начать</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <nav class="max-w-6xl mx-auto px-4 pt-24 pb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-2 text-sm text-slate">
+            <li><a href="index.html" class="hover:text-teal transition">Главная</a></li>
+            <li>/</li>
+            <li class="text-white">Проблемы селлеров</li>
+        </ol>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-4 pt-8 pb-16">
+            <div class="text-center fade-in">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                    <span class="text-teal">7 проблем</span> селлеров<br>маркетплейсов
+                </h1>
+                <p class="text-lg sm:text-xl text-slate max-w-3xl mx-auto leading-relaxed">
+                    Глубокие боли, о которых не говорят в чатах. Каждая стоит вам денег, времени и нервов. И у каждой есть конкретное решение.
+                </p>
+            </div>
+        </section>
+
+        <!-- Pain Points -->
+        <section class="max-w-4xl mx-auto px-4 pb-24 space-y-12">
+
+            <!-- Pain 1 -->
+            <article id="pain-1" class="card rounded-2xl p-8 sm:p-10 fade-in transition-all duration-300">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="text-4xl sm:text-5xl">😵</span>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-teal">Проблема #1</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold mt-1">Одиночество решений</h2>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На поверхности</h3>
+                        <blockquote class="border-l-2 border-teal/40 pl-5 italic text-slate text-lg">
+                            «Мне не с кем посоветоваться по бизнесу»
+                        </blockquote>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На самом деле</h3>
+                        <div class="space-y-4 text-white/80 leading-relaxed">
+                            <p>Вы принимаете сотни решений в день без данных, без аналитики, на одной интуиции. Закупил партию на 500К₽ -- потому что «чуйка». Товар не зашёл.</p>
+                            <p>Если бы AI-аналитик проверил нишу за 10 минут -- увидел бы что спрос падает. <strong class="text-white">500К₽ сэкономлено.</strong></p>
+                            <p>Каждое решение без данных -- это рулетка. И с каждым проигрышем растёт страх принимать новые решения.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">Последствия</h3>
+                        <ul class="space-y-2 text-white/70">
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Ошибочные закупки на сотни тысяч рублей</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Выгорание от груза ответственности</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Застой бизнеса из-за страха действовать</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-teal/10 border border-teal/20 rounded-xl p-6">
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-teal mb-3">Как AI-Офис закрывает</h3>
+                        <p class="text-white/90 leading-relaxed">
+                            AI-аналитик проверяет любую нишу за <strong class="text-teal">10 минут</strong>. Даёт данные по спросу, конкуренции, сезонности. Вы принимаете решения на основе фактов, а не чуйки.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Pain 2 -->
+            <article id="pain-2" class="card rounded-2xl p-8 sm:p-10 fade-in transition-all duration-300">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="text-4xl sm:text-5xl">🌀</span>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-teal">Проблема #2</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold mt-1">«Я быстрее сам»</h2>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На поверхности</h3>
+                        <blockquote class="border-l-2 border-teal/40 pl-5 italic text-slate text-lg">
+                            «Пока объяснишь — сам три раза сделаешь»
+                        </blockquote>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На самом деле</h3>
+                        <div class="space-y-4 text-white/80 leading-relaxed">
+                            <p>Делаешь карточку сам за 4 часа. AI-офис делает за 20 минут. За месяц разница: ты = 8 карточек, AI = <strong class="text-white">120 карточек</strong>. Кто выведет больше товаров?</p>
+                            <p>Это ловушка: вы тратите время на операционку и не занимаетесь стратегией. Бизнес не растёт, потому что руководитель работает руками, а не головой.</p>
+                            <p>Вы -- <strong class="text-white">самое узкое место</strong> собственного бизнеса.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">Последствия</h3>
+                        <ul class="space-y-2 text-white/70">
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Потолок роста -- бизнес не масштабируется</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Физическое выгорание от работы 14+ часов в день</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Невозможность масштабирования</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-teal/10 border border-teal/20 rounded-xl p-6">
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-teal mb-3">Как AI-Офис закрывает</h3>
+                        <p class="text-white/90 leading-relaxed">
+                            AI-офис делает за <strong class="text-teal">20 минут</strong> то, что вы делаете за 4 часа. Вы освобождаете время для стратегических задач. 120 карточек в месяц вместо 8 -- без вашего участия.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Pain 3 -->
+            <article id="pain-3" class="card rounded-2xl p-8 sm:p-10 fade-in transition-all duration-300">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="text-4xl sm:text-5xl">💸</span>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-teal">Проблема #3</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold mt-1">Невидимые потери</h2>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На поверхности</h3>
+                        <blockquote class="border-l-2 border-teal/40 pl-5 italic text-slate text-lg">
+                            «Вроде продажи есть, а денег на счету нет»
+                        </blockquote>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На самом деле</h3>
+                        <div class="space-y-4 text-white/80 leading-relaxed">
+                            <p>У селлера 15 SKU. Думал все прибыльные. ABC-анализ показал: 4 товара убыточные, они «съедают» <strong class="text-white">40К₽/мес</strong> из прибыли остальных. Убрал -- чистая прибыль выросла на 35%.</p>
+                            <p>ДРР 22% вместо целевых 12%, карточки без рич-контента получают на 40% меньше показов, логистика не оптимизирована -- каждый день утекают деньги, которых вы не видите.</p>
+                            <p>Это <strong class="text-white">медленная смерть бизнеса</strong> при полной иллюзии прибыльности.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">Последствия</h3>
+                        <ul class="space-y-2 text-white/70">
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Работа в ноль или в убыток при иллюзии прибыльности</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Медленная смерть бизнеса без видимых причин</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Невозможность понять, куда уходят деньги</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-teal/10 border border-teal/20 rounded-xl p-6">
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-teal mb-3">Как AI-Офис закрывает</h3>
+                        <p class="text-white/90 leading-relaxed">
+                            AI-аудитор делает полный разбор кабинета: ABC-анализ, unit-экономика по каждому SKU, аудит рекламы. Находит все утечки за <strong class="text-teal">2 часа</strong>. Вы видите реальную картину бизнеса.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Pain 4 -->
+            <article id="pain-4" class="card rounded-2xl p-8 sm:p-10 fade-in transition-all duration-300">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="text-4xl sm:text-5xl">😰</span>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-teal">Проблема #4</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold mt-1">Страх конкуренции</h2>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На поверхности</h3>
+                        <blockquote class="border-l-2 border-teal/40 pl-5 italic text-slate text-lg">
+                            «Конкуренты демпингуют, невозможно конкурировать»
+                        </blockquote>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На самом деле</h3>
+                        <div class="space-y-4 text-white/80 leading-relaxed">
+                            <p>Конкурент обновил карточки с AI-фото + видеообзор + рич-контент. Его CTR вырос с 3% до <strong class="text-white">8%</strong>. Твои продажи упали на 40% за месяц -- карточка скатилась на 5-ю страницу.</p>
+                            <p>Дело не в ценах -- дело в качестве контента и скорости адаптации. Пока вы думаете -- конкуренты действуют.</p>
+                            <p>И разрыв <strong class="text-white">увеличивается каждый день</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">Последствия</h3>
+                        <ul class="space-y-2 text-white/70">
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Потеря позиций в поисковой выдаче</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Падение продаж на 30-50% за считанные недели</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Вытеснение с рынка более быстрыми игроками</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-teal/10 border border-teal/20 rounded-xl p-6">
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-teal mb-3">Как AI-Офис закрывает</h3>
+                        <p class="text-white/90 leading-relaxed">
+                            AI-дизайнер + AI-копирайтер обновляют карточки за <strong class="text-teal">часы, не недели</strong>. Вы действуете так же быстро, как крупные игроки. Качество контента на уровне топ-селлеров.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Pain 5 -->
+            <article id="pain-5" class="card rounded-2xl p-8 sm:p-10 fade-in transition-all duration-300">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="text-4xl sm:text-5xl">🧠</span>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-teal">Проблема #5</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold mt-1">Инфо-перегрузка</h2>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На поверхности</h3>
+                        <blockquote class="border-l-2 border-teal/40 pl-5 italic text-slate text-lg">
+                            «Столько информации — голова кругом, не знаю что внедрять»
+                        </blockquote>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На самом деле</h3>
+                        <div class="space-y-4 text-white/80 leading-relaxed">
+                            <p>Потратил 3 часа на чтение чатов. Узнал 20 «лайфхаков». Внедрил <strong class="text-white">0</strong>. AI-офис: спросил -- получил один конкретный ответ с пошаговым планом.</p>
+                            <p>Вы подписаны на 15 каналов, 8 чатов, 3 курса. Информации море, а толку ноль. Потому что знания без внедрения -- это развлечение, а не бизнес.</p>
+                            <p>Чем больше вы потребляете контент -- тем <strong class="text-white">меньше действуете</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">Последствия</h3>
+                        <ul class="space-y-2 text-white/70">
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Паралич действий -- знаете что делать, но не делаете</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Прокрастинация под видом «обучения»</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Ощущение что «всё сложно» и ничего не получится</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-teal/10 border border-teal/20 rounded-xl p-6">
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-teal mb-3">Как AI-Офис закрывает</h3>
+                        <p class="text-white/90 leading-relaxed">
+                            AI-офис -- это <strong class="text-teal">один вход для всех вопросов</strong>. Спросили -- получили конкретный ответ с пошаговым планом. Без воды, без «а ещё можно...». Только действие.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Pain 6 -->
+            <article id="pain-6" class="card rounded-2xl p-8 sm:p-10 fade-in transition-all duration-300">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="text-4xl sm:text-5xl">🏠</span>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-teal">Проблема #6</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold mt-1">Бизнес поглощает жизнь</h2>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На поверхности</h3>
+                        <blockquote class="border-l-2 border-teal/40 pl-5 italic text-slate text-lg">
+                            «Я работаю 14 часов и всё равно не успеваю»
+                        </blockquote>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На самом деле</h3>
+                        <div class="space-y-4 text-white/80 leading-relaxed">
+                            <p>Будний день: проснулся в 7, проверил остатки. 8-12 -- работа с товарами. 12-15 -- реклама. 15-18 -- карточки. 18-21 -- отчёты. 22:00 -- жена говорит <strong class="text-white">«ты опять в телефоне»</strong>.</p>
+                            <p>AI-офис забирает 6 из 14 часов. У вас появляется вечер, выходные, отпуск.</p>
+                            <p>Бизнес перестаёт быть <strong class="text-white">тюрьмой, которую вы сами построили</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">Последствия</h3>
+                        <ul class="space-y-2 text-white/70">
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Разрушение отношений с близкими</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Проблемы со здоровьем от хронического стресса</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Выгорание и желание «всё бросить»</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-teal/10 border border-teal/20 rounded-xl p-6">
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-teal mb-3">Как AI-Офис закрывает</h3>
+                        <p class="text-white/90 leading-relaxed">
+                            AI-офис забирает рутину: карточки, аналитику, отчёты, аудиты. Вы получаете обратно <strong class="text-teal">6 часов в день</strong>. Это целый второй рабочий день -- или время для семьи.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Pain 7 -->
+            <article id="pain-7" class="card rounded-2xl p-8 sm:p-10 fade-in transition-all duration-300">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="text-4xl sm:text-5xl">🎭</span>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-teal">Проблема #7</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold mt-1">Синдром самозванца</h2>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На поверхности</h3>
+                        <blockquote class="border-l-2 border-teal/40 pl-5 italic text-slate text-lg">
+                            «У всех получается, а у меня нет. Наверное, я не создан для бизнеса»
+                        </blockquote>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">На самом деле</h3>
+                        <div class="space-y-4 text-white/80 leading-relaxed">
+                            <p>В чате пишут: «мой оборот 5М, я нанял 3 менеджера». А у тебя 800К и ты один. Разница не в тебе -- <strong class="text-white">у него просто есть инструменты и люди</strong>.</p>
+                            <p>AI-офис = те самые люди. Вы сравниваете свою изнанку с чужим фасадом.</p>
+                            <p>Те, кто зарабатывает больше -- не умнее. У них просто есть <strong class="text-white">команда, которая делает рутину</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-slate mb-3">Последствия</h3>
+                        <ul class="space-y-2 text-white/70">
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Заниженная самооценка и неуверенность в решениях</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Импульсивные решения из-за стресса и сравнений</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 mt-0.5">&#10007;</span>
+                                <span>Отказ от перспективных возможностей из страха провала</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-teal/10 border border-teal/20 rounded-xl p-6">
+                        <h3 class="text-sm font-semibold uppercase tracking-widest text-teal mb-3">Как AI-Офис закрывает</h3>
+                        <p class="text-white/90 leading-relaxed">
+                            AI-офис уравнивает шансы. У вас те же инструменты, что и у крупного игрока. <strong class="text-teal">16 сотрудников за 30К₽</strong> -- это ваша команда. Разница между вами и топ-селлером стирается.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 px-4">
+            <div class="max-w-4xl mx-auto text-center scale-in">
+                <div class="card rounded-3xl p-10 sm:p-16 glow">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mb-6">
+                        Узнали себя?<br><span class="text-teal">AI-Офис закрывает все 7 болей</span>
+                    </h2>
+                    <p class="text-slate text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+                        16 AI-сотрудников работают на вас 24/7. Без выходных, без больничных, без «я не успел». Попробуйте бесплатно и почувствуйте разницу.
+                    </p>
+                    <a href="contact.html" class="inline-block bg-teal hover:bg-teal/80 text-white px-10 py-4 rounded-xl text-lg font-semibold transition glow">
+                        Попробовать 7 дней бесплатно
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="text-xl font-bold mb-4">AI-<span class="text-teal">Офис</span></div>
+                    <p class="text-slate text-sm">16 AI-сотрудников для вашего бизнеса на маркетплейсах</p>
+                </div>
+                <div>
+                    <div class="font-semibold mb-4">Страницы</div>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li><a href="problems.html" class="hover:text-teal transition">Проблемы</a></li>
+                        <li><a href="team.html" class="hover:text-teal transition">Команда</a></li>
+                        <li><a href="how-it-works.html" class="hover:text-teal transition">Как работает</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="font-semibold mb-4">Ещё</div>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li><a href="pricing.html" class="hover:text-teal transition">Тарифы</a></li>
+                        <li><a href="cases.html" class="hover:text-teal transition">Кейсы</a></li>
+                        <li><a href="contact.html" class="hover:text-teal transition">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="font-semibold mb-4">Связаться</div>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li><a href="https://t.me/estetica_an" class="hover:text-teal transition" target="_blank" rel="noopener">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate">
+                <span>AI Forge &copy; 2026</span>
+                <span>@estetica_an</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('menu-open');
+            mobileMenu.classList.toggle('hidden');
+        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.fade-in, .scale-in').forEach(el => observer.observe(el));
+    </script>
+<script>setTimeout(function(){document.querySelectorAll(".fade-in,.scale-in").forEach(function(el){el.classList.add("visible")})},2000)</script></body>
+</html>

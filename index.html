@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Офис — 16 AI-сотрудников для селлеров маркетплейсов | AI Forge</title>
+    <meta name="description" content="AI-Офис для селлеров WB и Ozon. Команда из 16 AI-сотрудников за 30 000₽/мес вместо 200 000₽+ на штат. Работают 24/7 через Telegram.">
+    <meta property="og:title" content="AI-Офис — 16 AI-сотрудников для селлеров маркетплейсов">
+    <meta property="og:description" content="Команда из 16 AI-сотрудников за 30 000₽/мес вместо 200 000₽+ на штат. Работают 24/7 через Telegram.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-office.ru/">
+    <meta property="og:image" content="https://ai-office.ru/og-image.jpg">
+    <link rel="canonical" href="https://ai-office.ru/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ===== Reset / Base ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #0F1229; color: #fff; }
+
+        /* ===== Custom styles (original) ===== */
+        .glow { box-shadow: 0 0 30px rgba(13, 148, 136, 0.4); }
+        .glow:hover { box-shadow: 0 0 50px rgba(13, 148, 136, 0.6); }
+        .card { background: rgba(26, 31, 61, 0.7); border: 1px solid rgba(148, 163, 184, 0.1); }
+        .card:hover { border-color: rgba(13, 148, 136, 0.3); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .scale-in { opacity: 0; transform: scale(0.9); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .scale-in.visible { opacity: 1; transform: scale(1); }
+        .sticky-header { backdrop-filter: blur(20px); background: rgba(15, 18, 41, 0.8); }
+        .hamburger-line { transition: all 0.3s ease; }
+        .menu-open .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .menu-open .hamburger-line:nth-child(2) { opacity: 0; }
+        .menu-open .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+        .teal-col { background: rgba(13, 148, 136, 0.08); }
+        .table-zebra tr:nth-child(even) { background: rgba(26, 31, 61, 0.5); }
+        .table-zebra tr:nth-child(odd) { background: rgba(15, 18, 41, 0.5); }
+
+        /* ===== Tailwind utility classes ===== */
+
+        /* Display */
+        .block { display: block; }
+        .inline-block { display: inline-block; }
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .hidden { display: none; }
+
+        /* Position */
+        .fixed { position: fixed; }
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .top-0 { top: 0; }
+        .left-0 { left: 0; }
+        .right-0 { right: 0; }
+        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+        .z-10 { z-index: 10; }
+        .z-50 { z-index: 50; }
+
+        /* Overflow */
+        .overflow-hidden { overflow: hidden; }
+        .overflow-x-auto { overflow-x: auto; }
+
+        /* Flexbox */
+        .flex-col { flex-direction: column; }
+        .flex-row { flex-direction: row; }
+        .flex-shrink-0 { flex-shrink: 0; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-center { justify-content: center; }
+        .gap-1\.5 { gap: 0.375rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+
+        /* Grid */
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+        /* Spacing - Margin */
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+        .mb-14 { margin-bottom: 3.5rem; }
+        .mt-0\.5 { margin-top: 0.125rem; }
+        .mt-10 { margin-top: 2.5rem; }
+
+        /* Spacing - Padding */
+        .p-2 { padding: 0.5rem; }
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+        .px-8 { padding-left: 2rem; padding-right: 2rem; }
+        .px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-2\.5 { padding-top: 0.625rem; padding-bottom: 0.625rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+        .pt-8 { padding-top: 2rem; }
+        .pt-32 { padding-top: 8rem; }
+        .pb-20 { padding-bottom: 5rem; }
+
+        /* Sizing */
+        .w-full { width: 100%; }
+        .w-6 { width: 1.5rem; }
+        .w-16 { width: 4rem; }
+        .h-0\.5 { height: 0.125rem; }
+        .h-16 { height: 4rem; }
+        .max-w-2xl { max-width: 42rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .max-w-5xl { max-width: 64rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .max-w-7xl { max-width: 80rem; }
+
+        /* Typography */
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1; }
+        .text-6xl { font-size: 3.75rem; line-height: 1; }
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .font-normal { font-weight: 400; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .leading-tight { line-height: 1.25; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+
+        /* Colors */
+        .text-white { color: #ffffff; }
+        .text-teal { color: #0D9488; }
+        .text-slate { color: #94A3B8; }
+        .text-mint { color: #99F6E4; }
+        .text-red-400 { color: #f87171; }
+        .text-yellow-400 { color: #facc15; }
+        .bg-dark { background-color: #0F1229; }
+        .bg-teal { background-color: #0D9488; }
+        .bg-white { background-color: #ffffff; }
+        .bg-navy\/30 { background-color: rgba(26, 31, 61, 0.3); }
+        .bg-teal\/10 { background-color: rgba(13, 148, 136, 0.1); }
+        .bg-teal\/5 { background-color: rgba(13, 148, 136, 0.05); }
+        .bg-dark\/95 { background-color: rgba(15, 18, 41, 0.95); }
+
+        /* Borders */
+        .border { border-width: 1px; border-style: solid; }
+        .border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+        .border-t { border-top-width: 1px; border-top-style: solid; }
+        .border-white\/5 { border-color: rgba(255, 255, 255, 0.05); }
+        .border-white\/10 { border-color: rgba(255, 255, 255, 0.1); }
+        .border-white\/20 { border-color: rgba(255, 255, 255, 0.2); }
+        .border-teal { border-color: #0D9488; }
+        .border-teal\/20 { border-color: rgba(13, 148, 136, 0.2); }
+        .border-teal\/30 { border-color: rgba(13, 148, 136, 0.3); }
+        .border-teal\/50 { border-color: rgba(13, 148, 136, 0.5); }
+
+        /* Rounded */
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .rounded-full { border-radius: 9999px; }
+
+        /* Transitions */
+        .transition { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+        /* Opacity / alpha text */
+        .text-white\/60 { color: rgba(255, 255, 255, 0.6); }
+
+        /* Backdrop */
+        .backdrop-blur-xl { backdrop-filter: blur(24px); }
+
+        /* Transform */
+        .-translate-x-1\/2 { transform: translateX(-50%); }
+        .-top-3 { top: -0.75rem; }
+        .left-1\/2 { left: 50%; }
+
+        /* Space */
+        .space-y-2 > * + * { margin-top: 0.5rem; }
+
+        /* Gradient */
+        .bg-gradient-to-b.from-teal\/5.to-transparent {
+            background: linear-gradient(to bottom, rgba(13, 148, 136, 0.05), transparent);
+        }
+
+        /* Hover states */
+        .hover\:text-teal:hover { color: #0D9488; }
+        .hover\:text-white:hover { color: #ffffff; }
+        .hover\:bg-teal:hover { background-color: #0D9488; }
+        .hover\:bg-teal\/80:hover { background-color: rgba(13, 148, 136, 0.8); }
+        .hover\:border-teal\/50:hover { border-color: rgba(13, 148, 136, 0.5); }
+        .hover\:underline:hover { text-decoration: underline; }
+
+        /* Table */
+        table { border-collapse: collapse; }
+
+        /* List style */
+        ul { list-style: none; }
+
+        /* Links */
+        a { text-decoration: none; color: inherit; }
+
+        /* ===== Responsive: sm (640px) ===== */
+        @media (min-width: 640px) {
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:text-5xl { font-size: 3rem; line-height: 1; }
+            .sm\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .sm\:flex-row { flex-direction: row; }
+            .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+            .sm\:col-span-2 { grid-column: span 2 / span 2; }
+        }
+
+        /* ===== Responsive: md (768px) ===== */
+        @media (min-width: 768px) {
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+
+        /* ===== Responsive: lg (1024px) ===== */
+        @media (min-width: 1024px) {
+            .lg\:text-6xl { font-size: 3.75rem; line-height: 1; }
+            .lg\:flex { display: flex; }
+            .lg\:hidden { display: none; }
+            .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+            .lg\:col-span-1 { grid-column: span 1 / span 1; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AI Forge",
+        "description": "AI-Офис — команда из 16 AI-сотрудников для селлеров маркетплейсов",
+        "url": "https://ai-office.ru",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "url": "https://t.me/estetica_an"
+        },
+        "sameAs": ["https://t.me/estetica_an"]
+    }
+    </script>
+</head>
+<body class="bg-dark text-white font-inter">
+
+    <!-- Header -->
+    <header class="sticky-header fixed top-0 left-0 right-0 z-50 border-b border-white/5">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold text-white">AI-<span class="text-teal">Офис</span></a>
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-white font-medium hover:text-teal transition">Главная</a>
+                <a href="problems.html" class="text-slate hover:text-teal transition">Проблемы</a>
+                <a href="team.html" class="text-slate hover:text-teal transition">Команда</a>
+                <a href="how-it-works.html" class="text-slate hover:text-teal transition">Как работает</a>
+                <a href="pricing.html" class="text-slate hover:text-teal transition">Тарифы</a>
+                <a href="cases.html" class="text-slate hover:text-teal transition">Кейсы</a>
+                <a href="contact.html" class="bg-teal hover:bg-teal/80 text-white px-5 py-2 rounded-lg font-medium transition">Начать</a>
+            </div>
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Открыть меню">
+                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="lg:hidden hidden bg-dark/95 backdrop-blur-xl border-t border-white/5">
+            <div class="px-4 py-6 flex flex-col gap-4">
+                <a href="index.html" class="text-white font-medium py-2">Главная</a>
+                <a href="problems.html" class="text-slate hover:text-teal py-2 transition">Проблемы</a>
+                <a href="team.html" class="text-slate hover:text-teal py-2 transition">Команда</a>
+                <a href="how-it-works.html" class="text-slate hover:text-teal py-2 transition">Как работает</a>
+                <a href="pricing.html" class="text-slate hover:text-teal py-2 transition">Тарифы</a>
+                <a href="cases.html" class="text-slate hover:text-teal py-2 transition">Кейсы</a>
+                <a href="contact.html" class="bg-teal text-white px-5 py-3 rounded-lg font-medium text-center">Начать</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="pt-32 pb-20 px-4 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-teal/5 to-transparent"></div>
+            <div class="max-w-5xl mx-auto text-center relative z-10">
+                <div class="fade-in">
+                    <span class="inline-block bg-teal/10 text-teal px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-teal/20">Для селлеров WB и Ozon</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        <span class="text-teal">16 AI-сотрудников</span><br>для вашего бизнеса<br>на маркетплейсах
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate max-w-2xl mx-auto mb-10">
+                        Полноценная команда специалистов в Telegram. Работают 24/7, не болеют, не увольняются. От 30 000₽/мес вместо 200 000₽+ на штат.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="contact.html" class="bg-teal hover:bg-teal/80 text-white px-8 py-4 rounded-xl font-semibold text-lg transition glow">
+                            Попробовать 7 дней бесплатно
+                        </a>
+                        <a href="how-it-works.html" class="border border-white/20 hover:border-teal/50 text-white px-8 py-4 rounded-xl font-semibold text-lg transition">
+                            Как это работает?
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 ключевых преимущества -->
+        <section class="py-16 px-4">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card rounded-2xl p-8 text-center fade-in">
+                    <div class="text-5xl mb-4">🕐</div>
+                    <div class="text-4xl font-bold text-teal mb-2">24/7</div>
+                    <p class="text-slate">Работают круглосуточно без выходных и больничных</p>
+                </div>
+                <div class="card rounded-2xl p-8 text-center fade-in">
+                    <div class="text-5xl mb-4">⚡</div>
+                    <div class="text-4xl font-bold text-teal mb-2">x10</div>
+                    <p class="text-slate">Скорость выполнения задач по сравнению с фрилансером</p>
+                </div>
+                <div class="card rounded-2xl p-8 text-center fade-in">
+                    <div class="text-5xl mb-4">💰</div>
+                    <div class="text-4xl font-bold text-teal mb-2">−80%</div>
+                    <p class="text-slate">Расходы на команду по сравнению со штатными сотрудниками</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7 болей -->
+        <section class="py-20 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">7 болей селлера, которые мы <span class="text-teal">закрываем</span></h2>
+                    <p class="text-slate text-lg">Знакомо? Вы не одиноки — и у нас есть решение</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card rounded-2xl p-6 fade-in">
+                        <div class="text-3xl mb-3">😵</div>
+                        <h3 class="text-lg font-semibold mb-2">Одиночество решений</h3>
+                        <p class="text-slate text-sm mb-4">Все решения на вас одном. Не с кем посоветоваться, некому делегировать анализ.</p>
+                        <a href="problems.html#pain-1" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
+                    </div>
+                    <div class="card rounded-2xl p-6 fade-in">
+                        <div class="text-3xl mb-3">🌀</div>
+                        <h3 class="text-lg font-semibold mb-2">«Я быстрее сам»</h3>
+                        <p class="text-slate text-sm mb-4">Ловушка, когда делаешь всё сам и не растёшь, потому что нет времени на стратегию.</p>
+                        <a href="problems.html#pain-2" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
+                    </div>
+                    <div class="card rounded-2xl p-6 fade-in">
+                        <div class="text-3xl mb-3">💸</div>
+                        <h3 class="text-lg font-semibold mb-2">Невидимые потери</h3>
+                        <p class="text-slate text-sm mb-4">Убыточные SKU, высокий ДРР, слабые карточки — потери, которые вы не видите.</p>
+                        <a href="problems.html#pain-3" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
+                    </div>
+                    <div class="card rounded-2xl p-6 fade-in">
+                        <div class="text-3xl mb-3">😰</div>
+                        <h3 class="text-lg font-semibold mb-2">Страх конкуренции</h3>
+                        <p class="text-slate text-sm mb-4">Конкуренты используют AI, обновляют карточки — а вы отстаёте.</p>
+                        <a href="problems.html#pain-4" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
+                    </div>
+                    <div class="card rounded-2xl p-6 fade-in">
+                        <div class="text-3xl mb-3">🧠</div>
+                        <h3 class="text-lg font-semibold mb-2">Инфо-перегрузка</h3>
+                        <p class="text-slate text-sm mb-4">Сотни чатов, курсов, лайфхаков — а внедряете 0. Нужен один конкретный ответ.</p>
+                        <a href="problems.html#pain-5" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
+                    </div>
+                    <div class="card rounded-2xl p-6 fade-in">
+                        <div class="text-3xl mb-3">🏠</div>
+                        <h3 class="text-lg font-semibold mb-2">Бизнес поглощает жизнь</h3>
+                        <p class="text-slate text-sm mb-4">14-часовой рабочий день, без выходных, семья страдает.</p>
+                        <a href="problems.html#pain-6" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
+                    </div>
+                    <div class="card rounded-2xl p-6 fade-in sm:col-span-2 lg:col-span-1">
+                        <div class="text-3xl mb-3">🎭</div>
+                        <h3 class="text-lg font-semibold mb-2">Синдром самозванца</h3>
+                        <p class="text-slate text-sm mb-4">Все вокруг зарабатывают больше. Разница — в инструментах, а не в вас.</p>
+                        <a href="problems.html#pain-7" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
+                    </div>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="problems.html" class="text-teal font-medium hover:underline text-lg">Узнать подробнее о каждой проблеме →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6 ключевых ролей -->
+        <section class="py-20 px-4 bg-navy/30">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ваша <span class="text-teal">AI-команда</span></h2>
+                    <p class="text-slate text-lg">6 ключевых специалистов — и ещё 10 в полной команде</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card rounded-2xl p-6 scale-in">
+                        <div class="text-3xl mb-3">🔍</div>
+                        <h3 class="text-lg font-semibold mb-2">Аналитик</h3>
+                        <p class="text-slate text-sm">Анализ ниш, конкурентов, трендов. Находит точки роста и скрытые потери за 30 минут.</p>
+                    </div>
+                    <div class="card rounded-2xl p-6 scale-in">
+                        <div class="text-3xl mb-3">🎨</div>
+                        <h3 class="text-lg font-semibold mb-2">Дизайнер</h3>
+                        <p class="text-slate text-sm">Инфографика, карточки товаров, рич-контент. 7 слайдов за 1 час вместо 2 дней.</p>
+                    </div>
+                    <div class="card rounded-2xl p-6 scale-in">
+                        <div class="text-3xl mb-3">📝</div>
+                        <h3 class="text-lg font-semibold mb-2">Копирайтер</h3>
+                        <p class="text-slate text-sm">SEO-описания, заголовки, буллиты. Оптимизация под алгоритмы WB и Ozon.</p>
+                    </div>
+                    <div class="card rounded-2xl p-6 scale-in">
+                        <div class="text-3xl mb-3">📢</div>
+                        <h3 class="text-lg font-semibold mb-2">Рекламщик</h3>
+                        <p class="text-slate text-sm">Стратегия рекламы, расчёт бюджета, управление ставками, снижение ДРР.</p>
+                    </div>
+                    <div class="card rounded-2xl p-6 scale-in">
+                        <div class="text-3xl mb-3">🔎</div>
+                        <h3 class="text-lg font-semibold mb-2">Аудитор</h3>
+                        <p class="text-slate text-sm">Полный аудит кабинета: воронка, CTR, ABC-анализ, слабые карточки, гипотезы роста.</p>
+                    </div>
+                    <div class="card rounded-2xl p-6 scale-in">
+                        <div class="text-3xl mb-3">📊</div>
+                        <h3 class="text-lg font-semibold mb-2">Excel-аналитик</h3>
+                        <p class="text-slate text-sm">P&L, unit-экономика, расчёт маржи по SKU. Финансовая ясность за 30 минут.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="team.html" class="text-teal font-medium hover:underline text-lg">Все 16 сотрудников →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Как работает -->
+        <section class="py-20 px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Как <span class="text-teal">работает</span> AI-Офис</h2>
+                    <p class="text-slate text-lg">4 простых шага — от задачи до результата</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center fade-in">
+                        <div class="w-16 h-16 bg-teal/10 border border-teal/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-teal font-bold text-xl">1</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Пишете в Telegram</h3>
+                        <p class="text-slate text-sm">Описываете задачу обычным языком, как другу</p>
+                    </div>
+                    <div class="text-center fade-in">
+                        <div class="w-16 h-16 bg-teal/10 border border-teal/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-teal font-bold text-xl">2</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">AI назначает специалиста</h3>
+                        <p class="text-slate text-sm">Система определяет нужного сотрудника автоматически</p>
+                    </div>
+                    <div class="text-center fade-in">
+                        <div class="w-16 h-16 bg-teal/10 border border-teal/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-teal font-bold text-xl">3</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Специалист работает</h3>
+                        <p class="text-slate text-sm">Анализирует, создаёт, считает — за минуты, не дни</p>
+                    </div>
+                    <div class="text-center fade-in">
+                        <div class="w-16 h-16 bg-teal/10 border border-teal/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-teal font-bold text-xl">4</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Результат + обучение</h3>
+                        <p class="text-slate text-sm">Получаете готовый результат. AI учится на ваших правках</p>
+                    </div>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="how-it-works.html" class="text-teal font-medium hover:underline text-lg">Подробнее о процессе →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сравнение -->
+        <section class="py-20 px-4 bg-navy/30">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Штат vs Фрилансеры vs <span class="text-teal">AI-Офис</span></h2>
+                    <p class="text-slate text-lg">Сравните и убедитесь сами</p>
+                </div>
+                <div class="overflow-x-auto fade-in">
+                    <table class="w-full text-left table-zebra rounded-xl overflow-hidden">
+                        <thead>
+                            <tr class="border-b border-white/10">
+                                <th class="p-4 text-slate font-medium">Параметр</th>
+                                <th class="p-4 font-medium">Штат</th>
+                                <th class="p-4 font-medium">Фрилансеры</th>
+                                <th class="p-4 font-medium teal-col text-teal">AI-Офис ✓</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-white/5">
+                                <td class="p-4 text-slate">Стоимость/мес</td>
+                                <td class="p-4">280 000₽+</td>
+                                <td class="p-4">80 000₽+</td>
+                                <td class="p-4 teal-col font-semibold text-teal">30 000₽</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="p-4 text-slate">Скорость</td>
+                                <td class="p-4">Дни</td>
+                                <td class="p-4">1-3 дня</td>
+                                <td class="p-4 teal-col font-semibold text-teal">Минуты</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="p-4 text-slate">Доступность</td>
+                                <td class="p-4">9:00-18:00</td>
+                                <td class="p-4">Когда свободен</td>
+                                <td class="p-4 teal-col font-semibold text-teal">24/7</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="p-4 text-slate">Кол-во специалистов</td>
+                                <td class="p-4">2-3</td>
+                                <td class="p-4">1-2</td>
+                                <td class="p-4 teal-col font-semibold text-teal">16</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="p-4 text-slate">Больничные/отпуска</td>
+                                <td class="p-4">Да</td>
+                                <td class="p-4">Да</td>
+                                <td class="p-4 teal-col font-semibold text-teal">Нет</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 text-slate">Масштабирование</td>
+                                <td class="p-4">Долгий наём</td>
+                                <td class="p-4">Поиск новых</td>
+                                <td class="p-4 teal-col font-semibold text-teal">Моментально</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Тарифы -->
+        <section class="py-20 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Выберите <span class="text-teal">тариф</span></h2>
+                    <p class="text-slate text-lg">Начните с бесплатных 7 дней — без обязательств</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="card rounded-2xl p-6 fade-in">
+                        <h3 class="text-lg font-semibold mb-1">Старт</h3>
+                        <p class="text-slate text-sm mb-4">Для новичков</p>
+                        <div class="text-3xl font-bold mb-1">15-25К₽<span class="text-lg text-slate font-normal">/мес</span></div>
+                        <p class="text-slate text-sm mb-6">3 сотрудника, до 50 задач</p>
+                        <ul class="text-sm text-slate space-y-2 mb-6">
+                            <li>✓ Аналитик</li>
+                            <li>✓ Копирайтер</li>
+                            <li>✓ Дизайнер</li>
+                        </ul>
+                        <a href="contact.html" class="block text-center border border-teal text-teal py-2.5 rounded-lg hover:bg-teal hover:text-white transition font-medium">Выбрать</a>
+                    </div>
+                    <div class="card rounded-2xl p-6 border-teal/50 relative fade-in">
+                        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-teal text-white text-xs font-semibold px-3 py-1 rounded-full">Популярный</span>
+                        <h3 class="text-lg font-semibold mb-1">Бизнес</h3>
+                        <p class="text-slate text-sm mb-4">Для растущих</p>
+                        <div class="text-3xl font-bold mb-1">30-50К₽<span class="text-lg text-slate font-normal">/мес</span></div>
+                        <p class="text-slate text-sm mb-6">8 сотрудников, безлимит</p>
+                        <ul class="text-sm text-slate space-y-2 mb-6">
+                            <li>✓ Всё из «Старт»</li>
+                            <li>✓ Рекламщик</li>
+                            <li>✓ Аудитор</li>
+                            <li>✓ Excel-аналитик</li>
+                            <li>✓ Приоритетная поддержка</li>
+                        </ul>
+                        <a href="contact.html" class="block text-center bg-teal text-white py-2.5 rounded-lg hover:bg-teal/80 transition font-medium glow">Выбрать</a>
+                    </div>
+                    <div class="card rounded-2xl p-6 fade-in">
+                        <h3 class="text-lg font-semibold mb-1">Масштаб</h3>
+                        <p class="text-slate text-sm mb-4">Для крупных</p>
+                        <div class="text-3xl font-bold mb-1">50-100К₽<span class="text-lg text-slate font-normal">/мес</span></div>
+                        <p class="text-slate text-sm mb-6">16 сотрудников, менеджер</p>
+                        <ul class="text-sm text-slate space-y-2 mb-6">
+                            <li>✓ Все 16 сотрудников</li>
+                            <li>✓ Стратегические сессии</li>
+                            <li>✓ Выделенный менеджер</li>
+                        </ul>
+                        <a href="contact.html" class="block text-center border border-teal text-teal py-2.5 rounded-lg hover:bg-teal hover:text-white transition font-medium">Выбрать</a>
+                    </div>
+                    <div class="card rounded-2xl p-6 fade-in">
+                        <h3 class="text-lg font-semibold mb-1">Агентство</h3>
+                        <p class="text-slate text-sm mb-4">Для агентств</p>
+                        <div class="text-3xl font-bold mb-1">100-200К₽<span class="text-lg text-slate font-normal">/мес</span></div>
+                        <p class="text-slate text-sm mb-6">Мульти-кабинет, white label</p>
+                        <ul class="text-sm text-slate space-y-2 mb-6">
+                            <li>✓ Всё из «Масштаб»</li>
+                            <li>✓ 20+ клиентов</li>
+                            <li>✓ White label</li>
+                            <li>✓ API доступ</li>
+                        </ul>
+                        <a href="contact.html" class="block text-center border border-teal text-teal py-2.5 rounded-lg hover:bg-teal hover:text-white transition font-medium">Выбрать</a>
+                    </div>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="pricing.html" class="text-teal font-medium hover:underline text-lg">Подробнее о тарифах →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отзывы/кейсы -->
+        <section class="py-20 px-4 bg-navy/30">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Реальные <span class="text-teal">результаты</span></h2>
+                    <p class="text-slate text-lg">Что получают селлеры с AI-Офисом</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <article class="card rounded-2xl p-6 fade-in">
+                        <div class="text-teal font-semibold mb-2">Аудит кабинета</div>
+                        <h3 class="text-xl font-bold mb-3">Нашли 40К₽ скрытых потерь</h3>
+                        <p class="text-slate text-sm mb-4">Селлер с оборотом 1.5М₽ не знал, что 4 SKU убыточные. AI-аудитор нашёл потери, маржа выросла на 35%.</p>
+                        <div class="flex gap-4 text-sm">
+                            <span class="text-teal font-medium">+35% маржи</span>
+                            <span class="text-slate">за 2 часа</span>
+                        </div>
+                    </article>
+                    <article class="card rounded-2xl p-6 fade-in">
+                        <div class="text-teal font-semibold mb-2">Запуск товара</div>
+                        <h3 class="text-xl font-bold mb-3">5 дней вместо месяца</h3>
+                        <p class="text-slate text-sm mb-4">Цепочка AI: анализ ниши → карточки → SEO → рекламная стратегия. Первый заказ на 5-й день.</p>
+                        <div class="flex gap-4 text-sm">
+                            <span class="text-teal font-medium">x6 быстрее</span>
+                            <span class="text-slate">от идеи до заказа</span>
+                        </div>
+                    </article>
+                    <article class="card rounded-2xl p-6 fade-in">
+                        <div class="text-teal font-semibold mb-2">Экономия</div>
+                        <h3 class="text-xl font-bold mb-3">−180К₽/мес на команде</h3>
+                        <p class="text-slate text-sm mb-4">Заменил штат из 4 человек (200К₽) на AI-Офис (40К₽) + 1 менеджер. Скорость выросла в 3 раза.</p>
+                        <div class="flex gap-4 text-sm">
+                            <span class="text-teal font-medium">−80К₽/мес</span>
+                            <span class="text-slate">x3 скорость</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="cases.html" class="text-teal font-medium hover:underline text-lg">Все кейсы →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 px-4">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6">Попробуйте <span class="text-teal">7 дней бесплатно</span></h2>
+                <p class="text-slate text-lg mb-10">Без привязки карты. Полный доступ ко всем 16 AI-сотрудникам. Убедитесь сами — это работает.</p>
+                <a href="contact.html" class="inline-block bg-teal hover:bg-teal/80 text-white px-10 py-4 rounded-xl font-semibold text-lg transition glow">
+                    Начать бесплатно
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="text-xl font-bold mb-4">AI-<span class="text-teal">Офис</span></div>
+                    <p class="text-slate text-sm">16 AI-сотрудников для вашего бизнеса на маркетплейсах</p>
+                </div>
+                <div>
+                    <div class="font-semibold mb-4">Страницы</div>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li><a href="problems.html" class="hover:text-teal transition">Проблемы</a></li>
+                        <li><a href="team.html" class="hover:text-teal transition">Команда</a></li>
+                        <li><a href="how-it-works.html" class="hover:text-teal transition">Как работает</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="font-semibold mb-4">Ещё</div>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li><a href="pricing.html" class="hover:text-teal transition">Тарифы</a></li>
+                        <li><a href="cases.html" class="hover:text-teal transition">Кейсы</a></li>
+                        <li><a href="contact.html" class="hover:text-teal transition">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="font-semibold mb-4">Связаться</div>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li><a href="https://t.me/estetica_an" class="hover:text-teal transition" target="_blank" rel="noopener">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate">
+                <span>AI Forge © 2026</span>
+                <span>@estetica_an</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS: Mobile menu + Scroll animations -->
+    <script>
+        // Mobile menu
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('menu-open');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.05 });
+
+        document.querySelectorAll('.fade-in, .scale-in').forEach(el => observer.observe(el));
+    </script>
+<script>setTimeout(function(){document.querySelectorAll(".fade-in,.scale-in").forEach(function(el){el.classList.add("visible")})},2000)</script></body>
+</html>

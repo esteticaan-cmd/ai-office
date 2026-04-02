@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Начать работу с AI-Офисом — бесплатный тестовый период 7 дней</title>
+    <meta name="description" content="Напишите в Telegram и получите 7 дней бесплатного доступа к AI-Офису. Полная команда из 16 AI-сотрудников.">
+    <meta property="og:title" content="Начать работу с AI-Офисом — 7 дней бесплатно">
+    <meta property="og:description" content="Напишите в Telegram и получите 7 дней бесплатного доступа к AI-Офису.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-office.ru/contact">
+    <meta property="og:image" content="https://ai-office.ru/og-image.jpg">
+    <link rel="canonical" href="https://ai-office.ru/contact">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ===== Tailwind Utility Classes ===== */
+
+        /* Font */
+        .font-inter { font-family: 'Inter', sans-serif; }
+
+        /* Background colors */
+        .bg-dark { background-color: #0F1229; }
+        .bg-dark\/95 { background-color: rgba(15, 18, 41, 0.95); }
+        .bg-teal { background-color: #0D9488; }
+        .bg-teal\/10 { background-color: rgba(13, 148, 136, 0.1); }
+        .bg-teal\/80 { background-color: rgba(13, 148, 136, 0.8); }
+        .bg-navy { background-color: #1A1F3D; }
+        .bg-navy\/30 { background-color: rgba(26, 31, 61, 0.3); }
+        .bg-navy\/50 { background-color: rgba(26, 31, 61, 0.5); }
+        .bg-white { background-color: #fff; }
+
+        /* Text colors */
+        .text-white { color: #fff; }
+        .text-teal { color: #0D9488; }
+        .text-slate { color: #94A3B8; }
+        .text-red-400 { color: #f87171; }
+
+        /* Placeholder */
+        .placeholder-slate\/50::placeholder { color: rgba(148, 163, 184, 0.5); }
+
+        /* Border colors */
+        .border-white\/5 { border-color: rgba(255, 255, 255, 0.05); }
+        .border-white\/10 { border-color: rgba(255, 255, 255, 0.1); }
+        .border-teal { border-color: #0D9488; }
+        .border-teal\/20 { border-color: rgba(13, 148, 136, 0.2); }
+
+        /* Border style */
+        .border { border-width: 1px; border-style: solid; }
+        .border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+        .border-t { border-top-width: 1px; border-top-style: solid; }
+
+        /* Border radius */
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .rounded-full { border-radius: 9999px; }
+
+        /* Display */
+        .block { display: block; }
+        .inline-block { display: inline-block; }
+        .hidden { display: none; }
+        .flex { display: flex; }
+        .grid { display: grid; }
+
+        /* Flexbox */
+        .flex-col { flex-direction: column; }
+        .flex-shrink-0 { flex-shrink: 0; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-center { justify-content: center; }
+        .gap-1\.5 { gap: 0.375rem; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+
+        /* Grid */
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+        /* Spacing utilities */
+        .space-y-2 > * + * { margin-top: 0.5rem; }
+        .space-y-4 > * + * { margin-top: 1rem; }
+        .space-y-6 > * + * { margin-top: 1.5rem; }
+
+        /* Position */
+        .fixed { position: fixed; }
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .top-0 { top: 0; }
+        .left-0 { left: 0; }
+        .right-0 { right: 0; }
+        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+        .z-10 { z-index: 10; }
+        .z-50 { z-index: 50; }
+
+        /* Overflow */
+        .overflow-hidden { overflow: hidden; }
+
+        /* Width & Height */
+        .w-full { width: 100%; }
+        .w-5 { width: 1.25rem; }
+        .w-6 { width: 1.5rem; }
+        .w-12 { width: 3rem; }
+        .w-20 { width: 5rem; }
+        .h-0\.5 { height: 0.125rem; }
+        .h-5 { height: 1.25rem; }
+        .h-12 { height: 3rem; }
+        .h-16 { height: 4rem; }
+        .h-20 { height: 5rem; }
+        .max-w-2xl { max-width: 42rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .max-w-5xl { max-width: 64rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .max-w-7xl { max-width: 80rem; }
+
+        /* Margin */
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .mx-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+        .mb-12 { margin-bottom: 3rem; }
+        .mt-1 { margin-top: 0.25rem; }
+        .mt-4 { margin-top: 1rem; }
+        .mt-6 { margin-top: 1.5rem; }
+
+        /* Padding */
+        .p-2 { padding: 0.5rem; }
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .p-10 { padding: 2.5rem; }
+        .p-14 { padding: 3.5rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .px-8 { padding-left: 2rem; padding-right: 2rem; }
+        .px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+        .pt-8 { padding-top: 2rem; }
+        .pt-24 { padding-top: 6rem; }
+        .pb-4 { padding-bottom: 1rem; }
+        .pb-5 { padding-bottom: 1.25rem; }
+        .pb-16 { padding-bottom: 4rem; }
+
+        /* Typography */
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1; }
+        .text-6xl { font-size: 3.75rem; line-height: 1; }
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .leading-tight { line-height: 1.25; }
+
+        /* Form */
+        .resize-y { resize: vertical; }
+        .appearance-none { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+        /* Focus states */
+        .focus\:border-teal:focus { border-color: #0D9488; }
+        .focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; }
+
+        /* Transitions */
+        .transition { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+        .transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+        .duration-300 { transition-duration: 300ms; }
+
+        /* Hover states */
+        .hover\:text-teal:hover { color: #0D9488; }
+        .hover\:bg-teal\/80:hover { background-color: rgba(13, 148, 136, 0.8); }
+        .hover\:scale-105:hover { transform: scale(1.05); }
+
+        /* Gradient */
+        .bg-gradient-to-b { background: linear-gradient(to bottom, var(--tw-gradient-from), var(--tw-gradient-to)); }
+        .from-teal\/5 { --tw-gradient-from: rgba(13, 148, 136, 0.05); }
+        .to-transparent { --tw-gradient-to: transparent; }
+
+        /* Backdrop */
+        .backdrop-blur-xl { backdrop-filter: blur(24px); }
+
+        /* Responsive: sm (640px) */
+        @media (min-width: 640px) {
+            .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+            .sm\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .sm\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:text-5xl { font-size: 3rem; line-height: 1; }
+            .sm\:flex-row { flex-direction: row; }
+            .sm\:p-14 { padding: 3.5rem; }
+        }
+
+        /* Responsive: md (768px) */
+        @media (min-width: 768px) {
+            .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+
+        /* Responsive: lg (1024px) */
+        @media (min-width: 1024px) {
+            .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+            .lg\:flex { display: flex; }
+            .lg\:hidden { display: none; }
+            .lg\:text-6xl { font-size: 3.75rem; line-height: 1; }
+        }
+
+        /* ===== Custom CSS ===== */
+        body { font-family: 'Inter', sans-serif; background: #0F1229; color: #fff; }
+        .glow { box-shadow: 0 0 30px rgba(13, 148, 136, 0.4); }
+        .glow:hover { box-shadow: 0 0 50px rgba(13, 148, 136, 0.6); }
+        .card { background: rgba(26, 31, 61, 0.7); border: 1px solid rgba(148, 163, 184, 0.1); }
+        .card:hover { border-color: rgba(13, 148, 136, 0.3); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .scale-in { opacity: 0; transform: scale(0.9); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .scale-in.visible { opacity: 1; transform: scale(1); }
+        .sticky-header { backdrop-filter: blur(20px); background: rgba(15, 18, 41, 0.8); }
+        .hamburger-line { transition: all 0.3s ease; }
+        .menu-open .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .menu-open .hamburger-line:nth-child(2) { opacity: 0; }
+        .menu-open .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Начать работу с AI-Офисом",
+        "description": "Напишите в Telegram и получите 7 дней бесплатного доступа к AI-Офису. Полная команда из 16 AI-сотрудников.",
+        "url": "https://ai-office.ru/contact",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "AI Forge",
+            "url": "https://ai-office.ru",
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "contactType": "sales",
+                    "url": "https://t.me/estetica_an",
+                    "availableLanguage": "Russian"
+                },
+                {
+                    "@type": "ContactPoint",
+                    "contactType": "customer support",
+                    "email": "info@ai-office.ru",
+                    "availableLanguage": "Russian"
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body class="bg-dark text-white font-inter">
+
+    <!-- Header -->
+    <header class="sticky-header fixed top-0 left-0 right-0 z-50 border-b border-white/5">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold text-white">AI-<span class="text-teal">Офис</span></a>
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-slate hover:text-teal transition">Главная</a>
+                <a href="problems.html" class="text-slate hover:text-teal transition">Проблемы</a>
+                <a href="team.html" class="text-slate hover:text-teal transition">Команда</a>
+                <a href="how-it-works.html" class="text-slate hover:text-teal transition">Как работает</a>
+                <a href="pricing.html" class="text-slate hover:text-teal transition">Тарифы</a>
+                <a href="cases.html" class="text-slate hover:text-teal transition">Кейсы</a>
+                <a href="contact.html" class="bg-teal hover:bg-teal/80 text-white px-5 py-2 rounded-lg font-medium transition">Начать</a>
+            </div>
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Открыть меню">
+                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="lg:hidden hidden bg-dark/95 backdrop-blur-xl border-t border-white/5">
+            <div class="px-4 py-6 flex flex-col gap-4">
+                <a href="index.html" class="text-slate hover:text-teal py-2 transition">Главная</a>
+                <a href="problems.html" class="text-slate hover:text-teal py-2 transition">Проблемы</a>
+                <a href="team.html" class="text-slate hover:text-teal py-2 transition">Команда</a>
+                <a href="how-it-works.html" class="text-slate hover:text-teal py-2 transition">Как работает</a>
+                <a href="pricing.html" class="text-slate hover:text-teal py-2 transition">Тарифы</a>
+                <a href="cases.html" class="text-slate hover:text-teal py-2 transition">Кейсы</a>
+                <a href="contact.html" class="bg-teal text-white px-5 py-3 rounded-lg font-medium text-center">Начать</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <section class="pt-24 pb-4 px-4">
+            <div class="max-w-5xl mx-auto">
+                <nav aria-label="Breadcrumb" class="text-sm text-slate">
+                    <a href="index.html" class="hover:text-teal transition">Главная</a>
+                    <span class="mx-2">/</span>
+                    <span class="text-white">Начать работу</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Hero -->
+        <section class="pt-8 pb-16 px-4 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-teal/5 to-transparent"></div>
+            <div class="max-w-5xl mx-auto text-center relative z-10">
+                <div class="fade-in">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Начните работу с <span class="text-teal">AI-Офисом</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate max-w-2xl mx-auto">
+                        7 дней бесплатно. 16 AI-сотрудников. Без привязки карты.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Big CTA Telegram -->
+        <section class="py-12 px-4">
+            <div class="max-w-2xl mx-auto fade-in">
+                <div class="card rounded-2xl p-10 sm:p-14 text-center glow">
+                    <!-- Telegram Icon SVG -->
+                    <div class="mb-6">
+                        <svg class="w-20 h-20 mx-auto text-teal" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.15"/>
+                            <path d="M34.29 14.07L10.78 23.31c-1.6.64-1.59 1.54-.29 1.94l6.04 1.88 2.32 7.12c.28.78.14 1.09.81 1.09.52 0 .75-.24 1.04-.52l2.5-2.43 6.1 4.51c1.12.62 1.93.3 2.21-.84l4-18.86c.41-1.64-.63-2.38-1.72-1.9l-.54.23zM18.91 27.44l-.68 6.44-.01.01L17 29.11l13.82-8.72c.65-.39 1.25-.18.76.25L18.91 27.44z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-3">Напишите нам в Telegram</h2>
+                    <p class="text-slate text-lg mb-8">@estetica_an</p>
+                    <a href="https://t.me/estetica_an" target="_blank" rel="noopener" class="inline-block bg-teal hover:bg-teal/80 text-white px-10 py-4 rounded-xl font-semibold text-lg transition glow">
+                        Написать в Telegram
+                    </a>
+                    <p class="text-slate text-sm mt-6">Обычно отвечаем за 5 минут</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="py-16 px-4">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10 fade-in">Или оставьте <span class="text-teal">заявку</span></h2>
+                <form id="contactForm" action="#" method="POST" class="space-y-6 fade-in" novalidate>
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-2">Имя</label>
+                        <input type="text" id="name" name="name" required placeholder="Ваше имя"
+                               class="w-full bg-navy/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate/50 focus:border-teal focus:outline-none transition">
+                        <p class="text-red-400 text-sm mt-1 hidden" data-error="name">Пожалуйста, укажите имя</p>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium mb-2">Телефон</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__"
+                               class="w-full bg-navy/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate/50 focus:border-teal focus:outline-none transition">
+                        <p class="text-red-400 text-sm mt-1 hidden" data-error="phone">Пожалуйста, укажите телефон</p>
+                    </div>
+                    <div>
+                        <label for="revenue" class="block text-sm font-medium mb-2">Ваш оборот на маркетплейсе</label>
+                        <select id="revenue" name="revenue"
+                                class="w-full bg-navy/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-teal focus:outline-none transition appearance-none">
+                            <option value="" class="bg-navy">Выберите</option>
+                            <option value="under500k" class="bg-navy">До 500К₽</option>
+                            <option value="500k-1m" class="bg-navy">500К - 1М₽</option>
+                            <option value="1m-3m" class="bg-navy">1М - 3М₽</option>
+                            <option value="3m-10m" class="bg-navy">3М - 10М₽</option>
+                            <option value="10m+" class="bg-navy">10М₽+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium mb-2">Что вам нужно?</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Расскажите о вашей задаче..."
+                                  class="w-full bg-navy/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate/50 focus:border-teal focus:outline-none transition resize-y"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-teal hover:bg-teal/80 text-white px-8 py-4 rounded-xl font-semibold text-lg transition glow">
+                        Отправить заявку
+                    </button>
+                    <p id="formSuccess" class="text-teal text-center font-medium hidden">Заявка отправлена! Мы свяжемся с вами в ближайшее время.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- 3 Ways to Contact -->
+        <section class="py-16 px-4 bg-navy/30">
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="https://t.me/estetica_an" target="_blank" rel="noopener" class="card rounded-2xl p-8 text-center scale-in hover:scale-105 transition-transform">
+                        <div class="mb-4">
+                            <svg class="w-12 h-12 mx-auto text-teal" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M34.29 14.07L10.78 23.31c-1.6.64-1.59 1.54-.29 1.94l6.04 1.88 2.32 7.12c.28.78.14 1.09.81 1.09.52 0 .75-.24 1.04-.52l2.5-2.43 6.1 4.51c1.12.62 1.93.3 2.21-.84l4-18.86c.41-1.64-.63-2.38-1.72-1.9l-.54.23zM18.91 27.44l-.68 6.44-.01.01L17 29.11l13.82-8.72c.65-.39 1.25-.18.76.25L18.91 27.44z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Telegram</h3>
+                        <p class="text-teal font-medium">@estetica_an</p>
+                    </a>
+                    <a href="https://wa.me/" target="_blank" rel="noopener" class="card rounded-2xl p-8 text-center scale-in hover:scale-105 transition-transform">
+                        <div class="mb-4">
+                            <svg class="w-12 h-12 mx-auto text-teal" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 4C12.95 4 4 12.95 4 24c0 3.54.93 6.86 2.55 9.74L4 44l10.54-2.47A19.87 19.87 0 0024 44c11.05 0 20-8.95 20-20S35.05 4 24 4zm0 36.5a16.42 16.42 0 01-8.58-2.41l-.61-.37-6.32 1.66 1.69-6.17-.4-.64A16.42 16.42 0 017.5 24c0-9.11 7.39-16.5 16.5-16.5S40.5 14.89 40.5 24 33.11 40.5 24 40.5zm9.03-12.33c-.5-.25-2.94-1.45-3.39-1.62-.46-.16-.79-.25-1.12.25-.33.5-1.29 1.62-1.58 1.95-.29.33-.58.37-1.08.12-.5-.25-2.1-.77-4-2.46-1.48-1.32-2.48-2.95-2.77-3.45-.29-.5-.03-.77.22-1.02.22-.22.5-.58.75-.87.25-.29.33-.5.5-.83.16-.33.08-.62-.04-.87-.12-.25-1.12-2.7-1.54-3.7-.4-.97-.82-.84-1.12-.85-.29-.02-.62-.02-.96-.02s-.87.12-1.33.62c-.46.5-1.74 1.7-1.74 4.15s1.78 4.81 2.03 5.15c.25.33 3.51 5.36 8.51 7.51 1.19.51 2.12.82 2.84 1.05 1.19.38 2.28.33 3.14.2.96-.14 2.94-1.2 3.36-2.36.41-1.16.41-2.15.29-2.36-.12-.2-.46-.33-.96-.58z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">WhatsApp</h3>
+                        <p class="text-teal font-medium">Написать</p>
+                    </a>
+                    <a href="mailto:info@ai-office.ru" class="card rounded-2xl p-8 text-center scale-in hover:scale-105 transition-transform">
+                        <div class="mb-4">
+                            <svg class="w-12 h-12 mx-auto text-teal" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M40 12H8c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h32c1.1 0 2-.9 2-2V14c0-1.1-.9-2-2-2zm0 4l-16 10L8 16v-2l16 10 16-10v2z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Email</h3>
+                        <p class="text-teal font-medium">info@ai-office.ru</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Accordion -->
+        <section class="py-20 px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 fade-in">Частые <span class="text-teal">вопросы</span></h2>
+                <div class="space-y-4 fade-in">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item card rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                            <span class="font-semibold text-lg">Как быстро я получу доступ?</span>
+                            <svg class="faq-icon w-5 h-5 text-teal flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5">
+                            <p class="text-slate">Сразу после регистрации. Напишите в Telegram — и бот AI-Офиса будет доступен в течение 5 минут.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="faq-item card rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                            <span class="font-semibold text-lg">Нужно ли устанавливать приложение?</span>
+                            <svg class="faq-icon w-5 h-5 text-teal flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5">
+                            <p class="text-slate">Нет. AI-Офис работает прямо в Telegram. Никаких дополнительных приложений или программ.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="faq-item card rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                            <span class="font-semibold text-lg">Подходит ли для новичков?</span>
+                            <svg class="faq-icon w-5 h-5 text-teal flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5">
+                            <p class="text-slate">Да! Тариф «Старт» создан специально для тех, кто только начинает. AI-наставник поможет разобраться.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <div class="faq-item card rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                            <span class="font-semibold text-lg">Что если AI ошибётся?</span>
+                            <svg class="faq-icon w-5 h-5 text-teal flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5">
+                            <p class="text-slate">Вы всегда можете скорректировать результат. AI учится на ваших правках и с каждым разом работает точнее.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 5 -->
+                    <div class="faq-item card rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                            <span class="font-semibold text-lg">Можно ли использовать для Ozon и WB одновременно?</span>
+                            <svg class="faq-icon w-5 h-5 text-teal flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5">
+                            <p class="text-slate">Да, AI-Офис работает с обоими маркетплейсами. Можете вести несколько кабинетов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guarantees -->
+        <section class="py-16 px-4 bg-navy/30">
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="card rounded-2xl p-8 text-center scale-in">
+                        <div class="text-5xl mb-4">🎁</div>
+                        <h3 class="text-xl font-bold mb-2">7 дней бесплатно</h3>
+                        <p class="text-slate">Полный доступ без ограничений</p>
+                    </div>
+                    <div class="card rounded-2xl p-8 text-center scale-in">
+                        <div class="text-5xl mb-4">💳</div>
+                        <h3 class="text-xl font-bold mb-2">Без привязки карты</h3>
+                        <p class="text-slate">Никаких скрытых платежей</p>
+                    </div>
+                    <div class="card rounded-2xl p-8 text-center scale-in">
+                        <div class="text-5xl mb-4">↩️</div>
+                        <h3 class="text-xl font-bold mb-2">Возврат 14 дней</h3>
+                        <p class="text-slate">Если не понравится — вернём деньги</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="text-xl font-bold mb-4">AI-<span class="text-teal">Офис</span></div>
+                    <p class="text-slate text-sm">16 AI-сотрудников для вашего бизнеса на маркетплейсах</p>
+                </div>
+                <div>
+                    <div class="font-semibold mb-4">Страницы</div>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li><a href="problems.html" class="hover:text-teal transition">Проблемы</a></li>
+                        <li><a href="team.html" class="hover:text-teal transition">Команда</a></li>
+                        <li><a href="how-it-works.html" class="hover:text-teal transition">Как работает</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="font-semibold mb-4">Ещё</div>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li><a href="pricing.html" class="hover:text-teal transition">Тарифы</a></li>
+                        <li><a href="cases.html" class="hover:text-teal transition">Кейсы</a></li>
+                        <li><a href="contact.html" class="hover:text-teal transition">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="font-semibold mb-4">Связаться</div>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li><a href="https://t.me/estetica_an" class="hover:text-teal transition" target="_blank" rel="noopener">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate">
+                <span>AI Forge © 2026</span>
+                <span>@estetica_an</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS: Mobile menu + Scroll animations + FAQ accordion + Form validation -->
+    <script>
+        // Mobile menu
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('menu-open');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.05 });
+
+        document.querySelectorAll('.fade-in, .scale-in').forEach(el => observer.observe(el));
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('.faq-icon');
+                const isOpen = !content.classList.contains('hidden');
+
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.querySelector('.faq-content').classList.add('hidden');
+                    faq.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                    faq.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle current
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Form validation
+        const form = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            // Reset errors
+            form.querySelectorAll('[data-error]').forEach(err => err.classList.add('hidden'));
+
+            // Validate name
+            const name = form.querySelector('#name');
+            if (!name.value.trim()) {
+                form.querySelector('[data-error="name"]').classList.remove('hidden');
+                isValid = false;
+            }
+
+            // Validate phone
+            const phone = form.querySelector('#phone');
+            if (!phone.value.trim()) {
+                form.querySelector('[data-error="phone"]').classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (isValid) {
+                formSuccess.classList.remove('hidden');
+                form.reset();
+                setTimeout(() => {
+                    formSuccess.classList.add('hidden');
+                }, 5000);
+            }
+        });
+
+        // Clear error on input
+        form.querySelectorAll('input[required]').forEach(input => {
+            input.addEventListener('input', () => {
+                const errorEl = form.querySelector(`[data-error="${input.id}"]`);
+                if (errorEl) errorEl.classList.add('hidden');
+            });
+        });
+    </script>
+<script>setTimeout(function(){document.querySelectorAll(".fade-in,.scale-in").forEach(function(el){el.classList.add("visible")})},2000)</script></body>
+</html>

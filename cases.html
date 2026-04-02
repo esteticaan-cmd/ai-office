@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейсы AI-Офиса — реальные примеры для селлеров</title>
+    <meta name="description" content="Как AI-Офис помогает селлерам: аудит кабинета, создание карточек, оптимизация рекламы. Примеры до/после.">
+    <meta property="og:title" content="Кейсы AI-Офиса — реальные примеры для селлеров">
+    <meta property="og:description" content="Примеры до/после: аудит кабинета, создание карточек, оптимизация рекламы.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-office.ru/cases">
+    <meta property="og:image" content="https://ai-office.ru/og-image.jpg">
+    <link rel="canonical" href="https://ai-office.ru/cases">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ===== Custom styles ===== */
+        body { font-family: 'Inter', sans-serif; background: #0F1229; color: #fff; }
+        .glow { box-shadow: 0 0 30px rgba(13, 148, 136, 0.4); }
+        .glow:hover { box-shadow: 0 0 50px rgba(13, 148, 136, 0.6); }
+        .card { background: rgba(26, 31, 61, 0.7); border: 1px solid rgba(148, 163, 184, 0.1); }
+        .card:hover { border-color: rgba(13, 148, 136, 0.3); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .scale-in { opacity: 0; transform: scale(0.9); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .scale-in.visible { opacity: 1; transform: scale(1); }
+        .sticky-header { backdrop-filter: blur(20px); background: rgba(15, 18, 41, 0.8); }
+        .hamburger-line { transition: all 0.3s ease; }
+        .menu-open .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .menu-open .hamburger-line:nth-child(2) { opacity: 0; }
+        .menu-open .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+
+        /* ===== Tailwind utility classes ===== */
+        *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* Font */
+        .font-inter { font-family: 'Inter', sans-serif; }
+
+        /* Background colors */
+        .bg-dark { background-color: #0F1229; }
+        .bg-dark\/60 { background-color: rgba(15, 18, 41, 0.6); }
+        .bg-dark\/95 { background-color: rgba(15, 18, 41, 0.95); }
+        .bg-teal { background-color: #0D9488; }
+        .bg-teal\/5 { background-color: rgba(13, 148, 136, 0.05); }
+        .bg-teal\/10 { background-color: rgba(13, 148, 136, 0.1); }
+        .bg-teal\/80 { background-color: rgba(13, 148, 136, 0.8); }
+        .bg-navy\/30 { background-color: rgba(26, 31, 61, 0.3); }
+        .bg-white { background-color: #fff; }
+
+        /* Text colors */
+        .text-white { color: #fff; }
+        .text-teal { color: #0D9488; }
+        .text-slate { color: #94A3B8; }
+        .text-red-400 { color: #f87171; }
+
+        /* Border colors */
+        .border-white\/5 { border-color: rgba(255, 255, 255, 0.05); }
+        .border-white\/10 { border-color: rgba(255, 255, 255, 0.1); }
+        .border-teal { border-color: #0D9488; }
+        .border-teal\/20 { border-color: rgba(13, 148, 136, 0.2); }
+
+        /* Border styles */
+        .border { border-width: 1px; border-style: solid; }
+        .border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+        .border-t { border-top-width: 1px; border-top-style: solid; }
+
+        /* Layout */
+        .block { display: block; }
+        .inline-block { display: inline-block; }
+        .hidden { display: none; }
+        .flex { display: flex; }
+        .grid { display: grid; }
+
+        /* Flexbox */
+        .flex-col { flex-direction: column; }
+        .flex-wrap { flex-wrap: wrap; }
+        .flex-1 { flex: 1 1 0%; }
+        .items-center { align-items: center; }
+        .items-start { align-items: flex-start; }
+        .justify-between { justify-content: space-between; }
+        .justify-center { justify-content: center; }
+        .gap-1\.5 { gap: 0.375rem; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+
+        /* Grid */
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+        /* Spacing */
+        .space-y-2 > * + * { margin-top: 0.5rem; }
+        .space-y-3 > * + * { margin-top: 0.75rem; }
+
+        /* Position */
+        .fixed { position: fixed; }
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .top-0 { top: 0; }
+        .left-0 { left: 0; }
+        .right-0 { right: 0; }
+        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+        .z-10 { z-index: 10; }
+        .z-50 { z-index: 50; }
+        .overflow-hidden { overflow: hidden; }
+
+        /* Width & Height */
+        .w-full { width: 100%; }
+        .w-6 { width: 1.5rem; }
+        .h-0\.5 { height: 0.125rem; }
+        .h-16 { height: 4rem; }
+        .max-w-7xl { max-width: 80rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .max-w-5xl { max-width: 64rem; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .max-w-2xl { max-width: 42rem; }
+        .min-w-\[140px\] { min-width: 140px; }
+
+        /* Margin */
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .mx-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+        .mt-1 { margin-top: 0.25rem; }
+        .mt-10 { margin-top: 2.5rem; }
+
+        /* Padding */
+        .p-2 { padding: 0.5rem; }
+        .p-3 { padding: 0.75rem; }
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-10 { padding: 2.5rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+        .pt-8 { padding-top: 2rem; }
+        .pt-24 { padding-top: 6rem; }
+        .pb-4 { padding-bottom: 1rem; }
+        .pb-16 { padding-bottom: 4rem; }
+        .px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+
+        /* Typography */
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1; }
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .font-normal { font-weight: 400; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .leading-tight { line-height: 1.25; }
+        .leading-relaxed { line-height: 1.625; }
+        .tracking-wider { letter-spacing: 0.05em; }
+        .uppercase { text-transform: uppercase; }
+
+        /* Border radius */
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .rounded-3xl { border-radius: 1.5rem; }
+        .rounded-full { border-radius: 9999px; }
+
+        /* Transition */
+        .transition { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+        /* Backdrop */
+        .backdrop-blur-xl { backdrop-filter: blur(24px); }
+
+        /* Gradient */
+        .bg-gradient-to-b { background: linear-gradient(to bottom, var(--tw-gradient-from), var(--tw-gradient-to)); }
+        .from-teal\/5 { --tw-gradient-from: rgba(13, 148, 136, 0.05); }
+        .to-transparent { --tw-gradient-to: transparent; }
+        .bg-gradient-to-b.from-teal\/5.to-transparent { background: linear-gradient(to bottom, rgba(13, 148, 136, 0.05), transparent); }
+
+        /* Hover states */
+        .hover\:text-teal:hover { color: #0D9488; }
+        .hover\:bg-teal\/80:hover { background-color: rgba(13, 148, 136, 0.8); }
+
+        /* ===== Responsive: sm (640px) ===== */
+        @media (min-width: 640px) {
+            .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+            .sm\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .sm\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            .sm\:p-10 { padding: 2.5rem; }
+            .sm\:flex-row { flex-direction: row; }
+        }
+
+        /* ===== Responsive: md (768px) ===== */
+        @media (min-width: 768px) {
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+
+        /* ===== Responsive: lg (1024px) ===== */
+        @media (min-width: 1024px) {
+            .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+            .lg\:flex { display: flex; }
+            .lg\:hidden { display: none; }
+            .lg\:text-5xl { font-size: 3rem; line-height: 1; }
+        }
+    </style>
+</head>
+<body class="bg-dark text-white font-inter">
+
+    <!-- Header -->
+    <header class="sticky-header fixed top-0 left-0 right-0 z-50 border-b border-white/5">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold text-white">AI-<span class="text-teal">Офис</span></a>
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-slate hover:text-teal transition">Главная</a>
+                <a href="problems.html" class="text-slate hover:text-teal transition">Проблемы</a>
+                <a href="team.html" class="text-slate hover:text-teal transition">Команда</a>
+                <a href="how-it-works.html" class="text-slate hover:text-teal transition">Как работает</a>
+                <a href="pricing.html" class="text-slate hover:text-teal transition">Тарифы</a>
+                <a href="cases.html" class="text-white font-medium hover:text-teal transition">Кейсы</a>
+                <a href="contact.html" class="bg-teal hover:bg-teal/80 text-white px-5 py-2 rounded-lg font-medium transition">Начать</a>
+            </div>
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Открыть меню">
+                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="lg:hidden hidden bg-dark/95 backdrop-blur-xl border-t border-white/5">
+            <div class="px-4 py-6 flex flex-col gap-4">
+                <a href="index.html" class="text-slate hover:text-teal py-2 transition">Главная</a>
+                <a href="problems.html" class="text-slate hover:text-teal py-2 transition">Проблемы</a>
+                <a href="team.html" class="text-slate hover:text-teal py-2 transition">Команда</a>
+                <a href="how-it-works.html" class="text-slate hover:text-teal py-2 transition">Как работает</a>
+                <a href="pricing.html" class="text-slate hover:text-teal py-2 transition">Тарифы</a>
+                <a href="cases.html" class="text-white font-medium py-2">Кейсы</a>
+                <a href="contact.html" class="bg-teal text-white px-5 py-3 rounded-lg font-medium text-center">Начать</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="pt-24 pb-4 px-4">
+            <div class="max-w-6xl mx-auto">
+                <nav class="text-sm text-slate">
+                    <a href="index.html" class="hover:text-teal transition">Главная</a>
+                    <span class="mx-2">/</span>
+                    <span class="text-white">Кейсы</span>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Hero -->
+        <section class="pt-8 pb-16 px-4 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-teal/5 to-transparent"></div>
+            <div class="max-w-4xl mx-auto text-center relative z-10 fade-in">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+                    Кейсы и примеры работы <span class="text-teal">AI-Офиса</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate max-w-2xl mx-auto">
+                    Реалистичные сценарии — как AI-Офис помогает селлерам маркетплейсов
+                </p>
+            </div>
+        </section>
+
+        <!-- Case 1 -->
+        <section class="py-12 px-4">
+            <div class="max-w-5xl mx-auto">
+                <article class="card rounded-3xl p-6 sm:p-10 fade-in">
+                    <span class="inline-block bg-teal/10 text-teal px-3 py-1 rounded-full text-sm font-medium border border-teal/20 mb-4">Кейс #1</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-4">Аудит кабинета — нашли 40К&#8381; скрытых потерь</h2>
+
+                    <div class="text-slate mb-6 leading-relaxed">
+                        <p class="mb-3"><strong class="text-white">Ситуация:</strong> Селлер на Ozon, оборот 1.5М&#8381;/мес, маржа падает 3 месяца подряд. Не понимает причину.</p>
+                        <p class="mb-3"><strong class="text-white">Что сделали:</strong> AI-аудитор провёл полный анализ кабинета за 2 часа.</p>
+                        <p><strong class="text-white">Нашли:</strong> 4 убыточных SKU из 15 (потери 40К&#8381;/мес), ДРР 22% вместо целевых 12%, 3 карточки без рич-контента (&minus;40% показов), неоптимальные ставки на рекламу.</p>
+                    </div>
+
+                    <!-- До / После -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-dark/60 rounded-2xl p-6 border border-white/5">
+                            <div class="text-sm font-semibold text-red-400 uppercase tracking-wider mb-4">До</div>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex justify-between"><span class="text-slate">Маржинальность</span><span class="text-red-400 font-semibold">12%</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Убыточные SKU</span><span class="text-red-400 font-semibold">4</span></li>
+                                <li class="flex justify-between"><span class="text-slate">ДРР</span><span class="text-red-400 font-semibold">22%</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Показы карточек</span><span class="text-red-400 font-semibold">&minus;40%</span></li>
+                            </ul>
+                        </div>
+                        <div class="bg-teal/5 rounded-2xl p-6 border border-teal/20">
+                            <div class="text-sm font-semibold text-teal uppercase tracking-wider mb-4">После</div>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex justify-between"><span class="text-slate">Маржинальность</span><span class="text-teal font-semibold">35%</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Убыточные SKU</span><span class="text-teal font-semibold">0</span></li>
+                                <li class="flex justify-between"><span class="text-slate">ДРР</span><span class="text-teal font-semibold">11%</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Показы карточек</span><span class="text-teal font-semibold">норма</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline -->
+                    <div class="mb-6">
+                        <div class="text-sm font-semibold text-white mb-4">Таймлайн</div>
+                        <div class="flex flex-wrap gap-3">
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">День 1</div>
+                                <div class="text-slate">Аудит</div>
+                            </div>
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">День 2</div>
+                                <div class="text-slate">Убрали убыточные SKU</div>
+                            </div>
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">День 3-5</div>
+                                <div class="text-slate">Оптимизация рекламы</div>
+                            </div>
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">Неделя 2</div>
+                                <div class="text-slate">Переделка карточек</div>
+                            </div>
+                            <div class="bg-teal/10 rounded-xl px-4 py-3 border border-teal/20 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">Месяц 1</div>
+                                <div class="text-white font-medium">Результат +35% маржи</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key metrics -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">+35%</div>
+                            <div class="text-xs text-slate mt-1">маржинальность</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">40К&#8381;</div>
+                            <div class="text-xs text-slate mt-1">найдено потерь</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">2 часа</div>
+                            <div class="text-xs text-slate mt-1">на аудит</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">0</div>
+                            <div class="text-xs text-slate mt-1">убыточных SKU</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Case 2 -->
+        <section class="py-12 px-4">
+            <div class="max-w-5xl mx-auto">
+                <article class="card rounded-3xl p-6 sm:p-10 fade-in">
+                    <span class="inline-block bg-teal/10 text-teal px-3 py-1 rounded-full text-sm font-medium border border-teal/20 mb-4">Кейс #2</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-4">Запуск нового товара за 5 дней вместо месяца</h2>
+
+                    <div class="text-slate mb-6 leading-relaxed">
+                        <p class="mb-3"><strong class="text-white">Ситуация:</strong> Селлер хочет вывести новый товар (набор для ухода за кожей). Раньше запуск занимал 3-4 недели.</p>
+                        <p><strong class="text-white">Что сделали:</strong> Цепочка AI-сотрудников работала параллельно.</p>
+                    </div>
+
+                    <!-- До / После -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-dark/60 rounded-2xl p-6 border border-white/5">
+                            <div class="text-sm font-semibold text-red-400 uppercase tracking-wider mb-4">До</div>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex justify-between"><span class="text-slate">Время запуска</span><span class="text-red-400 font-semibold">25 дней</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Стоимость запуска</span><span class="text-red-400 font-semibold">45К&#8381;</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Первый заказ</span><span class="text-red-400 font-semibold">через 4 недели</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Качество карточки</span><span class="text-red-400 font-semibold">базовое</span></li>
+                            </ul>
+                        </div>
+                        <div class="bg-teal/5 rounded-2xl p-6 border border-teal/20">
+                            <div class="text-sm font-semibold text-teal uppercase tracking-wider mb-4">После</div>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex justify-between"><span class="text-slate">Время запуска</span><span class="text-teal font-semibold">5 дней</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Стоимость запуска</span><span class="text-teal font-semibold">8К&#8381;</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Первый заказ</span><span class="text-teal font-semibold">через 5 дней</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Качество карточки</span><span class="text-teal font-semibold">premium с рич-контентом</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline -->
+                    <div class="mb-6">
+                        <div class="text-sm font-semibold text-white mb-4">Таймлайн</div>
+                        <div class="flex flex-wrap gap-3">
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">День 1</div>
+                                <div class="text-slate">Аналитик — анализ ниши, конкурентов</div>
+                            </div>
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">День 2</div>
+                                <div class="text-slate">Копирайтер — SEO-описания, буллиты</div>
+                            </div>
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">День 3</div>
+                                <div class="text-slate">Дизайнер — инфографика 7 слайдов</div>
+                            </div>
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">День 4</div>
+                                <div class="text-slate">Рекламщик — стратегия, бюджет, ставки</div>
+                            </div>
+                            <div class="bg-teal/10 rounded-xl px-4 py-3 border border-teal/20 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">День 5</div>
+                                <div class="text-white font-medium">Запуск — первый заказ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key metrics -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">x5</div>
+                            <div class="text-xs text-slate mt-1">быстрее запуск</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">-82%</div>
+                            <div class="text-xs text-slate mt-1">стоимость</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">5 дней</div>
+                            <div class="text-xs text-slate mt-1">до первого заказа</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">Premium</div>
+                            <div class="text-xs text-slate mt-1">качество карточки</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Case 3 -->
+        <section class="py-12 px-4">
+            <div class="max-w-5xl mx-auto">
+                <article class="card rounded-3xl p-6 sm:p-10 fade-in">
+                    <span class="inline-block bg-teal/10 text-teal px-3 py-1 rounded-full text-sm font-medium border border-teal/20 mb-4">Кейс #3</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-4">Экономия 180К&#8381;/мес на команде</h2>
+
+                    <div class="text-slate mb-6 leading-relaxed">
+                        <p class="mb-3"><strong class="text-white">Ситуация:</strong> Селлер с оборотом 3М&#8381;. Штат: менеджер (80К), дизайнер (50К), копирайтер (40К), аналитик-фрилансер (30К). Итого 200К&#8381;/мес на команду.</p>
+                        <p><strong class="text-white">Что сделали:</strong> Перевели операционные задачи на AI-Офис, оставили 1 менеджера.</p>
+                    </div>
+
+                    <!-- До / После -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-dark/60 rounded-2xl p-6 border border-white/5">
+                            <div class="text-sm font-semibold text-red-400 uppercase tracking-wider mb-4">До</div>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex justify-between"><span class="text-slate">Расходы на команду</span><span class="text-red-400 font-semibold">200К&#8381;</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Кол-во специалистов</span><span class="text-red-400 font-semibold">4</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Скорость выполнения</span><span class="text-red-400 font-semibold">1x</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Доступность</span><span class="text-red-400 font-semibold">9-18</span></li>
+                            </ul>
+                        </div>
+                        <div class="bg-teal/5 rounded-2xl p-6 border border-teal/20">
+                            <div class="text-sm font-semibold text-teal uppercase tracking-wider mb-4">После</div>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex justify-between"><span class="text-slate">Расходы на команду</span><span class="text-teal font-semibold">120К&#8381;</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Кол-во специалистов</span><span class="text-teal font-semibold">16 (AI) + 1 менеджер</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Скорость выполнения</span><span class="text-teal font-semibold">3x</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Доступность</span><span class="text-teal font-semibold">24/7</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Key metrics -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">-80К&#8381;</div>
+                            <div class="text-xs text-slate mt-1">экономия в месяц</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">16+1</div>
+                            <div class="text-xs text-slate mt-1">специалистов</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">x3</div>
+                            <div class="text-xs text-slate mt-1">скорость</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">24/7</div>
+                            <div class="text-xs text-slate mt-1">доступность</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Case 4 -->
+        <section class="py-12 px-4">
+            <div class="max-w-5xl mx-auto">
+                <article class="card rounded-3xl p-6 sm:p-10 fade-in">
+                    <span class="inline-block bg-teal/10 text-teal px-3 py-1 rounded-full text-sm font-medium border border-teal/20 mb-4">Кейс #4</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-4">Рост CTR с 2.5% до 7% за 2 недели</h2>
+
+                    <div class="text-slate mb-6 leading-relaxed">
+                        <p class="mb-3"><strong class="text-white">Ситуация:</strong> 8 карточек с устаревшим дизайном. CTR 2.5%, продажи падают. Конкуренты уже с AI-контентом.</p>
+                        <p><strong class="text-white">Что сделали:</strong> AI-дизайнер + AI-копирайтер переделали все 8 карточек.</p>
+                    </div>
+
+                    <!-- До / После -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-dark/60 rounded-2xl p-6 border border-white/5">
+                            <div class="text-sm font-semibold text-red-400 uppercase tracking-wider mb-4">До</div>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex justify-between"><span class="text-slate">CTR</span><span class="text-red-400 font-semibold">2.5%</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Позиция в поиске</span><span class="text-red-400 font-semibold">страница 3-5</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Конверсия в корзину</span><span class="text-red-400 font-semibold">4%</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Продажи</span><span class="text-red-400 font-semibold">падают</span></li>
+                            </ul>
+                        </div>
+                        <div class="bg-teal/5 rounded-2xl p-6 border border-teal/20">
+                            <div class="text-sm font-semibold text-teal uppercase tracking-wider mb-4">После</div>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex justify-between"><span class="text-slate">CTR</span><span class="text-teal font-semibold">7%</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Позиция в поиске</span><span class="text-teal font-semibold">страница 1</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Конверсия в корзину</span><span class="text-teal font-semibold">9%</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Продажи</span><span class="text-teal font-semibold">+120%</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline -->
+                    <div class="mb-6">
+                        <div class="text-sm font-semibold text-white mb-4">Таймлайн</div>
+                        <div class="flex flex-wrap gap-3">
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">День 1-2</div>
+                                <div class="text-slate">Аудит текущих карточек</div>
+                            </div>
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">День 3-5</div>
+                                <div class="text-slate">Новый дизайн инфографики</div>
+                            </div>
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">День 6-7</div>
+                                <div class="text-slate">SEO-оптимизация текстов</div>
+                            </div>
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">Неделя 2</div>
+                                <div class="text-slate">Загрузка, мониторинг</div>
+                            </div>
+                            <div class="bg-teal/10 rounded-xl px-4 py-3 border border-teal/20 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">Месяц 1</div>
+                                <div class="text-white font-medium">CTR 7%, продажи +120%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key metrics -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">7%</div>
+                            <div class="text-xs text-slate mt-1">CTR</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">стр. 1</div>
+                            <div class="text-xs text-slate mt-1">позиция в поиске</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">9%</div>
+                            <div class="text-xs text-slate mt-1">конверсия в корзину</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">+120%</div>
+                            <div class="text-xs text-slate mt-1">рост продаж</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Case 5 -->
+        <section class="py-12 px-4">
+            <div class="max-w-5xl mx-auto">
+                <article class="card rounded-3xl p-6 sm:p-10 fade-in">
+                    <span class="inline-block bg-teal/10 text-teal px-3 py-1 rounded-full text-sm font-medium border border-teal/20 mb-4">Кейс #5</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-4">Масштабирование с 800К до 2.5М оборота за 3 месяца</h2>
+
+                    <div class="text-slate mb-6 leading-relaxed">
+                        <p class="mb-3"><strong class="text-white">Ситуация:</strong> Селлер-одиночка, оборот 800К&#8381;. Работает 14 часов/день, упёрся в потолок.</p>
+                        <p><strong class="text-white">Что сделали:</strong> Подключили AI-офис тариф «Бизнес». Делегировали карточки, аналитику, рекламу.</p>
+                    </div>
+
+                    <!-- До / После -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-dark/60 rounded-2xl p-6 border border-white/5">
+                            <div class="text-sm font-semibold text-red-400 uppercase tracking-wider mb-4">До</div>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex justify-between"><span class="text-slate">Оборот</span><span class="text-red-400 font-semibold">800К&#8381;</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Рабочий день</span><span class="text-red-400 font-semibold">14 часов</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Кол-во SKU</span><span class="text-red-400 font-semibold">12</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Чистая прибыль</span><span class="text-red-400 font-semibold">базовая</span></li>
+                            </ul>
+                        </div>
+                        <div class="bg-teal/5 rounded-2xl p-6 border border-teal/20">
+                            <div class="text-sm font-semibold text-teal uppercase tracking-wider mb-4">После</div>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex justify-between"><span class="text-slate">Оборот</span><span class="text-teal font-semibold">2.5М&#8381;</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Рабочий день</span><span class="text-teal font-semibold">8 часов</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Кол-во SKU</span><span class="text-teal font-semibold">35</span></li>
+                                <li class="flex justify-between"><span class="text-slate">Чистая прибыль</span><span class="text-teal font-semibold">+180%</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline -->
+                    <div class="mb-6">
+                        <div class="text-sm font-semibold text-white mb-4">Таймлайн</div>
+                        <div class="flex flex-wrap gap-3">
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">Месяц 1</div>
+                                <div class="text-slate">Аудит, оптимизация текущих карточек</div>
+                            </div>
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">Месяц 2</div>
+                                <div class="text-slate">Запуск 15 новых SKU</div>
+                            </div>
+                            <div class="bg-dark/60 rounded-xl px-4 py-3 border border-white/5 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">Месяц 3</div>
+                                <div class="text-slate">Масштабирование рекламы</div>
+                            </div>
+                            <div class="bg-teal/10 rounded-xl px-4 py-3 border border-teal/20 text-sm flex-1 min-w-[140px]">
+                                <div class="text-teal font-medium mb-1">Результат</div>
+                                <div class="text-white font-medium">2.5М оборот, 8ч рабочий день</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key metrics -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">2.5М&#8381;</div>
+                            <div class="text-xs text-slate mt-1">оборот</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">8 часов</div>
+                            <div class="text-xs text-slate mt-1">рабочий день</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">35</div>
+                            <div class="text-xs text-slate mt-1">SKU</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl sm:text-3xl font-bold text-teal">+180%</div>
+                            <div class="text-xs text-slate mt-1">чистая прибыль</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 px-4">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6">Хотите <span class="text-teal">такие же результаты?</span></h2>
+                <p class="text-slate text-lg mb-10">Начните с бесплатного аудита вашего кабинета. Убедитесь, что AI-Офис работает для вашего бизнеса.</p>
+                <a href="contact.html" class="inline-block bg-teal hover:bg-teal/80 text-white px-10 py-4 rounded-xl font-semibold text-lg transition glow">
+                    Начать бесплатно
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="text-xl font-bold mb-4">AI-<span class="text-teal">Офис</span></div>
+                    <p class="text-slate text-sm">16 AI-сотрудников для вашего бизнеса на маркетплейсах</p>
+                </div>
+                <div>
+                    <div class="font-semibold mb-4">Страницы</div>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li><a href="problems.html" class="hover:text-teal transition">Проблемы</a></li>
+                        <li><a href="team.html" class="hover:text-teal transition">Команда</a></li>
+                        <li><a href="how-it-works.html" class="hover:text-teal transition">Как работает</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="font-semibold mb-4">Ещё</div>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li><a href="pricing.html" class="hover:text-teal transition">Тарифы</a></li>
+                        <li><a href="cases.html" class="hover:text-teal transition">Кейсы</a></li>
+                        <li><a href="contact.html" class="hover:text-teal transition">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="font-semibold mb-4">Связаться</div>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li><a href="https://t.me/estetica_an" class="hover:text-teal transition" target="_blank" rel="noopener">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate">
+                <span>AI Forge &copy; 2026</span>
+                <span>@estetica_an</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS: Mobile menu + Scroll animations -->
+    <script>
+        // Mobile menu
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('menu-open');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.05 });
+
+        document.querySelectorAll('.fade-in, .scale-in').forEach(el => observer.observe(el));
+    </script>
+<script>setTimeout(function(){document.querySelectorAll(".fade-in,.scale-in").forEach(function(el){el.classList.add("visible")})},2000)</script></body>
+</html>
