@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-Офис — 16 AI-сотрудников для селлеров маркетплейсов | AI Forge</title>
-    <meta name="description" content="AI-Офис для селлеров WB и Ozon. Команда из 16 AI-сотрудников за 30 000₽/мес вместо 200 000₽+ на штат. Работают 24/7 через Telegram.">
-    <meta property="og:title" content="AI-Офис — 16 AI-сотрудников для селлеров маркетплейсов">
-    <meta property="og:description" content="Команда из 16 AI-сотрудников за 30 000₽/мес вместо 200 000₽+ на штат. Работают 24/7 через Telegram.">
+    <title>AI-Офис — 20 AI-сотрудников для селлеров маркетплейсов | AI Forge</title>
+    <meta name="description" content="AI-Офис для селлеров WB и Ozon. Команда из 20 AI-сотрудников за 19 900₽/мес вместо 500 000₽+ на штат. Работают 24/7 через Telegram.">
+    <meta property="og:title" content="AI-Офис — 20 AI-сотрудников для селлеров маркетплейсов">
+    <meta property="og:description" content="Команда из 20 AI-сотрудников за 19 900₽/мес вместо 500 000₽+ на штат. Работают 24/7 через Telegram.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ai-office.ru/">
     <meta property="og:image" content="https://ai-office.ru/og-image.jpg">
@@ -15,717 +15,1232 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* ===== Reset / Base ===== */
+        /* ===== Reset ===== */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: #0F1229; color: #fff; }
 
-        /* ===== Custom styles (original) ===== */
-        .glow { box-shadow: 0 0 30px rgba(13, 148, 136, 0.4); }
-        .glow:hover { box-shadow: 0 0 50px rgba(13, 148, 136, 0.6); }
-        .card { background: rgba(26, 31, 61, 0.7); border: 1px solid rgba(148, 163, 184, 0.1); }
-        .card:hover { border-color: rgba(13, 148, 136, 0.3); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .scale-in { opacity: 0; transform: scale(0.9); transition: opacity 0.5s ease, transform 0.5s ease; }
-        .scale-in.visible { opacity: 1; transform: scale(1); }
-        .sticky-header { backdrop-filter: blur(20px); background: rgba(15, 18, 41, 0.8); }
-        .hamburger-line { transition: all 0.3s ease; }
-        .menu-open .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .menu-open .hamburger-line:nth-child(2) { opacity: 0; }
-        .menu-open .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
-        .teal-col { background: rgba(13, 148, 136, 0.08); }
-        .table-zebra tr:nth-child(even) { background: rgba(26, 31, 61, 0.5); }
-        .table-zebra tr:nth-child(odd) { background: rgba(15, 18, 41, 0.5); }
-
-        /* ===== Tailwind utility classes ===== */
-
-        /* Display */
-        .block { display: block; }
-        .inline-block { display: inline-block; }
-        .flex { display: flex; }
-        .grid { display: grid; }
-        .hidden { display: none; }
-
-        /* Position */
-        .fixed { position: fixed; }
-        .relative { position: relative; }
-        .absolute { position: absolute; }
-        .top-0 { top: 0; }
-        .left-0 { left: 0; }
-        .right-0 { right: 0; }
-        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
-        .z-10 { z-index: 10; }
-        .z-50 { z-index: 50; }
-
-        /* Overflow */
-        .overflow-hidden { overflow: hidden; }
-        .overflow-x-auto { overflow-x: auto; }
-
-        /* Flexbox */
-        .flex-col { flex-direction: column; }
-        .flex-row { flex-direction: row; }
-        .flex-shrink-0 { flex-shrink: 0; }
-        .items-center { align-items: center; }
-        .justify-between { justify-content: space-between; }
-        .justify-center { justify-content: center; }
-        .gap-1\.5 { gap: 0.375rem; }
-        .gap-4 { gap: 1rem; }
-        .gap-6 { gap: 1.5rem; }
-        .gap-8 { gap: 2rem; }
-
-        /* Grid */
-        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-
-        /* Spacing - Margin */
-        .mx-auto { margin-left: auto; margin-right: auto; }
-        .mb-1 { margin-bottom: 0.25rem; }
-        .mb-2 { margin-bottom: 0.5rem; }
-        .mb-3 { margin-bottom: 0.75rem; }
-        .mb-4 { margin-bottom: 1rem; }
-        .mb-6 { margin-bottom: 1.5rem; }
-        .mb-8 { margin-bottom: 2rem; }
-        .mb-10 { margin-bottom: 2.5rem; }
-        .mb-14 { margin-bottom: 3.5rem; }
-        .mt-0\.5 { margin-top: 0.125rem; }
-        .mt-10 { margin-top: 2.5rem; }
-
-        /* Spacing - Padding */
-        .p-2 { padding: 0.5rem; }
-        .p-4 { padding: 1rem; }
-        .p-6 { padding: 1.5rem; }
-        .p-8 { padding: 2rem; }
-        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
-        .px-4 { padding-left: 1rem; padding-right: 1rem; }
-        .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
-        .px-8 { padding-left: 2rem; padding-right: 2rem; }
-        .px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
-        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
-        .py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
-        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-        .py-2\.5 { padding-top: 0.625rem; padding-bottom: 0.625rem; }
-        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
-        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
-        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
-        .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
-        .pt-8 { padding-top: 2rem; }
-        .pt-32 { padding-top: 8rem; }
-        .pb-20 { padding-bottom: 5rem; }
-
-        /* Sizing */
-        .w-full { width: 100%; }
-        .w-6 { width: 1.5rem; }
-        .w-16 { width: 4rem; }
-        .h-0\.5 { height: 0.125rem; }
-        .h-16 { height: 4rem; }
-        .max-w-2xl { max-width: 42rem; }
-        .max-w-3xl { max-width: 48rem; }
-        .max-w-5xl { max-width: 64rem; }
-        .max-w-6xl { max-width: 72rem; }
-        .max-w-7xl { max-width: 80rem; }
-
-        /* Typography */
-        .text-xs { font-size: 0.75rem; line-height: 1rem; }
-        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
-        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
-        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
-        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
-        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-        .text-5xl { font-size: 3rem; line-height: 1; }
-        .text-6xl { font-size: 3.75rem; line-height: 1; }
-        .text-center { text-align: center; }
-        .text-left { text-align: left; }
-        .font-normal { font-weight: 400; }
-        .font-medium { font-weight: 500; }
-        .font-semibold { font-weight: 600; }
-        .font-bold { font-weight: 700; }
-        .leading-tight { line-height: 1.25; }
-        .font-inter { font-family: 'Inter', sans-serif; }
-
-        /* Colors */
-        .text-white { color: #ffffff; }
-        .text-teal { color: #0D9488; }
-        .text-slate { color: #94A3B8; }
-        .text-mint { color: #99F6E4; }
-        .text-red-400 { color: #f87171; }
-        .text-yellow-400 { color: #facc15; }
-        .bg-dark { background-color: #0F1229; }
-        .bg-teal { background-color: #0D9488; }
-        .bg-white { background-color: #ffffff; }
-        .bg-navy\/30 { background-color: rgba(26, 31, 61, 0.3); }
-        .bg-teal\/10 { background-color: rgba(13, 148, 136, 0.1); }
-        .bg-teal\/5 { background-color: rgba(13, 148, 136, 0.05); }
-        .bg-dark\/95 { background-color: rgba(15, 18, 41, 0.95); }
-
-        /* Borders */
-        .border { border-width: 1px; border-style: solid; }
-        .border-b { border-bottom-width: 1px; border-bottom-style: solid; }
-        .border-t { border-top-width: 1px; border-top-style: solid; }
-        .border-white\/5 { border-color: rgba(255, 255, 255, 0.05); }
-        .border-white\/10 { border-color: rgba(255, 255, 255, 0.1); }
-        .border-white\/20 { border-color: rgba(255, 255, 255, 0.2); }
-        .border-teal { border-color: #0D9488; }
-        .border-teal\/20 { border-color: rgba(13, 148, 136, 0.2); }
-        .border-teal\/30 { border-color: rgba(13, 148, 136, 0.3); }
-        .border-teal\/50 { border-color: rgba(13, 148, 136, 0.5); }
-
-        /* Rounded */
-        .rounded-lg { border-radius: 0.5rem; }
-        .rounded-xl { border-radius: 0.75rem; }
-        .rounded-2xl { border-radius: 1rem; }
-        .rounded-full { border-radius: 9999px; }
-
-        /* Transitions */
-        .transition { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
-
-        /* Opacity / alpha text */
-        .text-white\/60 { color: rgba(255, 255, 255, 0.6); }
-
-        /* Backdrop */
-        .backdrop-blur-xl { backdrop-filter: blur(24px); }
-
-        /* Transform */
-        .-translate-x-1\/2 { transform: translateX(-50%); }
-        .-top-3 { top: -0.75rem; }
-        .left-1\/2 { left: 50%; }
-
-        /* Space */
-        .space-y-2 > * + * { margin-top: 0.5rem; }
-
-        /* Gradient */
-        .bg-gradient-to-b.from-teal\/5.to-transparent {
-            background: linear-gradient(to bottom, rgba(13, 148, 136, 0.05), transparent);
+        /* ===== Variables ===== */
+        :root {
+            --blue: #2563EB;
+            --purple: #7C3AED;
+            --blue-light: #3B82F6;
+            --purple-light: #8B5CF6;
+            --gradient: linear-gradient(135deg, #2563EB, #7C3AED);
+            --gradient-hover: linear-gradient(135deg, #1D4ED8, #6D28D9);
+            --bg: #FFFFFF;
+            --bg-alt: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --text: #1E293B;
+            --text-light: #64748B;
+            --text-dark: #0F172A;
+            --border: #E2E8F0;
+            --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1), 0 6px 10px rgba(0,0,0,0.08);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.12);
+            --radius: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
         }
 
-        /* Hover states */
-        .hover\:text-teal:hover { color: #0D9488; }
-        .hover\:text-white:hover { color: #ffffff; }
-        .hover\:bg-teal:hover { background-color: #0D9488; }
-        .hover\:bg-teal\/80:hover { background-color: rgba(13, 148, 136, 0.8); }
-        .hover\:border-teal\/50:hover { border-color: rgba(13, 148, 136, 0.5); }
-        .hover\:underline:hover { text-decoration: underline; }
-
-        /* Table */
-        table { border-collapse: collapse; }
-
-        /* List style */
-        ul { list-style: none; }
-
-        /* Links */
-        a { text-decoration: none; color: inherit; }
-
-        /* ===== Responsive: sm (640px) ===== */
-        @media (min-width: 640px) {
-            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-            .sm\:text-5xl { font-size: 3rem; line-height: 1; }
-            .sm\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
-            .sm\:flex-row { flex-direction: row; }
-            .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-            .sm\:col-span-2 { grid-column: span 2 / span 2; }
+        /* ===== Base ===== */
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* ===== Responsive: md (768px) ===== */
-        @media (min-width: 768px) {
-            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-            .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        /* ===== Utility ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section-alt {
+            background: var(--bg-alt);
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+        .section-subtitle {
+            font-size: 1.125rem;
+            text-align: center;
+            color: var(--text-light);
+            max-width: 640px;
+            margin: 0 auto 48px;
+        }
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        /* ===== Responsive: lg (1024px) ===== */
-        @media (min-width: 1024px) {
-            .lg\:text-6xl { font-size: 3.75rem; line-height: 1; }
-            .lg\:flex { display: flex; }
-            .lg\:hidden { display: none; }
-            .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-            .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-            .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
-            .lg\:col-span-1 { grid-column: span 1 / span 1; }
+        /* ===== Animations ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-in-delay-1 { transition-delay: 0.1s; }
+        .fade-in-delay-2 { transition-delay: 0.2s; }
+        .fade-in-delay-3 { transition-delay: 0.3s; }
+
+        /* ===== CTA Button ===== */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            background: var(--gradient);
+            color: #fff;
+            font-size: 1.0625rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
+        }
+        .cta-btn-outline {
+            background: transparent;
+            border: 2px solid var(--blue);
+            color: var(--blue);
+            box-shadow: none;
+        }
+        .cta-btn-outline:hover {
+            background: var(--blue);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        .cta-btn-white {
+            background: #fff;
+            color: var(--blue);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        .cta-btn-white:hover {
+            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+        }
+
+        /* ===== Header ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.3s;
+        }
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.125rem;
+        }
+        .nav { display: flex; align-items: center; gap: 32px; }
+        .nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav a:hover { color: var(--blue); }
+        .nav-cta {
+            padding: 10px 24px;
+            background: var(--gradient);
+            color: #fff !important;
+            border-radius: 50px;
+            font-weight: 600 !important;
+            font-size: 0.875rem !important;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-dark);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 64px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(16px);
+            padding: 32px 20px;
+            z-index: 999;
+        }
+        .mobile-menu.open { display: flex; flex-direction: column; gap: 24px; }
+        .mobile-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(180deg, #EEF2FF 0%, #FFFFFF 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(124,58,237,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(37,99,235,0.08);
+            border: 1px solid rgba(37,99,235,0.15);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--blue);
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 3.25rem;
+            font-weight: 900;
+            line-height: 1.1;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        .hero-sub {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .hero-stat {
+            text-align: center;
+        }
+        .hero-stat-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+        .hero-stat-label {
+            font-size: 0.9375rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* ===== Pain Points ===== */
+        .pains-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .pain-card {
+            background: var(--bg-card);
+            border: 1px solid #FEE2E2;
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .pain-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .pain-icon {
+            width: 48px;
+            height: 48px;
+            background: #FEF2F2;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+        .pain-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .pain-desc {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* ===== Team / Agents ===== */
+        .agents-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .agent-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 20px;
+            text-align: center;
+            transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+            position: relative;
+            overflow: hidden;
+        }
+        .agent-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .agent-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+            border-color: rgba(37,99,235,0.2);
+        }
+        .agent-card:hover::before {
+            opacity: 1;
+        }
+        .agent-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .agent-name {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+        .agent-desc {
+            font-size: 0.8125rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .agent-saving {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #F0FDF4;
+            color: #16A34A;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 50px;
+        }
+
+        /* ===== How It Works ===== */
+        .steps {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            align-items: stretch;
+        }
+        .step {
+            flex: 1;
+            max-width: 340px;
+            text-align: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 40px 28px;
+            position: relative;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .step:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient);
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .step-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        .step h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+        .step p {
+            font-size: 0.9375rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+        .step-arrow {
+            display: flex;
+            align-items: center;
+            color: var(--blue);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        /* ===== Pricing ===== */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            align-items: stretch;
+        }
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 40px 32px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+        }
+        .pricing-card.popular {
+            border: 2px solid var(--blue);
+            box-shadow: var(--shadow-lg);
+        }
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient);
+            color: #fff;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .pricing-name {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .pricing-price {
+            font-size: 2.75rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+        .pricing-desc {
+            font-size: 0.9375rem;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+            flex: 1;
+        }
+        .pricing-features li {
+            padding: 8px 0;
+            font-size: 0.9375rem;
+            color: var(--text);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.4;
+        }
+        .pricing-features li::before {
+            content: '✓';
+            color: #16A34A;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .pricing-cta {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        /* ===== Comparison ===== */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .compare-block {
+            border-radius: var(--radius-xl);
+            padding: 40px 32px;
+        }
+        .compare-bad {
+            background: #FEF2F2;
+            border: 1px solid #FECACA;
+        }
+        .compare-good {
+            background: #F0FDF4;
+            border: 1px solid #BBF7D0;
+        }
+        .compare-title {
+            font-size: 1.375rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .compare-bad .compare-title { color: #DC2626; }
+        .compare-good .compare-title { color: #16A34A; }
+        .compare-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .compare-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .compare-bad .compare-list li::before {
+            content: '✕';
+            color: #DC2626;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+        .compare-good .compare-list li::before {
+            content: '✓';
+            color: #16A34A;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 760px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+        .faq-q {
+            padding: 20px 24px;
+            font-size: 1.0625rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            user-select: none;
+        }
+        .faq-q::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--text-light);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        .faq-item.open .faq-q::after {
+            content: '−';
+        }
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.open .faq-a {
+            max-height: 300px;
+        }
+        .faq-a-inner {
+            padding: 0 24px 20px;
+            font-size: 0.9375rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ===== Final CTA ===== */
+        .final-cta {
+            padding: 80px 0;
+            background: var(--gradient);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+        .final-cta-inner {
+            position: relative;
+            z-index: 1;
+        }
+        .final-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .final-cta p {
+            font-size: 1.125rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 32px;
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            padding: 40px 0;
+            background: var(--text-dark);
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        .footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+        .footer a:hover { color: #fff; }
+
+        /* ===== Mobile ===== */
+        @media (max-width: 1024px) {
+            .agents-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .section { padding: 60px 0; }
+            .section-title { font-size: 1.75rem; }
+            .hero { padding: 110px 0 60px; }
+            .hero h1 { font-size: 2rem; }
+            .hero-sub { font-size: 1.0625rem; }
+            .hero-stats { gap: 24px; }
+            .hero-stat-value { font-size: 1.75rem; }
+            .nav { display: none; }
+            .hamburger { display: flex; }
+            .pains-grid { grid-template-columns: repeat(2, 1fr); }
+            .agents-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps { flex-direction: column; align-items: center; }
+            .step-arrow { transform: rotate(90deg); }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+            .comparison { grid-template-columns: 1fr; }
+            .final-cta h2 { font-size: 1.75rem; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.625rem; }
+            .pains-grid { grid-template-columns: 1fr; }
+            .agents-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .agent-card { padding: 18px 14px; }
+            .agent-emoji { font-size: 2rem; }
+            .hero-stats { flex-direction: column; gap: 16px; }
         }
     </style>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "AI Forge",
-        "description": "AI-Офис — команда из 16 AI-сотрудников для селлеров маркетплейсов",
-        "url": "https://ai-office.ru",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "sales",
-            "url": "https://t.me/estetica_an"
-        },
-        "sameAs": ["https://t.me/estetica_an"]
-    }
-    </script>
 </head>
-<body class="bg-dark text-white font-inter">
+<body>
 
-    <!-- Header -->
-    <header class="sticky-header fixed top-0 left-0 right-0 z-50 border-b border-white/5">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-            <a href="index.html" class="text-xl font-bold text-white">AI-<span class="text-teal">Офис</span></a>
-            <div class="hidden lg:flex items-center gap-8">
-                <a href="index.html" class="text-white font-medium hover:text-teal transition">Главная</a>
-                <a href="problems.html" class="text-slate hover:text-teal transition">Проблемы</a>
-                <a href="team.html" class="text-slate hover:text-teal transition">Команда</a>
-                <a href="how-it-works.html" class="text-slate hover:text-teal transition">Как работает</a>
-                <a href="pricing.html" class="text-slate hover:text-teal transition">Тарифы</a>
-                <a href="cases.html" class="text-slate hover:text-teal transition">Кейсы</a>
-                <a href="contact.html" class="bg-teal hover:bg-teal/80 text-white px-5 py-2 rounded-lg font-medium transition">Начать</a>
-            </div>
-            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Открыть меню">
-                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
-                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
-                <span class="hamburger-line w-6 h-0.5 bg-white block"></span>
-            </button>
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <div class="logo-icon">AI</div>
+            AI-Офис
+        </a>
+        <nav class="nav">
+            <a href="#team">Команда</a>
+            <a href="#how">Как работает</a>
+            <a href="#pricing">Тарифы</a>
+            <a href="#faq">FAQ</a>
+            <a href="https://t.me/atlasfabric_bot" class="nav-cta" target="_blank">Попробовать бесплатно</a>
         </nav>
-        <div id="mobileMenu" class="lg:hidden hidden bg-dark/95 backdrop-blur-xl border-t border-white/5">
-            <div class="px-4 py-6 flex flex-col gap-4">
-                <a href="index.html" class="text-white font-medium py-2">Главная</a>
-                <a href="problems.html" class="text-slate hover:text-teal py-2 transition">Проблемы</a>
-                <a href="team.html" class="text-slate hover:text-teal py-2 transition">Команда</a>
-                <a href="how-it-works.html" class="text-slate hover:text-teal py-2 transition">Как работает</a>
-                <a href="pricing.html" class="text-slate hover:text-teal py-2 transition">Тарифы</a>
-                <a href="cases.html" class="text-slate hover:text-teal py-2 transition">Кейсы</a>
-                <a href="contact.html" class="bg-teal text-white px-5 py-3 rounded-lg font-medium text-center">Начать</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#team" onclick="closeMobile()">Команда</a>
+    <a href="#how" onclick="closeMobile()">Как работает</a>
+    <a href="#pricing" onclick="closeMobile()">Тарифы</a>
+    <a href="#faq" onclick="closeMobile()">FAQ</a>
+    <a href="https://t.me/atlasfabric_bot" class="cta-btn" style="text-align:center;justify-content:center" target="_blank">Попробовать бесплатно</a>
+</div>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+    <div class="container hero-inner">
+        <div class="hero-badge fade-in">
+            <span>🚀</span> Первый AI-офис для маркетплейсов в России
+        </div>
+        <h1 class="fade-in">20 AI-сотрудников<br>для вашего бизнеса<br>на <span class="gradient-text">маркетплейсах</span></h1>
+        <p class="hero-sub fade-in">Целая команда специалистов за 19 900&#8239;₽/мес вместо 500 000&#8239;₽+ на штат. Работают 24/7 через Telegram.</p>
+        <div class="hero-cta-group fade-in">
+            <a href="https://t.me/atlasfabric_bot" class="cta-btn" target="_blank">
+                Попробовать 7 дней бесплатно
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#how" class="cta-btn cta-btn-outline">Как это работает</a>
+        </div>
+        <div class="hero-stats fade-in">
+            <div class="hero-stat">
+                <div class="hero-stat-value">-80%</div>
+                <div class="hero-stat-label">расходов на команду</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">24/7</div>
+                <div class="hero-stat-label">без выходных</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">20</div>
+                <div class="hero-stat-label">специалистов</div>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <main>
-        <!-- Hero -->
-        <section class="pt-32 pb-20 px-4 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-teal/5 to-transparent"></div>
-            <div class="max-w-5xl mx-auto text-center relative z-10">
-                <div class="fade-in">
-                    <span class="inline-block bg-teal/10 text-teal px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-teal/20">Для селлеров WB и Ozon</span>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                        <span class="text-teal">16 AI-сотрудников</span><br>для вашего бизнеса<br>на маркетплейсах
-                    </h1>
-                    <p class="text-lg sm:text-xl text-slate max-w-2xl mx-auto mb-10">
-                        Полноценная команда специалистов в Telegram. Работают 24/7, не болеют, не увольняются. От 30 000₽/мес вместо 200 000₽+ на штат.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="contact.html" class="bg-teal hover:bg-teal/80 text-white px-8 py-4 rounded-xl font-semibold text-lg transition glow">
-                            Попробовать 7 дней бесплатно
-                        </a>
-                        <a href="how-it-works.html" class="border border-white/20 hover:border-teal/50 text-white px-8 py-4 rounded-xl font-semibold text-lg transition">
-                            Как это работает?
-                        </a>
-                    </div>
-                </div>
+<!-- ===== Pain Points ===== -->
+<section class="section section-alt" id="pains">
+    <div class="container">
+        <h2 class="section-title fade-in">Знакомые <span class="gradient-text">проблемы</span>?</h2>
+        <p class="section-subtitle fade-in">Каждый селлер сталкивается с этим. Мы знаем, потому что сами через это прошли.</p>
+        <div class="pains-grid">
+            <div class="pain-card fade-in">
+                <div class="pain-icon">💸</div>
+                <div class="pain-title">Наняли SMM за 60К — ушёл через месяц</div>
+                <div class="pain-desc">Текучка кадров съедает бюджет на обучение и поиск. Каждый новый сотрудник — это 2-3 месяца адаптации.</div>
             </div>
-        </section>
-
-        <!-- 3 ключевых преимущества -->
-        <section class="py-16 px-4">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card rounded-2xl p-8 text-center fade-in">
-                    <div class="text-5xl mb-4">🕐</div>
-                    <div class="text-4xl font-bold text-teal mb-2">24/7</div>
-                    <p class="text-slate">Работают круглосуточно без выходных и больничных</p>
-                </div>
-                <div class="card rounded-2xl p-8 text-center fade-in">
-                    <div class="text-5xl mb-4">⚡</div>
-                    <div class="text-4xl font-bold text-teal mb-2">x10</div>
-                    <p class="text-slate">Скорость выполнения задач по сравнению с фрилансером</p>
-                </div>
-                <div class="card rounded-2xl p-8 text-center fade-in">
-                    <div class="text-5xl mb-4">💰</div>
-                    <div class="text-4xl font-bold text-teal mb-2">−80%</div>
-                    <p class="text-slate">Расходы на команду по сравнению со штатными сотрудниками</p>
-                </div>
+            <div class="pain-card fade-in fade-in-delay-1">
+                <div class="pain-icon">🏃</div>
+                <div class="pain-title">Фрилансер пропал с предоплатой</div>
+                <div class="pain-desc">Дедлайн сорван, деньги потеряны. Приходится искать нового и начинать заново.</div>
             </div>
-        </section>
-
-        <!-- 7 болей -->
-        <section class="py-20 px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-14 fade-in">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">7 болей селлера, которые мы <span class="text-teal">закрываем</span></h2>
-                    <p class="text-slate text-lg">Знакомо? Вы не одиноки — и у нас есть решение</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="card rounded-2xl p-6 fade-in">
-                        <div class="text-3xl mb-3">😵</div>
-                        <h3 class="text-lg font-semibold mb-2">Одиночество решений</h3>
-                        <p class="text-slate text-sm mb-4">Все решения на вас одном. Не с кем посоветоваться, некому делегировать анализ.</p>
-                        <a href="problems.html#pain-1" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
-                    </div>
-                    <div class="card rounded-2xl p-6 fade-in">
-                        <div class="text-3xl mb-3">🌀</div>
-                        <h3 class="text-lg font-semibold mb-2">«Я быстрее сам»</h3>
-                        <p class="text-slate text-sm mb-4">Ловушка, когда делаешь всё сам и не растёшь, потому что нет времени на стратегию.</p>
-                        <a href="problems.html#pain-2" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
-                    </div>
-                    <div class="card rounded-2xl p-6 fade-in">
-                        <div class="text-3xl mb-3">💸</div>
-                        <h3 class="text-lg font-semibold mb-2">Невидимые потери</h3>
-                        <p class="text-slate text-sm mb-4">Убыточные SKU, высокий ДРР, слабые карточки — потери, которые вы не видите.</p>
-                        <a href="problems.html#pain-3" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
-                    </div>
-                    <div class="card rounded-2xl p-6 fade-in">
-                        <div class="text-3xl mb-3">😰</div>
-                        <h3 class="text-lg font-semibold mb-2">Страх конкуренции</h3>
-                        <p class="text-slate text-sm mb-4">Конкуренты используют AI, обновляют карточки — а вы отстаёте.</p>
-                        <a href="problems.html#pain-4" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
-                    </div>
-                    <div class="card rounded-2xl p-6 fade-in">
-                        <div class="text-3xl mb-3">🧠</div>
-                        <h3 class="text-lg font-semibold mb-2">Инфо-перегрузка</h3>
-                        <p class="text-slate text-sm mb-4">Сотни чатов, курсов, лайфхаков — а внедряете 0. Нужен один конкретный ответ.</p>
-                        <a href="problems.html#pain-5" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
-                    </div>
-                    <div class="card rounded-2xl p-6 fade-in">
-                        <div class="text-3xl mb-3">🏠</div>
-                        <h3 class="text-lg font-semibold mb-2">Бизнес поглощает жизнь</h3>
-                        <p class="text-slate text-sm mb-4">14-часовой рабочий день, без выходных, семья страдает.</p>
-                        <a href="problems.html#pain-6" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
-                    </div>
-                    <div class="card rounded-2xl p-6 fade-in sm:col-span-2 lg:col-span-1">
-                        <div class="text-3xl mb-3">🎭</div>
-                        <h3 class="text-lg font-semibold mb-2">Синдром самозванца</h3>
-                        <p class="text-slate text-sm mb-4">Все вокруг зарабатывают больше. Разница — в инструментах, а не в вас.</p>
-                        <a href="problems.html#pain-7" class="text-teal text-sm font-medium hover:underline">Подробнее →</a>
-                    </div>
-                </div>
-                <div class="text-center mt-10">
-                    <a href="problems.html" class="text-teal font-medium hover:underline text-lg">Узнать подробнее о каждой проблеме →</a>
-                </div>
+            <div class="pain-card fade-in fade-in-delay-2">
+                <div class="pain-icon">⚠️</div>
+                <div class="pain-title">Штрафы за маркировку — 300К</div>
+                <div class="pain-desc">Не уследили за Честным ЗНАКом или сертификатами — получили штраф, который обнулил месячную прибыль.</div>
             </div>
-        </section>
-
-        <!-- 6 ключевых ролей -->
-        <section class="py-20 px-4 bg-navy/30">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-14 fade-in">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ваша <span class="text-teal">AI-команда</span></h2>
-                    <p class="text-slate text-lg">6 ключевых специалистов — и ещё 10 в полной команде</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="card rounded-2xl p-6 scale-in">
-                        <div class="text-3xl mb-3">🔍</div>
-                        <h3 class="text-lg font-semibold mb-2">Аналитик</h3>
-                        <p class="text-slate text-sm">Анализ ниш, конкурентов, трендов. Находит точки роста и скрытые потери за 30 минут.</p>
-                    </div>
-                    <div class="card rounded-2xl p-6 scale-in">
-                        <div class="text-3xl mb-3">🎨</div>
-                        <h3 class="text-lg font-semibold mb-2">Дизайнер</h3>
-                        <p class="text-slate text-sm">Инфографика, карточки товаров, рич-контент. 7 слайдов за 1 час вместо 2 дней.</p>
-                    </div>
-                    <div class="card rounded-2xl p-6 scale-in">
-                        <div class="text-3xl mb-3">📝</div>
-                        <h3 class="text-lg font-semibold mb-2">Копирайтер</h3>
-                        <p class="text-slate text-sm">SEO-описания, заголовки, буллиты. Оптимизация под алгоритмы WB и Ozon.</p>
-                    </div>
-                    <div class="card rounded-2xl p-6 scale-in">
-                        <div class="text-3xl mb-3">📢</div>
-                        <h3 class="text-lg font-semibold mb-2">Рекламщик</h3>
-                        <p class="text-slate text-sm">Стратегия рекламы, расчёт бюджета, управление ставками, снижение ДРР.</p>
-                    </div>
-                    <div class="card rounded-2xl p-6 scale-in">
-                        <div class="text-3xl mb-3">🔎</div>
-                        <h3 class="text-lg font-semibold mb-2">Аудитор</h3>
-                        <p class="text-slate text-sm">Полный аудит кабинета: воронка, CTR, ABC-анализ, слабые карточки, гипотезы роста.</p>
-                    </div>
-                    <div class="card rounded-2xl p-6 scale-in">
-                        <div class="text-3xl mb-3">📊</div>
-                        <h3 class="text-lg font-semibold mb-2">Excel-аналитик</h3>
-                        <p class="text-slate text-sm">P&L, unit-экономика, расчёт маржи по SKU. Финансовая ясность за 30 минут.</p>
-                    </div>
-                </div>
-                <div class="text-center mt-10">
-                    <a href="team.html" class="text-teal font-medium hover:underline text-lg">Все 16 сотрудников →</a>
-                </div>
+            <div class="pain-card fade-in">
+                <div class="pain-icon">📉</div>
+                <div class="pain-title">Out of stock — потерял позиции на 3 недели</div>
+                <div class="pain-desc">Не рассчитали закупку, товар кончился. Пока восстанавливали — конкуренты заняли топ.</div>
             </div>
-        </section>
-
-        <!-- Как работает -->
-        <section class="py-20 px-4">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-14 fade-in">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Как <span class="text-teal">работает</span> AI-Офис</h2>
-                    <p class="text-slate text-lg">4 простых шага — от задачи до результата</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="text-center fade-in">
-                        <div class="w-16 h-16 bg-teal/10 border border-teal/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <span class="text-teal font-bold text-xl">1</span>
-                        </div>
-                        <h3 class="font-semibold mb-2">Пишете в Telegram</h3>
-                        <p class="text-slate text-sm">Описываете задачу обычным языком, как другу</p>
-                    </div>
-                    <div class="text-center fade-in">
-                        <div class="w-16 h-16 bg-teal/10 border border-teal/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <span class="text-teal font-bold text-xl">2</span>
-                        </div>
-                        <h3 class="font-semibold mb-2">AI назначает специалиста</h3>
-                        <p class="text-slate text-sm">Система определяет нужного сотрудника автоматически</p>
-                    </div>
-                    <div class="text-center fade-in">
-                        <div class="w-16 h-16 bg-teal/10 border border-teal/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <span class="text-teal font-bold text-xl">3</span>
-                        </div>
-                        <h3 class="font-semibold mb-2">Специалист работает</h3>
-                        <p class="text-slate text-sm">Анализирует, создаёт, считает — за минуты, не дни</p>
-                    </div>
-                    <div class="text-center fade-in">
-                        <div class="w-16 h-16 bg-teal/10 border border-teal/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <span class="text-teal font-bold text-xl">4</span>
-                        </div>
-                        <h3 class="font-semibold mb-2">Результат + обучение</h3>
-                        <p class="text-slate text-sm">Получаете готовый результат. AI учится на ваших правках</p>
-                    </div>
-                </div>
-                <div class="text-center mt-10">
-                    <a href="how-it-works.html" class="text-teal font-medium hover:underline text-lg">Подробнее о процессе →</a>
-                </div>
+            <div class="pain-card fade-in fade-in-delay-1">
+                <div class="pain-icon">🔍</div>
+                <div class="pain-title">Конкурент снизил цену — узнали через неделю</div>
+                <div class="pain-desc">Без постоянного мониторинга вы теряете продажи. Ручной анализ занимает часы каждый день.</div>
             </div>
-        </section>
-
-        <!-- Сравнение -->
-        <section class="py-20 px-4 bg-navy/30">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-14 fade-in">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Штат vs Фрилансеры vs <span class="text-teal">AI-Офис</span></h2>
-                    <p class="text-slate text-lg">Сравните и убедитесь сами</p>
-                </div>
-                <div class="overflow-x-auto fade-in">
-                    <table class="w-full text-left table-zebra rounded-xl overflow-hidden">
-                        <thead>
-                            <tr class="border-b border-white/10">
-                                <th class="p-4 text-slate font-medium">Параметр</th>
-                                <th class="p-4 font-medium">Штат</th>
-                                <th class="p-4 font-medium">Фрилансеры</th>
-                                <th class="p-4 font-medium teal-col text-teal">AI-Офис ✓</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-white/5">
-                                <td class="p-4 text-slate">Стоимость/мес</td>
-                                <td class="p-4">280 000₽+</td>
-                                <td class="p-4">80 000₽+</td>
-                                <td class="p-4 teal-col font-semibold text-teal">30 000₽</td>
-                            </tr>
-                            <tr class="border-b border-white/5">
-                                <td class="p-4 text-slate">Скорость</td>
-                                <td class="p-4">Дни</td>
-                                <td class="p-4">1-3 дня</td>
-                                <td class="p-4 teal-col font-semibold text-teal">Минуты</td>
-                            </tr>
-                            <tr class="border-b border-white/5">
-                                <td class="p-4 text-slate">Доступность</td>
-                                <td class="p-4">9:00-18:00</td>
-                                <td class="p-4">Когда свободен</td>
-                                <td class="p-4 teal-col font-semibold text-teal">24/7</td>
-                            </tr>
-                            <tr class="border-b border-white/5">
-                                <td class="p-4 text-slate">Кол-во специалистов</td>
-                                <td class="p-4">2-3</td>
-                                <td class="p-4">1-2</td>
-                                <td class="p-4 teal-col font-semibold text-teal">16</td>
-                            </tr>
-                            <tr class="border-b border-white/5">
-                                <td class="p-4 text-slate">Больничные/отпуска</td>
-                                <td class="p-4">Да</td>
-                                <td class="p-4">Да</td>
-                                <td class="p-4 teal-col font-semibold text-teal">Нет</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 text-slate">Масштабирование</td>
-                                <td class="p-4">Долгий наём</td>
-                                <td class="p-4">Поиск новых</td>
-                                <td class="p-4 teal-col font-semibold text-teal">Моментально</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Тарифы -->
-        <section class="py-20 px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-14 fade-in">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Выберите <span class="text-teal">тариф</span></h2>
-                    <p class="text-slate text-lg">Начните с бесплатных 7 дней — без обязательств</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="card rounded-2xl p-6 fade-in">
-                        <h3 class="text-lg font-semibold mb-1">Старт</h3>
-                        <p class="text-slate text-sm mb-4">Для новичков</p>
-                        <div class="text-3xl font-bold mb-1">15-25К₽<span class="text-lg text-slate font-normal">/мес</span></div>
-                        <p class="text-slate text-sm mb-6">3 сотрудника, до 50 задач</p>
-                        <ul class="text-sm text-slate space-y-2 mb-6">
-                            <li>✓ Аналитик</li>
-                            <li>✓ Копирайтер</li>
-                            <li>✓ Дизайнер</li>
-                        </ul>
-                        <a href="contact.html" class="block text-center border border-teal text-teal py-2.5 rounded-lg hover:bg-teal hover:text-white transition font-medium">Выбрать</a>
-                    </div>
-                    <div class="card rounded-2xl p-6 border-teal/50 relative fade-in">
-                        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-teal text-white text-xs font-semibold px-3 py-1 rounded-full">Популярный</span>
-                        <h3 class="text-lg font-semibold mb-1">Бизнес</h3>
-                        <p class="text-slate text-sm mb-4">Для растущих</p>
-                        <div class="text-3xl font-bold mb-1">30-50К₽<span class="text-lg text-slate font-normal">/мес</span></div>
-                        <p class="text-slate text-sm mb-6">8 сотрудников, безлимит</p>
-                        <ul class="text-sm text-slate space-y-2 mb-6">
-                            <li>✓ Всё из «Старт»</li>
-                            <li>✓ Рекламщик</li>
-                            <li>✓ Аудитор</li>
-                            <li>✓ Excel-аналитик</li>
-                            <li>✓ Приоритетная поддержка</li>
-                        </ul>
-                        <a href="contact.html" class="block text-center bg-teal text-white py-2.5 rounded-lg hover:bg-teal/80 transition font-medium glow">Выбрать</a>
-                    </div>
-                    <div class="card rounded-2xl p-6 fade-in">
-                        <h3 class="text-lg font-semibold mb-1">Масштаб</h3>
-                        <p class="text-slate text-sm mb-4">Для крупных</p>
-                        <div class="text-3xl font-bold mb-1">50-100К₽<span class="text-lg text-slate font-normal">/мес</span></div>
-                        <p class="text-slate text-sm mb-6">16 сотрудников, менеджер</p>
-                        <ul class="text-sm text-slate space-y-2 mb-6">
-                            <li>✓ Все 16 сотрудников</li>
-                            <li>✓ Стратегические сессии</li>
-                            <li>✓ Выделенный менеджер</li>
-                        </ul>
-                        <a href="contact.html" class="block text-center border border-teal text-teal py-2.5 rounded-lg hover:bg-teal hover:text-white transition font-medium">Выбрать</a>
-                    </div>
-                    <div class="card rounded-2xl p-6 fade-in">
-                        <h3 class="text-lg font-semibold mb-1">Агентство</h3>
-                        <p class="text-slate text-sm mb-4">Для агентств</p>
-                        <div class="text-3xl font-bold mb-1">100-200К₽<span class="text-lg text-slate font-normal">/мес</span></div>
-                        <p class="text-slate text-sm mb-6">Мульти-кабинет, white label</p>
-                        <ul class="text-sm text-slate space-y-2 mb-6">
-                            <li>✓ Всё из «Масштаб»</li>
-                            <li>✓ 20+ клиентов</li>
-                            <li>✓ White label</li>
-                            <li>✓ API доступ</li>
-                        </ul>
-                        <a href="contact.html" class="block text-center border border-teal text-teal py-2.5 rounded-lg hover:bg-teal hover:text-white transition font-medium">Выбрать</a>
-                    </div>
-                </div>
-                <div class="text-center mt-10">
-                    <a href="pricing.html" class="text-teal font-medium hover:underline text-lg">Подробнее о тарифах →</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Отзывы/кейсы -->
-        <section class="py-20 px-4 bg-navy/30">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-14 fade-in">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Реальные <span class="text-teal">результаты</span></h2>
-                    <p class="text-slate text-lg">Что получают селлеры с AI-Офисом</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <article class="card rounded-2xl p-6 fade-in">
-                        <div class="text-teal font-semibold mb-2">Аудит кабинета</div>
-                        <h3 class="text-xl font-bold mb-3">Нашли 40К₽ скрытых потерь</h3>
-                        <p class="text-slate text-sm mb-4">Селлер с оборотом 1.5М₽ не знал, что 4 SKU убыточные. AI-аудитор нашёл потери, маржа выросла на 35%.</p>
-                        <div class="flex gap-4 text-sm">
-                            <span class="text-teal font-medium">+35% маржи</span>
-                            <span class="text-slate">за 2 часа</span>
-                        </div>
-                    </article>
-                    <article class="card rounded-2xl p-6 fade-in">
-                        <div class="text-teal font-semibold mb-2">Запуск товара</div>
-                        <h3 class="text-xl font-bold mb-3">5 дней вместо месяца</h3>
-                        <p class="text-slate text-sm mb-4">Цепочка AI: анализ ниши → карточки → SEO → рекламная стратегия. Первый заказ на 5-й день.</p>
-                        <div class="flex gap-4 text-sm">
-                            <span class="text-teal font-medium">x6 быстрее</span>
-                            <span class="text-slate">от идеи до заказа</span>
-                        </div>
-                    </article>
-                    <article class="card rounded-2xl p-6 fade-in">
-                        <div class="text-teal font-semibold mb-2">Экономия</div>
-                        <h3 class="text-xl font-bold mb-3">−180К₽/мес на команде</h3>
-                        <p class="text-slate text-sm mb-4">Заменил штат из 4 человек (200К₽) на AI-Офис (40К₽) + 1 менеджер. Скорость выросла в 3 раза.</p>
-                        <div class="flex gap-4 text-sm">
-                            <span class="text-teal font-medium">−80К₽/мес</span>
-                            <span class="text-slate">x3 скорость</span>
-                        </div>
-                    </article>
-                </div>
-                <div class="text-center mt-10">
-                    <a href="cases.html" class="text-teal font-medium hover:underline text-lg">Все кейсы →</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="py-20 px-4">
-            <div class="max-w-3xl mx-auto text-center fade-in">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-6">Попробуйте <span class="text-teal">7 дней бесплатно</span></h2>
-                <p class="text-slate text-lg mb-10">Без привязки карты. Полный доступ ко всем 16 AI-сотрудникам. Убедитесь сами — это работает.</p>
-                <a href="contact.html" class="inline-block bg-teal hover:bg-teal/80 text-white px-10 py-4 rounded-xl font-semibold text-lg transition glow">
-                    Начать бесплатно
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-white/5 py-12 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="text-xl font-bold mb-4">AI-<span class="text-teal">Офис</span></div>
-                    <p class="text-slate text-sm">16 AI-сотрудников для вашего бизнеса на маркетплейсах</p>
-                </div>
-                <div>
-                    <div class="font-semibold mb-4">Страницы</div>
-                    <ul class="space-y-2 text-sm text-slate">
-                        <li><a href="problems.html" class="hover:text-teal transition">Проблемы</a></li>
-                        <li><a href="team.html" class="hover:text-teal transition">Команда</a></li>
-                        <li><a href="how-it-works.html" class="hover:text-teal transition">Как работает</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="font-semibold mb-4">Ещё</div>
-                    <ul class="space-y-2 text-sm text-slate">
-                        <li><a href="pricing.html" class="hover:text-teal transition">Тарифы</a></li>
-                        <li><a href="cases.html" class="hover:text-teal transition">Кейсы</a></li>
-                        <li><a href="contact.html" class="hover:text-teal transition">Контакты</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="font-semibold mb-4">Связаться</div>
-                    <ul class="space-y-2 text-sm text-slate">
-                        <li><a href="https://t.me/estetica_an" class="hover:text-teal transition" target="_blank" rel="noopener">Telegram</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate">
-                <span>AI Forge © 2026</span>
-                <span>@estetica_an</span>
+            <div class="pain-card fade-in fade-in-delay-2">
+                <div class="pain-icon">🤯</div>
+                <div class="pain-title">Всё сам: от карточек до бухгалтерии</div>
+                <div class="pain-desc">Выгорание от того, что вы и копирайтер, и дизайнер, и логист, и бухгалтер одновременно.</div>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- JS: Mobile menu + Scroll animations -->
-    <script>
-        // Mobile menu
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        menuBtn.addEventListener('click', () => {
-            menuBtn.classList.toggle('menu-open');
-            mobileMenu.classList.toggle('hidden');
-        });
+<!-- ===== Team: 20 Agents ===== -->
+<section class="section" id="team">
+    <div class="container">
+        <h2 class="section-title fade-in">Ваша <span class="gradient-text">AI-команда</span> из 20 специалистов</h2>
+        <p class="section-subtitle fade-in">Каждый агент — эксперт в своей области. Вместе они закрывают все задачи вашего бизнеса.</p>
+        <div class="agents-grid">
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">🐱</span>
+                <div class="agent-name">Васька</div>
+                <div class="agent-desc">Операционный директор. Управляет всей командой, делегирует задачи.</div>
+                <span class="agent-saving">Координация</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">✍️</span>
+                <div class="agent-name">Копирайтер</div>
+                <div class="agent-desc">SEO-тексты, описания карточек, контент для всех площадок.</div>
+                <span class="agent-saving">40-60К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">📊</span>
+                <div class="agent-name">Аналитик</div>
+                <div class="agent-desc">Анализ продаж, конкурентов, unit-экономика, отчёты.</div>
+                <span class="agent-saving">50-80К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">🎨</span>
+                <div class="agent-name">Дизайнер</div>
+                <div class="agent-desc">Инфографика, карточки товаров, баннеры, визуал.</div>
+                <span class="agent-saving">40-70К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">🔧</span>
+                <div class="agent-name">Технарь</div>
+                <div class="agent-desc">Автоматизация, интеграции, API, техническая поддержка.</div>
+                <span class="agent-saving">80-120К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">🎬</span>
+                <div class="agent-name">Продюсер</div>
+                <div class="agent-desc">Контент-план, видео-сценарии, reels и short-видео.</div>
+                <span class="agent-saving">50-80К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">🔍</span>
+                <div class="agent-name">Аудитор</div>
+                <div class="agent-desc">Аудит магазинов, поиск точек роста и слабых мест.</div>
+                <span class="agent-saving">Рост +20-40%</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">📢</span>
+                <div class="agent-name">Рекламщик</div>
+                <div class="agent-desc">Настройка рекламы WB/Ozon, оптимизация ставок.</div>
+                <span class="agent-saving">30-50К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">🇨🇳</span>
+                <div class="agent-name">Китай-менеджер</div>
+                <div class="agent-desc">Поиск поставщиков, переговоры, контроль закупок.</div>
+                <span class="agent-saving">50-100К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">💼</span>
+                <div class="agent-name">Продажник</div>
+                <div class="agent-desc">Скрипты продаж, обработка лидов, конверсия.</div>
+                <span class="agent-saving">Конверсия +25%</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">📋</span>
+                <div class="agent-name">Проджект-менеджер</div>
+                <div class="agent-desc">Контроль задач, дедлайны, координация процессов.</div>
+                <span class="agent-saving">60-90К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">📈</span>
+                <div class="agent-name">Маркетолог</div>
+                <div class="agent-desc">Стратегия продвижения, анализ каналов трафика.</div>
+                <span class="agent-saving">60-100К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">💰</span>
+                <div class="agent-name">Финансист</div>
+                <div class="agent-desc">P&amp;L, cash flow, юнит-экономика, планирование.</div>
+                <span class="agent-saving">40-60К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">🚚</span>
+                <div class="agent-name">Логист</div>
+                <div class="agent-desc">Оптимизация складов, FBO/FBS, логистика и упаковка.</div>
+                <span class="agent-saving">30-100К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">📦</span>
+                <div class="agent-name">Закупщик</div>
+                <div class="agent-desc">Прогноз продаж, оптимальные объёмы закупок.</div>
+                <span class="agent-saving">100-300К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">💲</span>
+                <div class="agent-name">Ценовик</div>
+                <div class="agent-desc">Мониторинг цен, оптимизация маржинальности.</div>
+                <span class="agent-saving">+15-30% маржи</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">⭐</span>
+                <div class="agent-name">Репутационщик</div>
+                <div class="agent-desc">Ответы на отзывы, рейтинг, вопросы покупателей.</div>
+                <span class="agent-saving">20-40К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">🔭</span>
+                <div class="agent-name">Скаут</div>
+                <div class="agent-desc">Поиск трендов, растущие ниши, сезонный анализ.</div>
+                <span class="agent-saving">Прибыль vs убыток</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">⚖️</span>
+                <div class="agent-name">Юрист-Сертификатор</div>
+                <div class="agent-desc">Маркировка, сертификаты, Честный ЗНАК, документы.</div>
+                <span class="agent-saving">50-300К на штрафах</span>
+            </div>
+            <div class="agent-card fade-in">
+                <span class="agent-emoji">📱</span>
+                <div class="agent-name">Контент-стратег</div>
+                <div class="agent-desc">Внешний трафик, SMM для товаров, воронки.</div>
+                <span class="agent-saving">40-60К/мес</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.05 });
+<!-- ===== How It Works ===== -->
+<section class="section section-alt" id="how">
+    <div class="container">
+        <h2 class="section-title fade-in">Как это <span class="gradient-text">работает</span></h2>
+        <p class="section-subtitle fade-in">Три шага — и у вас полноценная AI-команда.</p>
+        <div class="steps">
+            <div class="step fade-in">
+                <div class="step-number">1</div>
+                <div class="step-icon">📱</div>
+                <h3>Подключаете Telegram-бота</h3>
+                <p>Нажмите кнопку, перейдите в Telegram и нажмите /start. Никаких установок, регистраций или настроек.</p>
+            </div>
+            <div class="step-arrow fade-in">→</div>
+            <div class="step fade-in fade-in-delay-1">
+                <div class="step-number">2</div>
+                <div class="step-icon">💬</div>
+                <h3>Пишете задачу обычным языком</h3>
+                <p>«Напиши описание для карточки купальника на WB» или «Проанализируй конкурентов в нише кроссовки». Просто по-русски.</p>
+            </div>
+            <div class="step-arrow fade-in">→</div>
+            <div class="step fade-in fade-in-delay-2">
+                <div class="step-number">3</div>
+                <div class="step-icon">🚀</div>
+                <h3>Получаете результат за минуты</h3>
+                <p>Нужный агент подключается автоматически, выполняет задачу и отправляет результат прямо в чат.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        document.querySelectorAll('.fade-in, .scale-in').forEach(el => observer.observe(el));
-    </script>
-<script>setTimeout(function(){document.querySelectorAll(".fade-in,.scale-in").forEach(function(el){el.classList.add("visible")})},2000)</script></body>
+<!-- ===== Pricing ===== -->
+<section class="section" id="pricing">
+    <div class="container">
+        <h2 class="section-title fade-in">Выберите <span class="gradient-text">тариф</span></h2>
+        <p class="section-subtitle fade-in">7 дней бесплатно на любом тарифе. Без привязки карты.</p>
+        <div class="pricing-grid">
+            <!-- Starter -->
+            <div class="pricing-card fade-in">
+                <div class="pricing-name">Starter</div>
+                <div class="pricing-price">19 900₽ <span>/мес</span></div>
+                <div class="pricing-desc">Для тех, кто только начинает на маркетплейсах.</div>
+                <ul class="pricing-features">
+                    <li>5 AI-агентов</li>
+                    <li>Васька (координация)</li>
+                    <li>Копирайтер (SEO-тексты)</li>
+                    <li>Аналитик (анализ продаж)</li>
+                    <li>Дизайнер (карточки)</li>
+                    <li>Репутационщик (отзывы)</li>
+                    <li>Telegram-бот 24/7</li>
+                </ul>
+                <a href="https://t.me/atlasfabric_bot" class="cta-btn cta-btn-outline pricing-cta" target="_blank">Попробовать бесплатно</a>
+            </div>
+            <!-- Business -->
+            <div class="pricing-card popular fade-in fade-in-delay-1">
+                <div class="pricing-badge">Популярный</div>
+                <div class="pricing-name">Business</div>
+                <div class="pricing-price">49 900₽ <span>/мес</span></div>
+                <div class="pricing-desc">Для растущих магазинов с оборотом от 500К.</div>
+                <ul class="pricing-features">
+                    <li>12 AI-агентов</li>
+                    <li>Всё из Starter</li>
+                    <li>Рекламщик (WB/Ozon)</li>
+                    <li>Маркетолог (стратегия)</li>
+                    <li>Финансист (P&amp;L)</li>
+                    <li>Ценовик (маржа)</li>
+                    <li>Скаут (тренды)</li>
+                    <li>Закупщик (прогнозы)</li>
+                    <li>Контент-стратег (SMM)</li>
+                    <li>Приоритетная обработка</li>
+                </ul>
+                <a href="https://t.me/atlasfabric_bot" class="cta-btn pricing-cta" target="_blank">Попробовать бесплатно</a>
+            </div>
+            <!-- Enterprise -->
+            <div class="pricing-card fade-in fade-in-delay-2">
+                <div class="pricing-name">Enterprise</div>
+                <div class="pricing-price">89 900₽ <span>/мес</span></div>
+                <div class="pricing-desc">Для крупных селлеров и агентств.</div>
+                <ul class="pricing-features">
+                    <li>Все 20 AI-агентов</li>
+                    <li>Всё из Business</li>
+                    <li>Китай-менеджер (закупки)</li>
+                    <li>Продажник (лиды)</li>
+                    <li>Проджект-менеджер</li>
+                    <li>Логист (склады)</li>
+                    <li>Юрист-Сертификатор</li>
+                    <li>Технарь (API)</li>
+                    <li>Продюсер (видео)</li>
+                    <li>Аудитор (точки роста)</li>
+                    <li>Кастомные агенты под вас</li>
+                    <li>API-доступ</li>
+                    <li>Персональный менеджер</li>
+                </ul>
+                <a href="https://t.me/atlasfabric_bot" class="cta-btn cta-btn-outline pricing-cta" target="_blank">Попробовать бесплатно</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Comparison ===== -->
+<section class="section section-alt" id="compare">
+    <div class="container">
+        <h2 class="section-title fade-in">Штат vs <span class="gradient-text">AI-Офис</span></h2>
+        <p class="section-subtitle fade-in">Сравните и решите сами.</p>
+        <div class="comparison">
+            <div class="compare-block compare-bad fade-in">
+                <div class="compare-title">❌ Обычный штат</div>
+                <ul class="compare-list">
+                    <li>500 000₽+/мес на зарплаты и налоги</li>
+                    <li>Поиск занимает 2-3 месяца</li>
+                    <li>Больничные, отпуска, выгорание</li>
+                    <li>Уходят к конкурентам с вашими наработками</li>
+                    <li>Работают с 9 до 18, не в выходные</li>
+                    <li>Каждый знает только свою область</li>
+                </ul>
+            </div>
+            <div class="compare-block compare-good fade-in fade-in-delay-1">
+                <div class="compare-title">✅ AI-Офис</div>
+                <ul class="compare-list">
+                    <li>От 19 900₽/мес за целую команду</li>
+                    <li>Подключение за 5 минут</li>
+                    <li>24/7 без выходных и праздников</li>
+                    <li>Не уволится и не уйдёт к конкуренту</li>
+                    <li>Мгновенная реакция на задачи</li>
+                    <li>20 экспертов во всех областях сразу</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq">
+    <div class="container">
+        <h2 class="section-title fade-in">Частые <span class="gradient-text">вопросы</span></h2>
+        <p class="section-subtitle fade-in">Всё, что вы хотели спросить о нашем AI-офисе.</p>
+        <div class="faq-list">
+            <div class="faq-item fade-in">
+                <div class="faq-q">Это правда AI или за экраном сидят люди?</div>
+                <div class="faq-a"><div class="faq-a-inner">Да, это настоящий искусственный интеллект на базе Claude (Anthropic) — одной из самых мощных AI-моделей в мире. Каждый агент обучен на данных маркетплейсов, SEO, маркетинга и e-commerce. Мы не нанимаем фрилансеров — всю работу делает AI.</div></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-q">А если результат не устроит?</div>
+                <div class="faq-a"><div class="faq-a-inner">Вы можете попросить переделать или уточнить задачу — AI выполнит её заново. У нас 7-дневный бесплатный период: попробуйте и решите сами. Если не подойдёт — вы ничего не платите.</div></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-q">Какие маркетплейсы поддерживаете?</div>
+                <div class="faq-a"><div class="faq-a-inner">Wildberries и Ozon — основные площадки. Также работаем с Яндекс Маркет и можем помочь с Amazon, Alibaba. Агенты знают специфику каждой площадки: комиссии, логистику, правила карточек, рекламные кабинеты.</div></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-q">Нужно ли что-то устанавливать?</div>
+                <div class="faq-a"><div class="faq-a-inner">Нет. Всё работает через Telegram — приложение, которое уже есть у вас на телефоне. Нажали /start — и готово. Никаких программ, плагинов или настроек.</div></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-q">Есть ли пробный период?</div>
+                <div class="faq-a"><div class="faq-a-inner">Да, 7 дней бесплатно на любом тарифе. Без привязки карты. Просто напишите боту в Telegram, протестируйте агентов на реальных задачах и решите, подходит ли вам.</div></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-q">Насколько это безопасно для моих данных?</div>
+                <div class="faq-a"><div class="faq-a-inner">Все данные передаются по зашифрованному каналу. Мы не храним данные ваших личных кабинетов маркетплейсов. AI работает только с той информацией, которую вы ему даёте в чате.</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="final-cta">
+    <div class="container final-cta-inner">
+        <h2 class="fade-in">Готовы собрать команду мечты?</h2>
+        <p class="fade-in">20 AI-специалистов уже ждут ваших задач. Начните бесплатно прямо сейчас.</p>
+        <a href="https://t.me/atlasfabric_bot" class="cta-btn cta-btn-white fade-in" target="_blank">
+            Начать бесплатно в Telegram
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+    <div class="container">
+        <p>AI-Офис &copy; 2026 &middot; <a href="https://t.me/atlasfabric_bot">Telegram</a> &middot; <a href="mailto:hello@ai-office.ru">hello@ai-office.ru</a></p>
+    </div>
+</footer>
+
+<script>
+// ===== Scroll animations (IntersectionObserver) =====
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ===== Header scroll shadow =====
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// ===== Mobile menu =====
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+
+function closeMobile() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+// ===== FAQ accordion =====
+document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const wasOpen = item.classList.contains('open');
+        // close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        // toggle current
+        if (!wasOpen) item.classList.add('open');
+    });
+});
+</script>
+
+</body>
 </html>
