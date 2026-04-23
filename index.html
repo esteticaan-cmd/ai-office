@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-Офис — 20 AI-сотрудников для селлеров маркетплейсов | AI Forge</title>
-    <meta name="description" content="AI-Офис для селлеров WB и Ozon. Команда из 20 AI-сотрудников за 19 900₽/мес вместо 500 000₽+ на штат. Работают 24/7 через Telegram.">
-    <meta property="og:title" content="AI-Офис — 20 AI-сотрудников для селлеров маркетплейсов">
-    <meta property="og:description" content="Команда из 20 AI-сотрудников за 19 900₽/мес вместо 500 000₽+ на штат. Работают 24/7 через Telegram.">
+    <title>AI-Офис для селлеров WB и Ozon — 15 AI-сотрудников от 19 900₽/мес</title>
+    <meta name="description" content="Готовая команда из 15 AI-специалистов для маркетплейсов. Копирайтер, аналитик, дизайнер, менеджер рекламы и ещё 11 сотрудников. Работают 24/7 через Telegram. 7 дней бесплатно.">
+    <meta name="keywords" content="ai офис для селлеров, ai для wildberries, ai для ozon, автоматизация маркетплейса, ai карточки товаров, seo карточка wb">
+    <meta property="og:title" content="AI-Офис для селлеров WB и Ozon — 15 AI-сотрудников от 19 900₽/мес">
+    <meta property="og:description" content="Готовая команда из 15 AI-специалистов для маркетплейсов. Копирайтер, аналитик, дизайнер, менеджер рекламы и ещё 11 сотрудников. Работают 24/7 через Telegram.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ai-office.ru/">
     <meta property="og:image" content="https://ai-office.ru/og-image.jpg">
@@ -382,7 +383,7 @@
         /* ===== Team / Agents ===== */
         .agents-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 16px;
         }
         .agent-card {
@@ -390,7 +391,7 @@
             border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 24px 20px;
-            text-align: center;
+            text-align: left;
             transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
             position: relative;
             overflow: hidden;
@@ -414,22 +415,27 @@
         .agent-card:hover::before {
             opacity: 1;
         }
+        .agent-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
         .agent-emoji {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
+            font-size: 2rem;
             display: block;
+            flex-shrink: 0;
         }
         .agent-name {
             font-size: 0.9375rem;
             font-weight: 700;
             color: var(--text-dark);
-            margin-bottom: 6px;
         }
         .agent-desc {
             font-size: 0.8125rem;
             color: var(--text-light);
             margin-bottom: 10px;
-            line-height: 1.4;
+            line-height: 1.5;
         }
         .agent-saving {
             display: inline-block;
@@ -440,22 +446,59 @@
             font-weight: 700;
             border-radius: 50px;
         }
+        .system-layer {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        .system-layer-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .system-layer-desc {
+            font-size: 0.9375rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .system-agents {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .system-agent {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .system-agent span {
+            font-size: 1.25rem;
+        }
 
         /* ===== How It Works ===== */
         .steps {
-            display: flex;
-            gap: 32px;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
             align-items: stretch;
         }
         .step {
-            flex: 1;
-            max-width: 340px;
             text-align: center;
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
-            padding: 40px 28px;
+            padding: 36px 24px;
             position: relative;
             transition: transform 0.25s, box-shadow 0.25s;
         }
@@ -542,6 +585,12 @@
             font-weight: 800;
             color: var(--text-dark);
             margin-bottom: 8px;
+        }
+        .pricing-agents {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--blue);
+            margin-bottom: 12px;
         }
         .pricing-price {
             font-size: 2.75rem;
@@ -749,7 +798,8 @@
 
         /* ===== Mobile ===== */
         @media (max-width: 1024px) {
-            .agents-grid { grid-template-columns: repeat(3, 1fr); }
+            .agents-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
             .section { padding: 60px 0; }
@@ -762,19 +812,16 @@
             .nav { display: none; }
             .hamburger { display: flex; }
             .pains-grid { grid-template-columns: repeat(2, 1fr); }
-            .agents-grid { grid-template-columns: repeat(2, 1fr); }
-            .steps { flex-direction: column; align-items: center; }
-            .step-arrow { transform: rotate(90deg); }
+            .agents-grid { grid-template-columns: 1fr; }
+            .steps { grid-template-columns: 1fr; }
             .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
             .comparison { grid-template-columns: 1fr; }
             .final-cta h2 { font-size: 1.75rem; }
+            .system-agents { flex-direction: column; align-items: center; gap: 12px; }
         }
         @media (max-width: 480px) {
             .hero h1 { font-size: 1.625rem; }
             .pains-grid { grid-template-columns: 1fr; }
-            .agents-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-            .agent-card { padding: 18px 14px; }
-            .agent-emoji { font-size: 2rem; }
             .hero-stats { flex-direction: column; gap: 16px; }
         }
     </style>
@@ -793,7 +840,7 @@
             <a href="#how">Как работает</a>
             <a href="#pricing">Тарифы</a>
             <a href="#faq">FAQ</a>
-            <a href="https://t.me/atlasfabric_bot" class="nav-cta" target="_blank">Попробовать бесплатно</a>
+            <a href="https://t.me/clavai_office_bot" class="nav-cta" target="_blank">Попробовать бесплатно</a>
         </nav>
         <button class="hamburger" id="hamburger" aria-label="Menu">
             <span></span><span></span><span></span>
@@ -807,19 +854,19 @@
     <a href="#how" onclick="closeMobile()">Как работает</a>
     <a href="#pricing" onclick="closeMobile()">Тарифы</a>
     <a href="#faq" onclick="closeMobile()">FAQ</a>
-    <a href="https://t.me/atlasfabric_bot" class="cta-btn" style="text-align:center;justify-content:center" target="_blank">Попробовать бесплатно</a>
+    <a href="https://t.me/clavai_office_bot" class="cta-btn" style="text-align:center;justify-content:center" target="_blank">Попробовать бесплатно</a>
 </div>
 
 <!-- ===== Hero ===== -->
 <section class="hero">
     <div class="container hero-inner">
         <div class="hero-badge fade-in">
-            <span>🚀</span> Первый AI-офис для маркетплейсов в России
+            <span>🚀</span> Первый AI-офис для селлеров WB и Ozon
         </div>
-        <h1 class="fade-in">20 AI-сотрудников<br>для вашего бизнеса<br>на <span class="gradient-text">маркетплейсах</span></h1>
-        <p class="hero-sub fade-in">Целая команда специалистов за 19 900&#8239;₽/мес вместо 500 000&#8239;₽+ на штат. Работают 24/7 через Telegram.</p>
+        <h1 class="fade-in">15 специалистов<br>для твоего магазина<br>на <span class="gradient-text">маркетплейсах</span></h1>
+        <p class="hero-sub fade-in">Копирайтер, аналитик, дизайнер, менеджер рекламы и ещё 11 сотрудников за 19&#8239;900&#8239;₽/мес. Работают 24/7 через Telegram. Нанять людей = 500&#8239;000&#8239;₽+ в месяц.</p>
         <div class="hero-cta-group fade-in">
-            <a href="https://t.me/atlasfabric_bot" class="cta-btn" target="_blank">
+            <a href="https://t.me/clavai_office_bot" class="cta-btn" target="_blank">
                 Попробовать 7 дней бесплатно
                 <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -827,16 +874,16 @@
         </div>
         <div class="hero-stats fade-in">
             <div class="hero-stat">
-                <div class="hero-stat-value">-80%</div>
+                <div class="hero-stat-value">-85%</div>
                 <div class="hero-stat-label">расходов на команду</div>
             </div>
             <div class="hero-stat">
                 <div class="hero-stat-value">24/7</div>
-                <div class="hero-stat-label">без выходных</div>
+                <div class="hero-stat-label">без выходных и больничных</div>
             </div>
             <div class="hero-stat">
-                <div class="hero-stat-value">20</div>
-                <div class="hero-stat-label">специалистов</div>
+                <div class="hero-stat-value">15</div>
+                <div class="hero-stat-label">специалистов в связке</div>
             </div>
         </div>
     </div>
@@ -846,167 +893,190 @@
 <section class="section section-alt" id="pains">
     <div class="container">
         <h2 class="section-title fade-in">Знакомые <span class="gradient-text">проблемы</span>?</h2>
-        <p class="section-subtitle fade-in">Каждый селлер сталкивается с этим. Мы знаем, потому что сами через это прошли.</p>
+        <p class="section-subtitle fade-in">Каждый селлер теряет на этом деньги. Мы знаем — сами через это прошли.</p>
         <div class="pains-grid">
             <div class="pain-card fade-in">
+                <div class="pain-icon">📉</div>
+                <div class="pain-title">Карточки не в ТОПе выдачи</div>
+                <div class="pain-desc">Конкуренты обходят, потому что у них SEO лучше. Ты пишешь описания на глаз, а они — по ключам с частотностью. Результат: твоя карточка на 5-й странице.</div>
+            </div>
+            <div class="pain-card fade-in fade-in-delay-1">
                 <div class="pain-icon">💸</div>
-                <div class="pain-title">Наняли SMM за 60К — ушёл через месяц</div>
-                <div class="pain-desc">Текучка кадров съедает бюджет на обучение и поиск. Каждый новый сотрудник — это 2-3 месяца адаптации.</div>
+                <div class="pain-title">Сливаю бюджет на рекламу</div>
+                <div class="pain-desc">ДРР 30%+, а продаж нет. Запускаешь рекламу на сырую карточку без SEO, без нормального фото — и льёшь деньги в пустоту.</div>
+            </div>
+            <div class="pain-card fade-in fade-in-delay-2">
+                <div class="pain-icon">⭐</div>
+                <div class="pain-title">Отзывы без ответа — рейтинг падает</div>
+                <div class="pain-desc">Покупатели пишут вопросы и жалобы — тишина. Конверсия минус 15%. А шаблонное «Спасибо за отзыв!» ещё хуже — люди видят, что тебе всё равно.</div>
+            </div>
+            <div class="pain-card fade-in">
+                <div class="pain-icon">📦</div>
+                <div class="pain-title">Out of stock = минус позиции на 3 недели</div>
+                <div class="pain-desc">Не рассчитал закупку, товар кончился на 3 дня. Пока восстанавливаешь позиции — конкуренты заняли твоё место в ТОПе. 2-4 недели на откат.</div>
             </div>
             <div class="pain-card fade-in fade-in-delay-1">
                 <div class="pain-icon">🏃</div>
-                <div class="pain-title">Фрилансер пропал с предоплатой</div>
-                <div class="pain-desc">Дедлайн сорван, деньги потеряны. Приходится искать нового и начинать заново.</div>
+                <div class="pain-title">Фрилансеры пропадают</div>
+                <div class="pain-desc">Дизайнер слился перед запуском. Копирайтер пишет шаблонно. Каждый новый — это 2-3 недели на погружение. А нанять в штат = 80-150К/мес + налоги.</div>
             </div>
             <div class="pain-card fade-in fade-in-delay-2">
                 <div class="pain-icon">⚠️</div>
-                <div class="pain-title">Штрафы за маркировку — 300К</div>
-                <div class="pain-desc">Не уследили за Честным ЗНАКом или сертификатами — получили штраф, который обнулил месячную прибыль.</div>
+                <div class="pain-title">Штраф 300К за Честный Знак</div>
+                <div class="pain-desc">Не уследил за сертификатами или маркировкой — получил штраф, который обнулил месячную прибыль. Блокировка карточки сверху.</div>
             </div>
             <div class="pain-card fade-in">
-                <div class="pain-icon">📉</div>
-                <div class="pain-title">Out of stock — потерял позиции на 3 недели</div>
-                <div class="pain-desc">Не рассчитали закупку, товар кончился. Пока восстанавливали — конкуренты заняли топ.</div>
+                <div class="pain-icon">💰</div>
+                <div class="pain-title">Не знаю свою реальную маржу</div>
+                <div class="pain-desc">Думаешь, что зарабатываешь 30%. А посчитай ВСЕ комиссии WB/Ozon, логистику, возвраты, рекламу — и окажется, что работаешь в минус.</div>
             </div>
             <div class="pain-card fade-in fade-in-delay-1">
                 <div class="pain-icon">🔍</div>
-                <div class="pain-title">Конкурент снизил цену — узнали через неделю</div>
-                <div class="pain-desc">Без постоянного мониторинга вы теряете продажи. Ручной анализ занимает часы каждый день.</div>
-            </div>
-            <div class="pain-card fade-in fade-in-delay-2">
-                <div class="pain-icon">🤯</div>
-                <div class="pain-title">Всё сам: от карточек до бухгалтерии</div>
-                <div class="pain-desc">Выгорание от того, что вы и копирайтер, и дизайнер, и логист, и бухгалтер одновременно.</div>
+                <div class="pain-title">Конкурент нашёл тренд раньше</div>
+                <div class="pain-desc">Пока ты раскачивался — ниша уже забита. Кто первый нашёл тренд, тот снял сливки. Остальным достаётся конкуренция и демпинг.</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ===== Team: 20 Agents ===== -->
+<!-- ===== Team: 15 Agents + 3 System ===== -->
 <section class="section" id="team">
     <div class="container">
-        <h2 class="section-title fade-in">Ваша <span class="gradient-text">AI-команда</span> из 20 специалистов</h2>
-        <p class="section-subtitle fade-in">Каждый агент — эксперт в своей области. Вместе они закрывают все задачи вашего бизнеса.</p>
+        <h2 class="section-title fade-in">Твоя <span class="gradient-text">AI-команда</span> — 15 специалистов</h2>
+        <p class="section-subtitle fade-in">Каждый сотрудник — эксперт в своей области. Работают в связке: аналитик собирает SEO → копирайтер пишет карточку → дизайнер делает фото. Конвейер, не хаос.</p>
+
+        <!-- System Layer -->
+        <div class="system-layer fade-in">
+            <div class="system-layer-title">Системный слой — включён бесплатно на всех тарифах</div>
+            <div class="system-layer-desc">Невидимый фундамент, который управляет всей командой. Ты не взаимодействуешь с ним напрямую — он работает сам.</div>
+            <div class="system-agents">
+                <div class="system-agent"><span>🐱</span> Операционный директор — управляет агентами, делегирует задачи</div>
+                <div class="system-agent"><span>🔧</span> Технарь — код, автоматизации, интеграции</div>
+                <div class="system-agent"><span>🧠</span> Менеджер памяти — помнит всё о твоём бизнесе</div>
+            </div>
+        </div>
+
+        <!-- 15 Client Agents -->
         <div class="agents-grid">
             <div class="agent-card fade-in">
-                <span class="agent-emoji">🐱</span>
-                <div class="agent-name">Васька</div>
-                <div class="agent-desc">Операционный директор. Управляет всей командой, делегирует задачи.</div>
-                <span class="agent-saving">Координация</span>
+                <div class="agent-header">
+                    <span class="agent-emoji">✍️</span>
+                    <div class="agent-name">Копирайтер</div>
+                </div>
+                <div class="agent-desc">SEO-карточки для WB/Ozon: заголовки с ключами, описания по формуле «боль → решение → выгода», bullet-points, Rich-контент. Каждая карточка уникальная, с учётом SEO-ядра от Аналитика. Не шаблонный текст — работа по данным.</div>
+                <span class="agent-saving">Экономия 40-60К/мес</span>
             </div>
             <div class="agent-card fade-in">
-                <span class="agent-emoji">✍️</span>
-                <div class="agent-name">Копирайтер</div>
-                <div class="agent-desc">SEO-тексты, описания карточек, контент для всех площадок.</div>
-                <span class="agent-saving">40-60К/мес</span>
+                <div class="agent-header">
+                    <span class="agent-emoji">📊</span>
+                    <div class="agent-name">Аналитик</div>
+                </div>
+                <div class="agent-desc">Собирает SEO-ядро: ключевые слова, частотность, конкуренты в выдаче. Анализирует нишу через Wildbox и Ozon Seller. Считает юнит-экономику. Даёт вердикт «входить или нет» с цифрами. Без него карточка = карточка в пустоту.</div>
+                <span class="agent-saving">Экономия 50-80К/мес</span>
             </div>
             <div class="agent-card fade-in">
-                <span class="agent-emoji">📊</span>
-                <div class="agent-name">Аналитик</div>
-                <div class="agent-desc">Анализ продаж, конкурентов, unit-экономика, отчёты.</div>
-                <span class="agent-saving">50-80К/мес</span>
+                <div class="agent-header">
+                    <span class="agent-emoji">⭐</span>
+                    <div class="agent-name">Менеджер отзывов</div>
+                </div>
+                <div class="agent-desc">Отвечает на ВСЕ отзывы уникально — не шаблонные «Спасибо!». Анализирует паттерны негатива: если 10 человек пишут про размер — сигналит обновить карточку. Мониторит рейтинг, алерт при падении.</div>
+                <span class="agent-saving">+15% конверсии</span>
             </div>
             <div class="agent-card fade-in">
-                <span class="agent-emoji">🎨</span>
-                <div class="agent-name">Дизайнер</div>
-                <div class="agent-desc">Инфографика, карточки товаров, баннеры, визуал.</div>
-                <span class="agent-saving">40-70К/мес</span>
+                <div class="agent-header">
+                    <span class="agent-emoji">🎨</span>
+                    <div class="agent-name">Дизайнер</div>
+                </div>
+                <div class="agent-desc">AI-фото для карточек: главное фото, lifestyle, инфографика. Генерирует через Nano Banana — уровень фотостудии. Делает карусели для Instagram. Работает после Копирайтера — фото строятся по тексту карточки.</div>
+                <span class="agent-saving">Экономия 40-70К/мес</span>
             </div>
             <div class="agent-card fade-in">
-                <span class="agent-emoji">🔧</span>
-                <div class="agent-name">Технарь</div>
-                <div class="agent-desc">Автоматизация, интеграции, API, техническая поддержка.</div>
-                <span class="agent-saving">80-120К/мес</span>
-            </div>
-            <div class="agent-card fade-in">
-                <span class="agent-emoji">🎬</span>
-                <div class="agent-name">Продюсер</div>
-                <div class="agent-desc">Контент-план, видео-сценарии, reels и short-видео.</div>
-                <span class="agent-saving">50-80К/мес</span>
-            </div>
-            <div class="agent-card fade-in">
-                <span class="agent-emoji">🔍</span>
-                <div class="agent-name">Аудитор</div>
-                <div class="agent-desc">Аудит магазинов, поиск точек роста и слабых мест.</div>
+                <div class="agent-header">
+                    <span class="agent-emoji">🔍</span>
+                    <div class="agent-name">Аудитор</div>
+                </div>
+                <div class="agent-desc">Полный аудит магазина: воронка (показы → CTR → корзина → заказ → выкуп), ABC-анализ ассортимента, аудит каждой карточки, рекламы, логистики, финансов. Выдаёт ТОП-5 проблем + ТОП-5 точек роста.</div>
                 <span class="agent-saving">Рост +20-40%</span>
             </div>
             <div class="agent-card fade-in">
-                <span class="agent-emoji">📢</span>
-                <div class="agent-name">Рекламщик</div>
-                <div class="agent-desc">Настройка рекламы WB/Ozon, оптимизация ставок.</div>
-                <span class="agent-saving">30-50К/мес</span>
+                <div class="agent-header">
+                    <span class="agent-emoji">📢</span>
+                    <div class="agent-name">Менеджер по рекламе</div>
+                </div>
+                <div class="agent-desc">Внутренняя реклама WB/Ozon: автокампании, ставки, бюджеты, ДРР. Оптимизирует конверсию воронки. Не запускает рекламу на сырую карточку — сначала ждёт Копирайтера и Дизайнера.</div>
+                <span class="agent-saving">ДРР минус 30-50%</span>
             </div>
             <div class="agent-card fade-in">
-                <span class="agent-emoji">🇨🇳</span>
-                <div class="agent-name">Китай-менеджер</div>
-                <div class="agent-desc">Поиск поставщиков, переговоры, контроль закупок.</div>
-                <span class="agent-saving">50-100К/мес</span>
+                <div class="agent-header">
+                    <span class="agent-emoji">💰</span>
+                    <div class="agent-name">Финансист</div>
+                </div>
+                <div class="agent-desc">P&amp;L по каждому SKU, юнит-экономика с учётом ВСЕХ комиссий (WB/Ozon меняют каждый месяц), финмодели, дашборды. Покажет реальную маржу, а не ту, что ты думаешь.</div>
+                <span class="agent-saving">Экономия 40-60К/мес</span>
             </div>
             <div class="agent-card fade-in">
-                <span class="agent-emoji">💼</span>
-                <div class="agent-name">Продажник</div>
-                <div class="agent-desc">Скрипты продаж, обработка лидов, конверсия.</div>
-                <span class="agent-saving">Конверсия +25%</span>
-            </div>
-            <div class="agent-card fade-in">
-                <span class="agent-emoji">📋</span>
-                <div class="agent-name">Проджект-менеджер</div>
-                <div class="agent-desc">Контроль задач, дедлайны, координация процессов.</div>
-                <span class="agent-saving">60-90К/мес</span>
-            </div>
-            <div class="agent-card fade-in">
-                <span class="agent-emoji">📈</span>
-                <div class="agent-name">Маркетолог</div>
-                <div class="agent-desc">Стратегия продвижения, анализ каналов трафика.</div>
-                <span class="agent-saving">60-100К/мес</span>
-            </div>
-            <div class="agent-card fade-in">
-                <span class="agent-emoji">💰</span>
-                <div class="agent-name">Финансист</div>
-                <div class="agent-desc">P&amp;L, cash flow, юнит-экономика, планирование.</div>
-                <span class="agent-saving">40-60К/мес</span>
-            </div>
-            <div class="agent-card fade-in">
-                <span class="agent-emoji">🚚</span>
-                <div class="agent-name">Логист</div>
-                <div class="agent-desc">Оптимизация складов, FBO/FBS, логистика и упаковка.</div>
-                <span class="agent-saving">30-100К/мес</span>
-            </div>
-            <div class="agent-card fade-in">
-                <span class="agent-emoji">📦</span>
-                <div class="agent-name">Закупщик</div>
-                <div class="agent-desc">Прогноз продаж, оптимальные объёмы закупок.</div>
-                <span class="agent-saving">100-300К/мес</span>
-            </div>
-            <div class="agent-card fade-in">
-                <span class="agent-emoji">💲</span>
-                <div class="agent-name">Ценовик</div>
-                <div class="agent-desc">Мониторинг цен, оптимизация маржинальности.</div>
+                <div class="agent-header">
+                    <span class="agent-emoji">💲</span>
+                    <div class="agent-name">Ценовик</div>
+                </div>
+                <div class="agent-desc">Мониторит цены ТОП-20 конкурентов каждый день. Рекомендует оптимальную цену. Калькулятор «участвовать в акции или нет» — считает реальную маржу с учётом скидки.</div>
                 <span class="agent-saving">+15-30% маржи</span>
             </div>
             <div class="agent-card fade-in">
-                <span class="agent-emoji">⭐</span>
-                <div class="agent-name">Репутационщик</div>
-                <div class="agent-desc">Ответы на отзывы, рейтинг, вопросы покупателей.</div>
-                <span class="agent-saving">20-40К/мес</span>
-            </div>
-            <div class="agent-card fade-in">
-                <span class="agent-emoji">🔭</span>
-                <div class="agent-name">Скаут</div>
-                <div class="agent-desc">Поиск трендов, растущие ниши, сезонный анализ.</div>
+                <div class="agent-header">
+                    <span class="agent-emoji">🔭</span>
+                    <div class="agent-name">Скаут</div>
+                </div>
+                <div class="agent-desc">Ищет тренды раньше конкурентов: TikTok, Pinterest, сезонность. Парсит конкурентов. Прогноз спроса на 30/60/90 дней. Еженедельный отчёт «растущие ниши». Кто первый — тот снял сливки.</div>
                 <span class="agent-saving">Прибыль vs убыток</span>
             </div>
             <div class="agent-card fade-in">
-                <span class="agent-emoji">⚖️</span>
-                <div class="agent-name">Юрист-Сертификатор</div>
-                <div class="agent-desc">Маркировка, сертификаты, Честный ЗНАК, документы.</div>
-                <span class="agent-saving">50-300К на штрафах</span>
+                <div class="agent-header">
+                    <span class="agent-emoji">📦</span>
+                    <div class="agent-name">Закупщик</div>
+                </div>
+                <div class="agent-desc">Прогноз «когда и сколько заказывать». Out of stock на 3 дня = падение в выдаче на 2-4 недели. Закупщик не допустит. Алерт «закажи через X дней», расчёт оптимального объёма.</div>
+                <span class="agent-saving">Экономия 100-300К/мес</span>
             </div>
             <div class="agent-card fade-in">
-                <span class="agent-emoji">📱</span>
-                <div class="agent-name">Контент-стратег</div>
-                <div class="agent-desc">Внешний трафик, SMM для товаров, воронки.</div>
-                <span class="agent-saving">40-60К/мес</span>
+                <div class="agent-header">
+                    <span class="agent-emoji">📱</span>
+                    <div class="agent-name">Менеджер по трафику</div>
+                </div>
+                <div class="agent-desc">Внешний трафик: контент-план на месяц для Instagram/TikTok/Telegram. Генерирует посты и рилс-скрипты. Стратегия «пост → маркетплейс» с UTM-метками. WB/Ozon дают бонус за внешний трафик.</div>
+                <span class="agent-saving">Экономия 40-60К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <div class="agent-header">
+                    <span class="agent-emoji">🎬</span>
+                    <div class="agent-name">Продюсер</div>
+                </div>
+                <div class="agent-desc">Видео для карточек WB/Ozon, Reels для Instagram. AI-видео (Sora/Veo), говорящие аватары (HeyGen). Полный цикл: сценарий → съёмка → монтаж → субтитры → готовый ролик.</div>
+                <span class="agent-saving">Экономия 50-80К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <div class="agent-header">
+                    <span class="agent-emoji">🇨🇳</span>
+                    <div class="agent-name">Переговорщик (Китай)</div>
+                </div>
+                <div class="agent-desc">Работает с китайскими поставщиками на EN/中文. Торгуется по цене, MOQ, условиям оплаты. Проверяет фабрики на надёжность. Не уходит с фабрики, пока не выбьет лучшую цену.</div>
+                <span class="agent-saving">Экономия 50-100К/мес</span>
+            </div>
+            <div class="agent-card fade-in">
+                <div class="agent-header">
+                    <span class="agent-emoji">🚚</span>
+                    <div class="agent-name">Логист</div>
+                </div>
+                <div class="agent-desc">FBO или FBS? Какой склад ближе к спросу? Оптимизация упаковки. Алерты при изменении тарифов. Селлеры теряют 10-20% прибыли на логистике — Логист это закрывает.</div>
+                <span class="agent-saving">-10-20% на логистике</span>
+            </div>
+            <div class="agent-card fade-in">
+                <div class="agent-header">
+                    <span class="agent-emoji">⚖️</span>
+                    <div class="agent-name">Юрист-Сертификатор</div>
+                </div>
+                <div class="agent-desc">Честный Знак, сертификация, ЕАС. Чек-лист документов по категории. Алерт «истекает сертификат через 30 дней». Штрафы до 300К — он не допустит.</div>
+                <span class="agent-saving">Экономия 50-300К на штрафах</span>
             </div>
         </div>
     </div>
@@ -1016,27 +1086,31 @@
 <section class="section section-alt" id="how">
     <div class="container">
         <h2 class="section-title fade-in">Как это <span class="gradient-text">работает</span></h2>
-        <p class="section-subtitle fade-in">Три шага — и у вас полноценная AI-команда.</p>
+        <p class="section-subtitle fade-in">Четыре шага — и у тебя полноценная команда. Без установок, настроек и обучения.</p>
         <div class="steps">
             <div class="step fade-in">
                 <div class="step-number">1</div>
                 <div class="step-icon">📱</div>
-                <h3>Подключаете Telegram-бота</h3>
-                <p>Нажмите кнопку, перейдите в Telegram и нажмите /start. Никаких установок, регистраций или настроек.</p>
+                <h3>Подключаешь бота в Telegram</h3>
+                <p>Нажми кнопку, перейди в @clavai_office_bot и нажми /start. Никаких установок, регистраций или настроек.</p>
             </div>
-            <div class="step-arrow fade-in">→</div>
             <div class="step fade-in fade-in-delay-1">
                 <div class="step-number">2</div>
                 <div class="step-icon">💬</div>
-                <h3>Пишете задачу обычным языком</h3>
-                <p>«Напиши описание для карточки купальника на WB» или «Проанализируй конкурентов в нише кроссовки». Просто по-русски.</p>
+                <h3>Пишешь задачу на русском</h3>
+                <p>«Сделай карточку для кроссовок на WB», «Проанализируй нишу детских игрушек», «Ответь на все отзывы за неделю». Просто пиши, как в чат.</p>
             </div>
-            <div class="step-arrow fade-in">→</div>
             <div class="step fade-in fade-in-delay-2">
                 <div class="step-number">3</div>
+                <div class="step-icon">🐱</div>
+                <h3>Директор сам выбирает сотрудника</h3>
+                <p>Операционный директор определяет, какого специалиста подключить. Соблюдает зависимости: сначала Аналитик, потом Копирайтер, потом Дизайнер.</p>
+            </div>
+            <div class="step fade-in fade-in-delay-3">
+                <div class="step-number">4</div>
                 <div class="step-icon">🚀</div>
-                <h3>Получаете результат за минуты</h3>
-                <p>Нужный агент подключается автоматически, выполняет задачу и отправляет результат прямо в чат.</p>
+                <h3>Получаешь готовый результат</h3>
+                <p>SEO-карточка, аналитический отчёт, AI-фото, ответы на отзывы — всё приходит прямо в Telegram. С вариантами на выбор.</p>
             </div>
         </div>
     </div>
@@ -1045,66 +1119,64 @@
 <!-- ===== Pricing ===== -->
 <section class="section" id="pricing">
     <div class="container">
-        <h2 class="section-title fade-in">Выберите <span class="gradient-text">тариф</span></h2>
-        <p class="section-subtitle fade-in">7 дней бесплатно на любом тарифе. Без привязки карты.</p>
+        <h2 class="section-title fade-in">Выбери <span class="gradient-text">тариф</span></h2>
+        <p class="section-subtitle fade-in">7 дней бесплатно на любом тарифе. Без привязки карты. Системный слой (Директор + Технарь + Память) включён везде.</p>
         <div class="pricing-grid">
             <!-- Starter -->
             <div class="pricing-card fade-in">
                 <div class="pricing-name">Starter</div>
+                <div class="pricing-agents">3 специалиста + системный слой</div>
                 <div class="pricing-price">19 900₽ <span>/мес</span></div>
-                <div class="pricing-desc">Для тех, кто только начинает на маркетплейсах.</div>
+                <div class="pricing-desc">Для начинающего селлера, который уже продаёт и хочет улучшить карточки и работу с отзывами.</div>
                 <ul class="pricing-features">
-                    <li>5 AI-агентов</li>
-                    <li>Васька (координация)</li>
-                    <li>Копирайтер (SEO-тексты)</li>
-                    <li>Аналитик (анализ продаж)</li>
-                    <li>Дизайнер (карточки)</li>
-                    <li>Репутационщик (отзывы)</li>
+                    <li>Копирайтер — SEO-карточки для WB/Ozon</li>
+                    <li>Аналитик — SEO-ядро, ниши, юнит-экономика</li>
+                    <li>Менеджер отзывов — уникальные ответы 24/7</li>
+                    <li>Операционный директор (системный)</li>
+                    <li>Технарь (системный)</li>
+                    <li>Менеджер памяти (системный)</li>
                     <li>Telegram-бот 24/7</li>
                 </ul>
-                <a href="https://t.me/atlasfabric_bot" class="cta-btn cta-btn-outline pricing-cta" target="_blank">Попробовать бесплатно</a>
+                <a href="https://t.me/clavai_office_bot" class="cta-btn cta-btn-outline pricing-cta" target="_blank">Попробовать бесплатно</a>
             </div>
             <!-- Business -->
             <div class="pricing-card popular fade-in fade-in-delay-1">
                 <div class="pricing-badge">Популярный</div>
                 <div class="pricing-name">Business</div>
+                <div class="pricing-agents">10 специалистов + системный слой</div>
                 <div class="pricing-price">49 900₽ <span>/мес</span></div>
-                <div class="pricing-desc">Для растущих магазинов с оборотом от 500К.</div>
+                <div class="pricing-desc">Для активного селлера с оборотом 500К+, которому нужна полная автоматизация магазина.</div>
                 <ul class="pricing-features">
-                    <li>12 AI-агентов</li>
-                    <li>Всё из Starter</li>
-                    <li>Рекламщик (WB/Ozon)</li>
-                    <li>Маркетолог (стратегия)</li>
-                    <li>Финансист (P&amp;L)</li>
-                    <li>Ценовик (маржа)</li>
-                    <li>Скаут (тренды)</li>
-                    <li>Закупщик (прогнозы)</li>
-                    <li>Контент-стратег (SMM)</li>
-                    <li>Приоритетная обработка</li>
+                    <li>Всё из Starter (3 специалиста)</li>
+                    <li>Дизайнер — AI-фото и инфографика</li>
+                    <li>Аудитор — полный аудит магазина</li>
+                    <li>Менеджер по рекламе — WB/Ozon</li>
+                    <li>Финансист — P&amp;L по каждому SKU</li>
+                    <li>Ценовик — мониторинг конкурентов</li>
+                    <li>Скаут — тренды и растущие ниши</li>
+                    <li>Закупщик — прогноз закупок</li>
+                    <li>Приоритетная обработка задач</li>
                 </ul>
-                <a href="https://t.me/atlasfabric_bot" class="cta-btn pricing-cta" target="_blank">Попробовать бесплатно</a>
+                <a href="https://t.me/clavai_office_bot" class="cta-btn pricing-cta" target="_blank">Попробовать бесплатно</a>
             </div>
             <!-- Enterprise -->
             <div class="pricing-card fade-in fade-in-delay-2">
                 <div class="pricing-name">Enterprise</div>
+                <div class="pricing-agents">Все 15 специалистов + системный слой</div>
                 <div class="pricing-price">89 900₽ <span>/мес</span></div>
-                <div class="pricing-desc">Для крупных селлеров и агентств.</div>
+                <div class="pricing-desc">Для крупного селлера или агентства с оборотом 1М+, импортом из Китая и внешним трафиком.</div>
                 <ul class="pricing-features">
-                    <li>Все 20 AI-агентов</li>
-                    <li>Всё из Business</li>
-                    <li>Китай-менеджер (закупки)</li>
-                    <li>Продажник (лиды)</li>
-                    <li>Проджект-менеджер</li>
-                    <li>Логист (склады)</li>
-                    <li>Юрист-Сертификатор</li>
-                    <li>Технарь (API)</li>
-                    <li>Продюсер (видео)</li>
-                    <li>Аудитор (точки роста)</li>
-                    <li>Кастомные агенты под вас</li>
+                    <li>Всё из Business (10 специалистов)</li>
+                    <li>Менеджер по трафику — внешний SMM</li>
+                    <li>Продюсер — AI-видео для карточек и Reels</li>
+                    <li>Переговорщик — Китай, EN/中文</li>
+                    <li>Логист — FBO/FBS, склады, упаковка</li>
+                    <li>Юрист-Сертификатор — Честный Знак, ЕАС</li>
+                    <li>Кастомные агенты под твой бизнес</li>
                     <li>API-доступ</li>
-                    <li>Персональный менеджер</li>
+                    <li>Персональная настройка</li>
                 </ul>
-                <a href="https://t.me/atlasfabric_bot" class="cta-btn cta-btn-outline pricing-cta" target="_blank">Попробовать бесплатно</a>
+                <a href="https://t.me/clavai_office_bot" class="cta-btn cta-btn-outline pricing-cta" target="_blank">Попробовать бесплатно</a>
             </div>
         </div>
     </div>
@@ -1113,17 +1185,18 @@
 <!-- ===== Comparison ===== -->
 <section class="section section-alt" id="compare">
     <div class="container">
-        <h2 class="section-title fade-in">Штат vs <span class="gradient-text">AI-Офис</span></h2>
-        <p class="section-subtitle fade-in">Сравните и решите сами.</p>
+        <h2 class="section-title fade-in">Нанять людей vs <span class="gradient-text">AI-Офис</span></h2>
+        <p class="section-subtitle fade-in">Сравни и реши сам.</p>
         <div class="comparison">
             <div class="compare-block compare-bad fade-in">
-                <div class="compare-title">❌ Обычный штат</div>
+                <div class="compare-title">❌ Нанять в штат / фрилансеров</div>
                 <ul class="compare-list">
-                    <li>500 000₽+/мес на зарплаты и налоги</li>
-                    <li>Поиск занимает 2-3 месяца</li>
-                    <li>Больничные, отпуска, выгорание</li>
-                    <li>Уходят к конкурентам с вашими наработками</li>
+                    <li>80-150К/мес на одного сотрудника + налоги + больничные</li>
+                    <li>15 специалистов = 1.5-2М₽/мес минимум</li>
+                    <li>Поиск и адаптация — 2-3 месяца каждый раз</li>
+                    <li>Фрилансер пропал — ищи нового</li>
                     <li>Работают с 9 до 18, не в выходные</li>
+                    <li>Уходят к конкурентам с твоими наработками</li>
                     <li>Каждый знает только свою область</li>
                 </ul>
             </div>
@@ -1131,11 +1204,12 @@
                 <div class="compare-title">✅ AI-Офис</div>
                 <ul class="compare-list">
                     <li>От 19 900₽/мес за целую команду</li>
-                    <li>Подключение за 5 минут</li>
-                    <li>24/7 без выходных и праздников</li>
+                    <li>Подключение за 5 минут через Telegram</li>
+                    <li>24/7 без выходных, праздников и больничных</li>
                     <li>Не уволится и не уйдёт к конкуренту</li>
-                    <li>Мгновенная реакция на задачи</li>
-                    <li>20 экспертов во всех областях сразу</li>
+                    <li>15 специалистов работают в связке</li>
+                    <li>Помнит всё о твоём бизнесе (Менеджер памяти)</li>
+                    <li>Масштабируется мгновенно — от 3 до 15 агентов</li>
                 </ul>
             </div>
         </div>
@@ -1146,31 +1220,35 @@
 <section class="section" id="faq">
     <div class="container">
         <h2 class="section-title fade-in">Частые <span class="gradient-text">вопросы</span></h2>
-        <p class="section-subtitle fade-in">Всё, что вы хотели спросить о нашем AI-офисе.</p>
+        <p class="section-subtitle fade-in">Всё, что ты хочешь знать об AI-Офисе.</p>
         <div class="faq-list">
             <div class="faq-item fade-in">
-                <div class="faq-q">Это правда AI или за экраном сидят люди?</div>
-                <div class="faq-a"><div class="faq-a-inner">Да, это настоящий искусственный интеллект на базе Claude (Anthropic) — одной из самых мощных AI-моделей в мире. Каждый агент обучен на данных маркетплейсов, SEO, маркетинга и e-commerce. Мы не нанимаем фрилансеров — всю работу делает AI.</div></div>
+                <div class="faq-q">Это реальный ИИ или люди?</div>
+                <div class="faq-a"><div class="faq-a-inner">Реальный ИИ на базе Claude (Anthropic) — одной из самых мощных AI-моделей в мире. Работает 24/7, не болеет, не увольняется. Каждый специалист обучен на данных маркетплейсов, SEO, маркетинга и e-commerce.</div></div>
             </div>
             <div class="faq-item fade-in">
-                <div class="faq-q">А если результат не устроит?</div>
-                <div class="faq-a"><div class="faq-a-inner">Вы можете попросить переделать или уточнить задачу — AI выполнит её заново. У нас 7-дневный бесплатный период: попробуйте и решите сами. Если не подойдёт — вы ничего не платите.</div></div>
+                <div class="faq-q">А если мне нужен только копирайтер?</div>
+                <div class="faq-a"><div class="faq-a-inner">Starter за 19 900₽ — копирайтер + аналитик + менеджер отзывов. Но копирайтер без аналитика пишет вслепую — карточка без SEO-ядра не попадёт в ТОП. Поэтому они работают в связке: аналитик собирает ключи → копирайтер пишет карточку. Результат в разы лучше.</div></div>
             </div>
             <div class="faq-item fade-in">
-                <div class="faq-q">Какие маркетплейсы поддерживаете?</div>
-                <div class="faq-a"><div class="faq-a-inner">Wildberries и Ozon — основные площадки. Также работаем с Яндекс Маркет и можем помочь с Amazon, Alibaba. Агенты знают специфику каждой площадки: комиссии, логистику, правила карточек, рекламные кабинеты.</div></div>
+                <div class="faq-q">Для WB или Ozon?</div>
+                <div class="faq-a"><div class="faq-a-inner">Для обоих. Агенты знают специфику каждой площадки: комиссии, логистику, правила карточек, рекламные кабинеты, алгоритмы выдачи. WB и Ozon работают по-разному — и наши специалисты это учитывают.</div></div>
             </div>
             <div class="faq-item fade-in">
-                <div class="faq-q">Нужно ли что-то устанавливать?</div>
-                <div class="faq-a"><div class="faq-a-inner">Нет. Всё работает через Telegram — приложение, которое уже есть у вас на телефоне. Нажали /start — и готово. Никаких программ, плагинов или настроек.</div></div>
+                <div class="faq-q">Нужно что-то устанавливать?</div>
+                <div class="faq-a"><div class="faq-a-inner">Нет. Всё работает через Telegram-бот @clavai_office_bot — приложение, которое уже есть на твоём телефоне. Нажал /start — и готово. Никаких программ, плагинов или настроек.</div></div>
             </div>
             <div class="faq-item fade-in">
-                <div class="faq-q">Есть ли пробный период?</div>
-                <div class="faq-a"><div class="faq-a-inner">Да, 7 дней бесплатно на любом тарифе. Без привязки карты. Просто напишите боту в Telegram, протестируйте агентов на реальных задачах и решите, подходит ли вам.</div></div>
+                <div class="faq-q">Есть пробный период?</div>
+                <div class="faq-a"><div class="faq-a-inner">7 дней бесплатно на любом тарифе. Без привязки карты. Просто напиши боту в Telegram, протестируй специалистов на реальных задачах и реши, подходит ли тебе.</div></div>
             </div>
             <div class="faq-item fade-in">
-                <div class="faq-q">Насколько это безопасно для моих данных?</div>
-                <div class="faq-a"><div class="faq-a-inner">Все данные передаются по зашифрованному каналу. Мы не храним данные ваших личных кабинетов маркетплейсов. AI работает только с той информацией, которую вы ему даёте в чате.</div></div>
+                <div class="faq-q">Мои данные в безопасности?</div>
+                <div class="faq-a"><div class="faq-a-inner">Менеджер памяти хранит только то, что ты ему дал. Данные не передаются третьим лицам. Все данные передаются по зашифрованному каналу. Мы не храним данные твоих личных кабинетов маркетплейсов.</div></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-q">Чем отличается от ChatGPT?</div>
+                <div class="faq-a"><div class="faq-a-inner">ChatGPT — один ассистент на все случаи жизни. AI-Офис — 15 специалистов, каждый со своим скиллом, работают в связке. Аналитик собирает SEO-ядро → Копирайтер пишет карточку → Дизайнер делает фото. Это конвейер, а не чат. Плюс память — система помнит всё о твоём бизнесе между сессиями.</div></div>
             </div>
         </div>
     </div>
@@ -1179,9 +1257,9 @@
 <!-- ===== Final CTA ===== -->
 <section class="final-cta">
     <div class="container final-cta-inner">
-        <h2 class="fade-in">Готовы собрать команду мечты?</h2>
-        <p class="fade-in">20 AI-специалистов уже ждут ваших задач. Начните бесплатно прямо сейчас.</p>
-        <a href="https://t.me/atlasfabric_bot" class="cta-btn cta-btn-white fade-in" target="_blank">
+        <h2 class="fade-in">Хватит делать всё в одиночку</h2>
+        <p class="fade-in">15 специалистов уже готовы к работе. Подключи AI-Офис за 5 минут — 7 дней бесплатно.</p>
+        <a href="https://t.me/clavai_office_bot" class="cta-btn cta-btn-white fade-in" target="_blank">
             Начать бесплатно в Telegram
             <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -1191,7 +1269,7 @@
 <!-- ===== Footer ===== -->
 <footer class="footer">
     <div class="container">
-        <p>AI-Офис &copy; 2026 &middot; <a href="https://t.me/atlasfabric_bot">Telegram</a> &middot; <a href="mailto:hello@ai-office.ru">hello@ai-office.ru</a></p>
+        <p>AI-Офис &copy; 2026 &middot; <a href="https://t.me/clavai_office_bot">Telegram</a> &middot; <a href="mailto:hello@ai-office.ru">hello@ai-office.ru</a></p>
     </div>
 </footer>
 
